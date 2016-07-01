@@ -1,0 +1,3 @@
+[submodule ".dev/wp-dev-lib"]
+	path = .dev/wp-dev-lib
+	url = git@github.com:xwp/wp-dev-lib.git

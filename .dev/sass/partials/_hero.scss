@@ -1,0 +1,14 @@
+.hero {
+  clear: both;
+  padding-top: 54px;
+
+  .hero-wrapper {
+    @extend .row;
+  }
+
+  .widget {
+    padding: 0;
+    background: none;
+  }
+
+}
