@@ -1,3 +1,11 @@
+.no-max-width .site-header-wrapper,
+.no-max-width .hero-wrapper,
+.no-max-width .site-footer-inner,
+.no-max-width .site-info {
+	max-width: none;
+}
+
+
 #content{
 	@extend .row;
 

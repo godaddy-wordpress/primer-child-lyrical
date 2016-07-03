@@ -4,7 +4,7 @@
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Lyrical is a child theme for Primer
- * Version: 0.0.1
+ * Version: 0.0.2
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: lyrical
@@ -2172,6 +2172,9 @@ img[class*="wp-image-"] {
 /* Make sure embeds and iframes fit their containers */
 embed, iframe, object {
   max-width: 100%; }
+
+.no-max-width .site-header-wrapper, .no-max-width .hero-wrapper, .no-max-width .site-footer-inner, .no-max-width .site-info {
+  max-width: none; }
 
 body.layout-one-column-full #content {
   max-width: 100%;
