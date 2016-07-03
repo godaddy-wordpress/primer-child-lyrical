@@ -268,10 +268,28 @@ $align-class-breakpoints:
 			}
 		}
 
-		h1 { font-size: $h1-font-size - $h1-font-reduction; }
-		h2 { font-size: $h2-font-size - $h2-font-reduction; }
-		h3 { font-size: $h3-font-size - $h3-font-reduction; }
-		h4 { font-size: $h4-font-size - $h4-font-reduction; }
+		h1 {
+			color: $h1-font-color;
+			font-size: $h1-font-size - $h1-font-reduction;
+			font-family: $h1-font-family;
+			font-weight: $h1-font-weight;
+		}
+		h2 {
+			color: $h2-font-color;
+			font-size: $h2-font-size - $h2-font-reduction;
+			font-weight: $h2-font-weight;
+		}
+		h3 {
+			font-size: $h3-font-size - $h3-font-reduction;
+			font-weight: $h3-font-weight;
+		}
+		h4 {
+			color: $h4-font-color;
+			font-size: $h4-font-size - $h4-font-reduction;
+			font-weight:$h4-font-weight;
+			letter-spacing: $h4-letter-spacing;
+			text-transform: $h4-text-transform;
+		}
 		h5 { font-size: $h5-font-size - $h5-font-reduction; }
 		h6 { font-size: $h6-font-size - $h6-font-reduction; }
 
@@ -301,6 +319,10 @@ $align-class-breakpoints:
 		small {
 			font-size: $small-font-size;
 			line-height: inherit;
+		}
+
+		address {
+			margin-bottom: 1em;
 		}
 
 		pre {

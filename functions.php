@@ -67,7 +67,7 @@ add_action( 'primer_header', 'lyrical_move_navigation', 19 );
  * @return mixed
  */
 function lyrical_update_google_font_query_args( $args ) {
-	$args['family'] .= '|Playfair+Display:900';
+	$args['family'] .= '|Playfair+Display:400,900';
 	return $args;
 }
 add_filter( 'google_font_query_args', 'lyrical_update_google_font_query_args' );

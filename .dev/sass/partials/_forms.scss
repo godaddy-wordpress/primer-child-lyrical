@@ -21,12 +21,14 @@ input[type="submit"] {
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: auto;
-	font-size: rem-calc(16);
+	font-size: rem-calc(13);
 	line-height: 1;
 	border-radius: 3px;
-	padding: .75em 1em;
-	padding: .75rem 1rem;
+	padding: 1em 2em;
+	padding: 1rem 2rem;
 	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing:1.2px;
 
 	&:hover {
 		color: contrast-color($color-background-button,#fff,#000,25%);
@@ -36,6 +38,10 @@ input[type="submit"] {
 	&:focus
 	&:active{
 		background: lighten($color-background-button,3%);
+	}
+	
+	&:disabled {
+		background-color: #c5c3c6;
 	}
 }
 
@@ -86,7 +92,9 @@ textarea {
 	border: none;
 	transform: 200ms background linear;
 	border-radius: 3px;
+	box-shadow: inset 0px 3px 0px 0px rgba(1, 1, 1, 0.06);
 	resize: none;
+	font-size: rem-calc(16);
 
 	&:focus {
 		color: $color-text-input-focus;
@@ -111,8 +119,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	padding: .75em;
-	padding: .75rem;
+	padding: 1em;
+	padding: 1rem;
 }
 
 input[type="file"] {
@@ -121,7 +129,11 @@ input[type="file"] {
 
 label{
 	font-family: $header-font-family;
-	font-weight: bold;
+	font-size: rem-calc(16);
+	text-transform: uppercase;
+	color: #606365;
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
 textarea {

@@ -66,6 +66,11 @@ $widget-bg: #fff !default;
 	.search-submit {
 		display: none;
 	}
+
+	label {
+		margin: 0;
+		width: 100%;
+	}
 }
 
 .widget-title {
