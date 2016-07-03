@@ -60,26 +60,39 @@ function lyrical_move_navigation() {
 add_action( 'primer_header', 'lyrical_move_navigation', 19 );
 
 /**
+ * Add Playfair Display font as a secondary font
+ *
+ * @param $args
+ *
+ * @return mixed
+ */
+function lyrical_update_google_font_query_args( $args ) {
+	$args['family'] .= '|Playfair+Display:900';
+	return $args;
+}
+add_filter( 'google_font_query_args', 'lyrical_update_google_font_query_args' );
+
+/**
  * Update custom header arguments
  *
  * @param $args
  * @return mixed
  */
-function primer_update_custom_header_args( $args ) {
+function lyrical_update_custom_header_args( $args ) {
 	$args['width'] = 2400;
 	$args['height'] = 1320;
 
 	return $args;
 }
-add_filter( 'primer_custom_header_args', 'primer_update_custom_header_args' );
+add_filter( 'primer_custom_header_args', 'lyrical_update_custom_header_args' );
 
 /**
  * Display hero in the header
  *
- * @action primer_after_header
+ * @action primer_header
  */
 function lyrical_add_hero(){
-	if( is_front_page() && is_active_sidebar( 'hero' ) ) {
+	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 		get_template_part( 'templates/parts/hero' );
 	}
 }
