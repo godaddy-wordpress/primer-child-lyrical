@@ -66,11 +66,23 @@ add_action( 'primer_header', 'lyrical_move_navigation', 19 );
  *
  * @return mixed
  */
-function lyrical_update_google_font_query_args( $args ) {
-	$args['family'] .= '|Playfair+Display:400,900';
-	return $args;
+function lyrical_update_default_fonts( ) {
+	return array(
+		'Open Sans',
+		'Playfair Display',
+		'Roboto',
+		'Lato',
+		'Montserrat',
+		'Raleway',
+		'PT Sans',
+		'Noto Sans',
+		'Muli',
+		'Oxygen',
+		'Source Serif Pro',
+		'PT Serif',
+	);
 }
-add_filter( 'google_font_query_args', 'lyrical_update_google_font_query_args' );
+add_filter( 'primer_fonts', 'lyrical_update_default_fonts' );
 
 /**
  * Update custom header arguments
