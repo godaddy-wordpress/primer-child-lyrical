@@ -1560,8 +1560,8 @@ a {
  * Post navigation
  */
 .navigation .nav-links {
-  margin-bottom: 1em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   padding: 0; }
 
 .comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
