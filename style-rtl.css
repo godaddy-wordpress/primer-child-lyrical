@@ -1409,8 +1409,7 @@ a {
         padding: 13px 10px;
         text-align: center;
         text-transform: uppercase;
-        position: relative;
-        padding-left: 55px; }
+        position: relative; }
         .main-navigation ul li a span {
           display: none; }
       .main-navigation ul li.current-menu-item a, .main-navigation ul li a:hover {
@@ -1426,30 +1425,28 @@ a {
         padding: 13px; }
         .main-navigation ul li.menu-item-has-children > a > span:before {
           content: "\25bc"; }
-      .main-navigation ul li.menu-item-has-children .sub-menu {
+      .main-navigation ul li.menu-item-has-children .sub-menu li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2); }
+        .main-navigation ul li.menu-item-has-children .sub-menu li a {
+          background: #1985a1;
+          color: #fff;
+          font-size: 0.75rem;
+          text-align: right;
+          text-transform: none;
+          padding: 10px 20px;
+          position: relative; }
+          .main-navigation ul li.menu-item-has-children .sub-menu li a span {
+            padding: 8px; }
+        .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a, .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
+          background: #1a89a5; }
+      .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
         display: none; }
-        .main-navigation ul li.menu-item-has-children .sub-menu li {
-          border-top: 1px solid rgba(255, 255, 255, 0.2); }
-          .main-navigation ul li.menu-item-has-children .sub-menu li a {
-            background: #1985a1;
-            color: #fff;
-            font-size: 0.75rem;
-            text-align: right;
-            text-transform: none;
-            padding: 10px 20px;
-            position: relative; }
-            .main-navigation ul li.menu-item-has-children .sub-menu li a span {
-              padding: 8px; }
-          .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a, .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
-            background: #1a89a5; }
-        .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
-          display: none; }
-          .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
-            padding-right: 30px; }
+        .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
+          padding-right: 30px; }
 
 .menu-toggle {
   display: block;
-  float: right;
+  float: left;
   cursor: pointer;
   padding: 19px 10px; }
   .menu-toggle div {

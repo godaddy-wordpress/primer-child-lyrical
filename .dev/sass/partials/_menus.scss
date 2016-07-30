@@ -29,7 +29,6 @@ $menu-link-color: #fff;
 				text-align: center;
 				text-transform: uppercase;
 				position: relative;
-				padding-right: 55px;
 				span {
 					display: none;
 				}
@@ -52,7 +51,6 @@ $menu-link-color: #fff;
 				}
 			}
 			&.menu-item-has-children .sub-menu {
-				display: none;
 				li {
 					border-top: 1px solid rgba(255,255,255,0.20);
 					a {
@@ -84,7 +82,7 @@ $menu-link-color: #fff;
 }
 .menu-toggle {
 	display: block;
-	float: left;
+	float: right;
 	cursor: pointer;
 	padding: 19px 10px;
 

@@ -49,6 +49,7 @@
 						wp_nav_menu(
 							array(
 								'theme_location' => 'site-info',
+								'depth'          => 1,
 							)
 						);
 
