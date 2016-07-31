@@ -29,15 +29,6 @@ function lyrical_add_image_size() {
 add_action( 'after_setup_theme', 'lyrical_add_image_size' );
 
 /**
- * Remove primer navigation and add lyrical navigation
- */
-function lyrical_navigation() {
-	wp_dequeue_script( 'primer-navigation' );
-	wp_enqueue_script( 'lyrical-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
-}
-add_action( 'wp_print_scripts', 'lyrical_navigation', 100 );
-
-/**
  * Move navigation from after_header to header
  *
  * @link https://codex.wordpress.org/Function_Reference/remove_action
@@ -58,6 +49,7 @@ add_action( 'after_setup_theme', 'lyrical_move_navigation', 10 );
  * @return mixed
  */
 function lyrical_update_custom_header_args( $args ) {
+
 	$args['width'] = 2400;
 	$args['height'] = 1320;
 
@@ -92,6 +84,17 @@ function lyrical_add_sidebars( $sidebars ) {
 }
 add_filter( 'primer_register_sidebars', 'lyrical_add_sidebars' );
 
+function remove_site_header_if_not_home() {
+
+	if ( ! is_front_page() ) {
+
+		remove_action( 'primer_header', 'primer_add_site_header', 10 );
+
+	}
+
+}
+add_action( 'after_setup_theme', 'remove_site_header_if_not_home' );
+
 /**
  * Get header image with image size
  *
@@ -99,21 +102,23 @@ add_filter( 'primer_register_sidebars', 'lyrical_add_sidebars' );
  * @return false|string
  */
 function lyrical_get_header_image() {
+
 	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
 	$custom_header = get_custom_header();
 
 	if ( ! empty( $custom_header->attachment_id ) ) {
+
 		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
+
 		if ( getimagesize( $image ) ) {
 			return $image;
 		}
 	}
-	$header_image = get_header_image();
-	return $header_image;
+	return get_header_image();
 }
 
 /**
- * Change Stout font types.
+ * Change font types.
  *
  * @action primer_font_types
  * @since 1.0.0
@@ -124,10 +129,44 @@ function lyrical_font_types() {
 	return array(
 		array(
 			'name'    => 'primary_font',
-			'label'   => esc_html__( 'Primary Font', 'primer' ),
-			'default' => 'Open Sans',
+			'label'   => __( 'Primary Font', 'primer' ),
+			'default' => 'Raleway',
 			'css'     => array(
-				'' => array(
+				'body,
+				h2, h3, h4, h5, h6,
+				blockquote,
+				button, a.button, input, select, textarea,
+				label,
+				legend,
+				.main-navigation,
+				.widget, .widget p, .widget ul, .widget ol,
+				.widget-title,
+				.entry-footer,
+				.entry-meta,
+				.event-meta, .sermon-meta, .location-meta, .person-meta,
+				.post-format,
+				.more-link,
+				.comment-list li .comment-author, .comment-list li .comment-metadata,
+				#respond,
+				.site-description,
+				.featured-content .entry-header .entry-title,
+				.featured-content .entry-header .read-more,
+				.hero blockquote.large cite,
+				.featured-content .entry-title,
+				.featured-content .read-more' => array(
+					'font-family' => '"%s", sans-serif',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_font',
+			'label'   => __( 'Secondary Font', 'primer' ),
+			'default' => 'Playfair Display',
+			'css'     => array(
+				'h1,
+				.site-title,
+				.hero blockquote.large p
+				' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),
@@ -138,7 +177,7 @@ function lyrical_font_types() {
 add_action( 'primer_font_types', 'lyrical_font_types' );
 
 /**
- * Change Lyrical colors
+ * Change colors
  *
  * @action primer_colors
  * @since 1.0.0
@@ -149,7 +188,7 @@ function lyrical_colors() {
 	return array(
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#',
+			'default' => '#202223',
 			'css'     => array(
 				'' => array(
 					'color' => '%1$s',
@@ -163,7 +202,7 @@ function lyrical_colors() {
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#',
+			'default' => '#f7f7f7',
 		),
 		array(
 			'name'    => 'header_background_color',
@@ -178,7 +217,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'tagline_text_color',
 			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-			'default' => '#',
+			'default' => '#202223',
 			'css'     => array(
 				'' => array(
 					'color' => '%1$s',
@@ -188,7 +227,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'menu_background_color',
 			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-			'default' => '#',
+			'default' => 'red',
 			'css'     => array(
 				'' => array(
 					'color' => '%1$s',
@@ -198,9 +237,9 @@ function lyrical_colors() {
 		array(
 			'name'    => 'link_color',
 			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#',
+			'default' => '#62d7db',
 			'css'     => array(
-				'' => array(
+				'a, a:visited, a:focus' => array(
 					'color' => '%1$s',
 				),
 				'' => array(
@@ -208,7 +247,7 @@ function lyrical_colors() {
 				),
 			),
 			'rgba_css' => array(
-				'' => array(
+				'a:hover' => array(
 					'color' => 'rgba(%1$s, 0.75)',
 				),
 				'' => array(
@@ -219,9 +258,9 @@ function lyrical_colors() {
 		array(
 			'name'    => 'main_text_color',
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
-			'default' => '#',
+			'default' => '#202223',
 			'css'     => array(
-				'' => array(
+				'body' => array(
 					'color' => '%1$s',
 				),
 			),
@@ -229,7 +268,17 @@ function lyrical_colors() {
 		array(
 			'name'    => 'secondary_text_color',
 			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-			'default' => '#',
+			'default' => '#202223',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'other_accent_color',
+			'label'   => esc_html__( 'Other Accent Color', 'lyrical' ),
+			'default' => '#db4353',
 			'css'     => array(
 				'' => array(
 					'color' => '%1$s',
@@ -242,7 +291,7 @@ function lyrical_colors() {
 add_action( 'primer_colors', 'lyrical_colors' );
 
 /**
- * Change Lyrical color schemes
+ * Change color schemes
  *
  * @action primer_color_schemes
  * @since 1.0.0

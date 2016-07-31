@@ -34,6 +34,28 @@ body.archive .archive-header {
 .featured-image{
 	margin-bottom: 1em;
 	margin-bottom: 1.5rem;
+	position: relative;
+	margin-top: 65px;
+
+	.avatar-container {
+		border: 4px solid #fff;
+		width: 114px;
+		height: 114px;
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: -57px;
+		border-radius: 100%;
+
+		.avatar {
+			width: 106px;
+			height: 106px;
+			border-radius: 100%;
+		}
+
+
+	}
 }
 
 .byline,
