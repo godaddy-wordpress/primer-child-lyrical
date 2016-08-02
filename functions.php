@@ -188,15 +188,15 @@ function lyrical_colors() {
 	return array(
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#202223',
+			'default' => '#fff',
 			'css'     => array(
-				'' => array(
+				'.site-title a, .site-title a:visited' => array(
 					'color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
-				'' => array(
-					'color' => 'rgba(%1$s, 0.75)',
+				'.site-title a:hover, .site-title a:visited:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
@@ -205,32 +205,87 @@ function lyrical_colors() {
 			'default' => '#f7f7f7',
 		),
 		array(
+			'name'    => 'content_background_color',
+			'label'   => esc_html__( 'Content Background Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.hentry,
+				.widget,
+				.menu-toggle div,
+				.comments-area,
+				body.search-results .page-header, body.archive .archive-header,
+				.no-results, .not-found,
+				article.format-link,
+				.widget_search .search-field,
+				.widget_search .search-field:focus' => array(
+					'background-color' => '%1$s',
+				),
+				'.social-media a,
+				.featured-content .read-more,
+				.featured-content article,
+				.featured-content, .featured-content .entry-title a,
+				.site-info-wrapper .site-info .social-menu a,
+				.site-info-wrapper a,
+				.site-info-wrapper,
+				button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"],
+				button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+				.footer-widget-area .footer-widget .widget,
+				.footer-widget-area .footer-widget .widget-title,
+				.site-footer a:hover,
+				.site-footer,
+				.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p, .hero cite, .hero table, .hero ul, .hero li, .hero dd, .hero dt, .hero address, .hero code, .hero pre
+				.featured-content .entry-header .read-more,
+				.featured-content .entry-header .entry-meta,
+				.featured-content .entry-header .entry-header-column,
+				.featured-content .entry-header, .featured-content .entry-header .entry-title, .featured-content .entry-header .entry-title a,
+				.gallery-caption,				' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.site-info-wrapper .site-info .social-menu a:hover,
+				.site-info-wrapper a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+		array(
 			'name'    => 'header_background_color',
 			'label'   => esc_html__( 'Header Background Color', 'primer' ),
-			'default' => '#',
+			'default' => '#191c1d',
 			'css'     => array(
-				'' => array(
-					'color' => '%1$s',
+				'.site-header' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
 			'name'    => 'tagline_text_color',
 			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-			'default' => '#202223',
+			'default' => '#fff',
 			'css'     => array(
-				'' => array(
+				'.site-description' => array(
 					'color' => '%1$s',
 				),
 			),
 		),
 		array(
-			'name'    => 'menu_background_color',
-			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-			'default' => 'red',
+			'name'    => 'footer_background_color',
+			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+			'default' => '#111',
 			'css'     => array(
-				'' => array(
-					'color' => '%1$s',
+				'.site-footer' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'site_info_background_color',
+			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
+			'default' => '#191c1d',
+			'css'     => array(
+				'.site-info-wrapper' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
@@ -239,19 +294,33 @@ function lyrical_colors() {
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#62d7db',
 			'css'     => array(
-				'a, a:visited, a:focus' => array(
+				'a, a:visited, 
+				.social-menu a,
+				.post-format,
+				.more-link,
+				.entry-footer a,
+				.widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover,
+				.main-navigation a,
+				.site-footer a,
+				.featured-content .entry-header .post-format' => array(
 					'color' => '%1$s',
 				),
-				'' => array(
+				'.featured-content .read-more,
+				button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"],
+				.featured-content .entry-header .read-more' => array(
 					'background-color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
-				'a:hover' => array(
-					'color' => 'rgba(%1$s, 0.75)',
+				'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active,
+				.social-menu a:hover,
+				.featured-content .read-more:hover,
+				.main-navigation a:hover,' => array(
+					'color' => 'rgba(%1$s, 0.8)',
 				),
-				'' => array(
-					'background-color' => 'rgba(%1$s, 0.75)',
+				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+				.featured-content .entry-header .read-more:hover' => array(
+					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
@@ -260,33 +329,50 @@ function lyrical_colors() {
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
 			'default' => '#202223',
 			'css'     => array(
-				'body' => array(
+				'body,
+				h1, h2, h3, h4, h5, h6,
+				legend,.entry-title a
+				  .hentry .entry-header' => array(
 					'color' => '%1$s',
+				),
+				'.main-navigation,
+				.main-navigation .menu' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
 			'name'    => 'secondary_text_color',
 			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-			'default' => '#202223',
+			'default' => '#8f8e8f',
 			'css'     => array(
-				'' => array(
+				'h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+				h2, h4,
+				.suheader,
+				hr,
+				pre,
+				code,
+				table th, table td,
+				abbr, acronym,
+				blockquote cite,
+				blockquote cite a, blockquote cite a:visited,
+				blockquote, blockquote p,
+				.footer-widget-area .footer-widget .widget_recent_entries .post-date,
+				#respond .form-allowed-tags,
+				#respond .comment-notes,
+				#respond .logged-in-as,
+				.comment-list .comment-awaiting-moderation,
+				 .comment-list li.pingback, .comment-list li.trackback,
+				 .entry-footer' => array(
 					'color' => '%1$s',
+				),
+				'button:disabled, a.button:disabled, a.button:visited:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
-		array(
-			'name'    => 'other_accent_color',
-			'label'   => esc_html__( 'Other Accent Color', 'lyrical' ),
-			'default' => '#db4353',
-			'css'     => array(
-				'' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-	);
 
+	);
 }
 add_action( 'primer_colors', 'lyrical_colors' );
 
