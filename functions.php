@@ -93,7 +93,7 @@ function remove_site_header_if_not_home() {
 	}
 
 }
-add_action( 'after_setup_theme', 'remove_site_header_if_not_home' );
+add_action( 'primer_before_header', 'remove_site_header_if_not_home' );
 
 /**
  * Get header image with image size
