@@ -84,16 +84,16 @@ function lyrical_add_sidebars( $sidebars ) {
 }
 add_filter( 'primer_register_sidebars', 'lyrical_add_sidebars' );
 
-function remove_site_header_if_not_home() {
+function remove_hero_if_not_home() {
 
 	if ( ! is_front_page() ) {
 
-		remove_action( 'primer_header', 'primer_add_site_header', 10 );
+		remove_action( 'primer_header', 'primer_add_hero', 10 );
 
 	}
 
 }
-add_action( 'primer_before_header', 'remove_site_header_if_not_home' );
+add_action( 'primer_before_header', 'remove_hero_if_not_home' );
 
 /**
  * Get header image with image size
