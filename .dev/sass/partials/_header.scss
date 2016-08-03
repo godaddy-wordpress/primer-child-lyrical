@@ -46,15 +46,10 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-description{
-	font-size: 14px;
+	font-size: 16px;
 	color: #fff;
 	font-family: $sans-font-family;
 	font-weight: 300;
-
-	@media #{$large-up} {
-		font-size: emCalc(18);
-		font-size: rem-calc(18);
-	}
 }
 
 .site-header {
@@ -64,7 +59,8 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	margin-bottom: -235px;
 }
 
-body.home .site-header {
+body.home .site-header,
+body.page-template-page-builder .site-header {
 	padding-bottom: 0;
 	margin-bottom: 40px;
 }

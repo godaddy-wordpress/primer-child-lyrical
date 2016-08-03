@@ -133,7 +133,7 @@ function lyrical_font_types() {
 		array(
 			'name'    => 'primary_font',
 			'label'   => __( 'Primary Font', 'primer' ),
-			'default' => 'Raleway',
+			'default' => 'Open Sans',
 			'css'     => array(
 				'body,
 				h2, h3, h4, h5, h6,
@@ -193,9 +193,14 @@ function lyrical_colors() {
 			'name'    => 'header_textcolor',
 			'default' => '#fff',
 			'css'     => array(
-				'.site-title a, .site-title a:visited' => array(
+				'.site-title a, .site-title a:visited,
+				.menu-toggle div,
+				.main-navigation li a, .main-navigation li a:hover, .main-navigation .sub-menu a, .main-navigation .sub-menu .sub-menu a' => array(
 					'color' => '%1$s',
 				),
+				'.main-navigation li.current-menu-item a, .main-navigation li a:hover' => array(
+					'border-color' => '%1$s',
+				)
 			),
 			'rgba_css' => array(
 				'.site-title a:hover, .site-title a:visited:hover' => array(
@@ -214,7 +219,6 @@ function lyrical_colors() {
 			'css'     => array(
 				'.hentry,
 				.widget,
-				.menu-toggle div,
 				.comments-area,
 				body.search-results .page-header, body.archive .archive-header,
 				.no-results, .not-found,
@@ -303,9 +307,10 @@ function lyrical_colors() {
 				.more-link,
 				.entry-footer a,
 				.widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover,
-				.main-navigation a,
 				.site-footer a,
-				.featured-content .entry-header .post-format' => array(
+				.featured-content .entry-header .post-format,
+				abbr,
+				.site-info-menu ul li a' => array(
 					'color' => '%1$s',
 				),
 				'.featured-content .read-more,
@@ -313,17 +318,24 @@ function lyrical_colors() {
 				.featured-content .entry-header .read-more' => array(
 					'background-color' => '%1$s',
 				),
+				'.site-info-menu ul li a' => array(
+					'border-color' => '%1$s',
+				),
 			),
 			'rgba_css' => array(
 				'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active,
 				.social-menu a:hover,
 				.featured-content .read-more:hover,
-				.main-navigation a:hover,' => array(
+				.site-footer a:hover,
+				.site-info-menu ul li a:hover' => array(
 					'color' => 'rgba(%1$s, 0.8)',
 				),
 				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 				.featured-content .entry-header .read-more:hover' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
+				),
+				'.site-info-menu ul li a:hover' => array(
+					'border-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
@@ -337,10 +349,6 @@ function lyrical_colors() {
 				legend,.entry-title a
 				  .hentry .entry-header' => array(
 					'color' => '%1$s',
-				),
-				'.main-navigation,
-				.main-navigation .menu' => array(
-					'background-color' => '%1$s',
 				),
 			),
 		),
@@ -356,7 +364,7 @@ function lyrical_colors() {
 				pre,
 				code,
 				table th, table td,
-				abbr, acronym,
+				acronym,
 				blockquote cite,
 				blockquote cite a, blockquote cite a:visited,
 				blockquote, blockquote p,

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 18:35+0100\n"
+"POT-Creation-Date: 2016-08-03 21:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:12
-msgid "Site Info"
+#: functions.php:14
+msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:75
 msgid "Hero"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:77
 msgid "The hero appears in the hero widget area on the front page"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:135
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:166
 msgid "Secondary Font"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:217
+msgid "Content Background Color"
+msgstr ""
+
+#: functions.php:261
 msgid "Header Background Color"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:271
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:229
-msgid "Menu Background Color"
+#: functions.php:281
+msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:291
+msgid "Site Info Background Color"
+msgstr ""
+
+#: functions.php:301
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:344
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:270
+#: functions.php:357
 msgid "Secondary Text Color"
 msgstr ""
 
-#: functions.php:280
-msgid "Other Accent Color"
-msgstr ""
-
-#: functions.php:304
+#: functions.php:401
 msgid "Schrapel"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:414
 msgid "Wallace"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:427
 msgid "Marley"
 msgstr ""
 

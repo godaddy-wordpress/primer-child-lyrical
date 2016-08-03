@@ -40,9 +40,10 @@ $menu-background-color: #202223;
 	a {
 		color: $primary-color;
 		display: block;
-		font-weight: bold;
+		font-weight: normal;
 		text-transform: uppercase;
 		padding: .75em 1em;
+		font-size: 16px;
 	}
 
 	.sub-menu a {
@@ -82,13 +83,13 @@ $menu-background-color: #202223;
 
 			a {
 				color: #fff;
-				border-bottom: 3px solid transparent;
+				border-bottom: 2px solid transparent;
 				padding: 0;
 			}
 
 			&.current-menu-item a,
 			a:hover {
-				border-bottom: 3px solid #fff;
+				border-bottom: 2px solid #fff;
 			}
 
 		}
@@ -98,11 +99,13 @@ $menu-background-color: #202223;
 			position: absolute;
 			width: 250px;
 			z-index: 100;
-			background-color: $menu-background-color;
+			padding-top: 0.5em;
 
 			li {
+				background-color: $menu-background-color;
 				float: none;
 				position: relative;
+				margin: 0;
 
 				&.menu-item-has-children > a:after {
 					width: 0;
