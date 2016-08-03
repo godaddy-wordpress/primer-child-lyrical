@@ -38,7 +38,7 @@
 
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'site-info' ) ) :  ?>
+			<?php if ( has_nav_menu( 'footer' ) ) :  ?>
 
 				<div class="site-info-menu-container">
 
@@ -48,7 +48,7 @@
 
 						wp_nav_menu(
 							array(
-								'theme_location' => 'site-info',
+								'theme_location' => 'footer',
 								'depth'          => 1,
 							)
 						);

@@ -5,16 +5,16 @@
  *
  * @link https://codex.wordpress.org/Function_Reference/register_nav_menus
  */
-function lyrical_register_site_info_menu() {
+function lyrical_register_footer_menu() {
 
 	register_nav_menus(
 		array(
-			'site-info' => esc_html__( 'Site Info', 'lyrical' ),
+			'footer' => esc_html__( 'Footer', 'lyrical' ),
 		)
 	);
 
 }
-add_action( 'after_setup_theme', 'lyrical_register_site_info_menu' );
+add_action( 'after_setup_theme', 'lyrical_register_footer_menu' );
 
 /**
  * Add image size for hero image
