@@ -1,20 +1,23 @@
 <?php
 
 /**
- * Register custom Custom Navigation Menus.
+ * Add a footer menu.
  *
- * @link https://codex.wordpress.org/Function_Reference/register_nav_menus
+ * @action primer_nav_menus
+ * @since 1.0.0
+ * @param $nav_menus
+ * @return array
  */
-function lyrical_register_footer_menu() {
+function lyrical_update_nav_menus( $nav_menus ) {
 
-	register_nav_menus(
-		array(
-			'footer' => esc_html__( 'Footer', 'lyrical' ),
-		)
+	$new_nav_menus = array(
+		'footer' => esc_html__( 'Footer Menu', 'scribbles' ),
 	);
 
+	return array_merge( $nav_menus, $new_nav_menus );
+
 }
-add_action( 'after_setup_theme', 'lyrical_register_footer_menu' );
+add_filter( 'primer_nav_menus', 'lyrical_update_nav_menus' );
 
 /**
  * Add image size for hero image
