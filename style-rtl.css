@@ -1443,8 +1443,8 @@ a {
       .main-navigation li a {
         color: #fff;
         border-bottom: 2px solid transparent;
-        padding: 0; }
-      .main-navigation li.current-menu-item a, .main-navigation li a:hover {
+        padding: 0 0 5px; }
+      .main-navigation li.current-menu-item > a, .main-navigation li > a:hover {
         border-bottom: 2px solid #fff; }
     .main-navigation .sub-menu {
       display: none;
@@ -2188,20 +2188,25 @@ embed, iframe, object {
 .no-max-width .site-header-wrapper, .no-max-width .hero-wrapper, .no-max-width .site-footer-inner, .no-max-width .site-info {
   max-width: none; }
 
-body.layout-one-column-full #content {
-  max-width: 100%;
-  margin: 0;
-  padding: 0; }
-body.page-template-page-builder #content {
-  padding: 0;
-  max-width: none; }
+#content {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  body.layout-one-column-full #content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+  body.page-template-page-builder #content, body.page-template-page-builder-no-header #content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0; }
 
 body.layout-one-column-full #primary {
   margin: 0;
   padding: 0;
   max-width: none;
   width: 100%; }
-body.page-template-page-builder #primary {
+body.page-template-page-builder #primary, body.page-template-page-builder-no-header #primary {
+  max-width: 100%;
   width: 100%;
   padding: 0;
   float: none; }
@@ -2218,8 +2223,8 @@ body.layout-one-column-narrow #content {
 
 .site-title {
   font-family: 'Playfair Display', "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  font-size: 1.125rem;
   font-weight: 900;
   color: #fff;
   line-height: 1;
@@ -2228,12 +2233,12 @@ body.layout-one-column-narrow #content {
     color: #fff; }
   @media only screen and (min-width:40.063em) {
     .site-title {
-      font-size: 1.75rem;
-      font-size: 1.75rem; } }
+      font-size: 1.375rem;
+      font-size: 1.375rem; } }
   @media only screen and (min-width:61.063em) {
     .site-title {
-      font-size: 2.375rem;
-      font-size: 2.375rem; } }
+      font-size: 1.75rem;
+      font-size: 1.75rem; } }
 
 .site-header .custom-logo {
   width: auto;
@@ -2246,20 +2251,14 @@ body.layout-one-column-narrow #content {
       max-height: 62px; } }
 
 .site-description {
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 .site-header {
   letter-spacing: -0.01em;
-  background: #62d7db;
-  padding-bottom: 235px;
-  margin-bottom: -235px; }
-
-body.home .site-header, body.page-template-page-builder .site-header {
-  padding-bottom: 0;
-  margin-bottom: 40px; }
+  background: #62d7db; }
 
 .site-header-wrapper {
   padding: 15px 0;
@@ -2326,6 +2325,23 @@ body.home .site-header, body.page-template-page-builder .site-header {
     font-size: 0.8125rem; }
     .featured-content .entry-header .read-more:hover {
       background-color: #39cfd1; }
+
+.page-title-container {
+  clear: both; }
+  .page-title-container:before, .page-title-container:after {
+    content: " ";
+    display: table; }
+  .page-title-container:after {
+    clear: both; }
+  .page-title-container .page-title, .page-title-container .archive-title {
+    color: white;
+    font-weight: 200;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; }
 
 .hero {
   clear: both;

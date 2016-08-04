@@ -67,7 +67,7 @@ $menu-background-color: #202223;
 		clear: none;
 		float: right;
 		margin-top: 15px;
-		
+
 		.menu {
 			position: relative;
 		}
@@ -84,11 +84,11 @@ $menu-background-color: #202223;
 			a {
 				color: #fff;
 				border-bottom: 2px solid transparent;
-				padding: 0;
+				padding: 0 0 5px;
 			}
 
-			&.current-menu-item a,
-			a:hover {
+			&.current-menu-item > a,
+			> a:hover {
 				border-bottom: 2px solid #fff;
 			}
 

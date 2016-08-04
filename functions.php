@@ -1,5 +1,26 @@
 <?php
 
+
+/**
+ * Move titles above menu templates.
+ *
+ * @since 1.0.0
+ */
+function lyrical_remove_titles(){
+
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+	if( ! is_front_page() ):
+		add_action( 'primer_header', 'primer_add_page_builder_template_title' );
+		add_action( 'primer_header', 'primer_add_blog_title' );
+		add_action( 'primer_header', 'primer_add_archive_title' );
+	endif;
+
+}
+add_action( 'init', 'lyrical_remove_titles' );
+
 /**
  * Add a footer menu.
  *
@@ -301,7 +322,7 @@ function lyrical_colors() {
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#62d7db',
 			'css'     => array(
-				'a, a:visited, 
+				'a, a:visited,
 				.social-menu a,
 				.post-format,
 				.more-link,
