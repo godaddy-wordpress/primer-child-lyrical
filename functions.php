@@ -212,7 +212,7 @@ function lyrical_colors() {
 	return array(
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'.site-title a, .site-title a:visited,
 				.menu-toggle div,
@@ -221,7 +221,7 @@ function lyrical_colors() {
 				),
 				'.main-navigation li.current-menu-item a, .main-navigation li a:hover' => array(
 					'border-color' => '%1$s',
-				)
+				),
 			),
 			'rgba_css' => array(
 				'.site-title a:hover, .site-title a:visited:hover' => array(
@@ -231,12 +231,12 @@ function lyrical_colors() {
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#f7f7f7',
+			'default' => '#eaeaea',
 		),
 		array(
 			'name'    => 'content_background_color',
 			'label'   => esc_html__( 'Content Background Color', 'primer' ),
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'.hentry,
 				.widget,
@@ -280,7 +280,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'header_background_color',
 			'label'   => esc_html__( 'Header Background Color', 'primer' ),
-			'default' => '#191c1d',
+			'default' => '#eaeaea',
 			'css'     => array(
 				'.site-header' => array(
 					'background-color' => '%1$s',
@@ -290,7 +290,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'tagline_text_color',
 			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'.site-description' => array(
 					'color' => '%1$s',
@@ -300,7 +300,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'footer_background_color',
 			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
-			'default' => '#111',
+			'default' => '#141414',
 			'css'     => array(
 				'.site-footer' => array(
 					'background-color' => '%1$s',
@@ -310,7 +310,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'site_info_background_color',
 			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
-			'default' => '#191c1d',
+			'default' => '#2d2d2d',
 			'css'     => array(
 				'.site-info-wrapper' => array(
 					'background-color' => '%1$s',
@@ -320,7 +320,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'link_color',
 			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#62d7db',
+			'default' => '#4c99ba',
 			'css'     => array(
 				'a, a:visited,
 				.social-menu a,
@@ -363,7 +363,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'main_text_color',
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
-			'default' => '#202223',
+			'default' => '#111111',
 			'css'     => array(
 				'body,
 				h1, h2, h3, h4, h5, h6,
@@ -376,7 +376,7 @@ function lyrical_colors() {
 		array(
 			'name'    => 'secondary_text_color',
 			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-			'default' => '#8f8e8f',
+			'default' => '#111111',
 			'css'     => array(
 				'h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 				h2, h4,
@@ -418,43 +418,34 @@ add_action( 'primer_colors', 'lyrical_colors' );
 function lyrical_color_schemes() {
 
 	return array(
-		'dark' => array(
-			'label'  => esc_html__( 'Schrapel', 'ascension' ),
+		'lyrical-2' => array(
+			'label'  => esc_html__( 'Lyrical 2', 'ascension' ),
 			'colors' => array(
-				'header_textcolor'        => '#ffffff',
-				'background_color'        => '#333333',
-				'header_background_color' => '#333333',
-				'tagline_text_color'      => '#999999',
-				'menu_background_color'   => '#444444',
-				'link_color'              => '#589ef2',
-				'main_text_color'         => '#e5e5e5',
-				'secondary_text_color'    => '#c1c1c1',
+				'header_textcolor'              => '#efece4',
+				'background_color'              => '#efece4',
+				'content_background_color'      => '#FFFFFF',
+				'header_background_color'       => '#eaeaea',
+				'tagline_text_color'            => '#ffffff',
+				'footer_background_color'       => '#141414',
+				'site_info_background_color'    => '#2d2d2d',
+				'link_color'                    => '#62d7db',
+				'main_text_color'               => '#111111',
+				'secondary_text_color'          => '#111111',
 			),
 		),
-		'muted' => array(
-			'label'  => esc_html__( 'Wallace', 'ascension' ),
+		'lyrical-3' => array(
+			'label'  => esc_html__( 'Lyrical 3', 'ascension' ),
 			'colors' => array(
-				'header_textcolor'        => '#5a6175',
-				'background_color'        => '#d5d6e0',
-				'header_background_color' => '#d5d6e0',
-				'tagline_text_color'      => '#888c99',
-				'menu_background_color'   => '#5a6175',
-				'link_color'              => '#3e4c75',
-				'main_text_color'         => '#4f5875',
-				'secondary_text_color'    => '#888c99',
-			),
-		),
-		'red' => array(
-			'label'  => esc_html__( 'Marley', 'ascension' ),
-			'colors' => array(
-				'header_textcolor'        => '#402b30',
-				'background_color'        => '#f9f9f9',
-				'header_background_color' => '#f9f9f9',
-				'tagline_text_color'      => '#999999',
-				'menu_background_color'   => '#640c1f',
-				'link_color'              => '#640c1f',
-				'main_text_color'         => '#402b30',
-				'secondary_text_color'    => '#222222',
+				'header_textcolor'              => '#ffffff',
+				'background_color'              => '#333333',
+				'content_background_color'      => '#333333',
+				'header_background_color'       => '#ffffff',
+				'tagline_text_color'            => '#ffffff',
+				'footer_background_color'       => '#333333',
+				'site_info_background_color'    => '#333333',
+				'link_color'                    => '#18a370',
+				'main_text_color'               => '#a0a0a0',
+				'secondary_text_color'          => '#a0a0a0',
 			),
 		),
 	);
