@@ -1431,7 +1431,7 @@ a {
     display: block;
     clear: none;
     float: right;
-    margin-top: 15px; }
+    margin-top: 5px; }
     .main-navigation .menu {
       position: relative; }
     .main-navigation li {
@@ -1484,7 +1484,7 @@ a {
 
 @media only screen and (min-width:61.063em) {
   .main-navigation {
-    margin-top: 20px; } }
+    margin-top: 10px; } }
 
 /**
  * Site Info menu
