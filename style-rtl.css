@@ -1612,7 +1612,8 @@ a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative;
   box-sizing: content-box;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1em; }
 
 .widget {
   background-color: #fff;
