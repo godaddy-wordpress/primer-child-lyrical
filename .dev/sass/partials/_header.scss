@@ -32,19 +32,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	}
 }
 
-.site-header .custom-logo {
-	width: auto;
-	max-height: 40px;
-
-	@media #{$medium-up} {
-		max-height: 52px;
-	}
-
-	@media #{$large-up} {
-		max-height: 62px;
-	}
-}
-
 .site-description{
 	font-size: 14px;
 	color: #fff;
@@ -55,6 +42,36 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-header {
 	letter-spacing: -.01em;
 	background: $primary-color;
+
+	.custom-logo {
+		width: auto;
+		max-height: 40px;
+
+		@media #{$medium-up} {
+			max-height: 52px;
+		}
+
+		@media #{$large-up} {
+			max-height: 62px;
+		}
+	}
+
+	.page-title-container{
+		clear: both;
+		@include clearfix();
+
+		.page-title,
+		.archive-title{
+			color: white;
+			font-weight: 200;
+			margin-top: 3rem;
+			margin-bottom: 0;
+			text-align: center;
+			font-family: $sans-font-family;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
 }
 
 
@@ -167,23 +184,5 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 				background-color: darken($primary-color,10%);
 			}
 		}
-	}
-}
-
-
-.page-title-container{
-	clear: both;
-	@include clearfix();
-
-	.page-title,
-	.archive-title{
-		color: white;
-		font-weight: 200;
-		margin-top: 3rem;
-		margin-bottom: 0;
-		text-align: center;
-		font-family: $sans-font-family;
-		font-weight: bold;
-		text-transform: uppercase;
 	}
 }

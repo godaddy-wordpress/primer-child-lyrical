@@ -418,8 +418,8 @@ add_action( 'primer_colors', 'lyrical_colors' );
 function lyrical_color_schemes() {
 
 	return array(
-		'lyrical-2' => array(
-			'label'  => esc_html__( 'Lyrical 2', 'ascension' ),
+		'wallace' => array(
+			'label'  => esc_html__( 'Wallace', 'ascension' ),
 			'colors' => array(
 				'header_textcolor'              => '#efece4',
 				'background_color'              => '#efece4',
@@ -428,13 +428,13 @@ function lyrical_color_schemes() {
 				'tagline_text_color'            => '#ffffff',
 				'footer_background_color'       => '#141414',
 				'site_info_background_color'    => '#2d2d2d',
-				'link_color'                    => '#62d7db',
+				'link_color'                    => '#00d3db',
 				'main_text_color'               => '#111111',
 				'secondary_text_color'          => '#111111',
 			),
 		),
-		'lyrical-3' => array(
-			'label'  => esc_html__( 'Lyrical 3', 'ascension' ),
+		'miller' => array(
+			'label'  => esc_html__( 'Miller', 'ascension' ),
 			'colors' => array(
 				'header_textcolor'              => '#ffffff',
 				'background_color'              => '#333333',
@@ -446,6 +446,21 @@ function lyrical_color_schemes() {
 				'link_color'                    => '#18a370',
 				'main_text_color'               => '#a0a0a0',
 				'secondary_text_color'          => '#a0a0a0',
+			),
+		),
+		'Garand' => array(
+			'label'  => esc_html__( 'Garand', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'              => '#ffffff',
+				'background_color'              => '#c9e8d1',
+				'content_background_color'      => '#ffffff',
+				'header_background_color'       => '#344939',
+				'tagline_text_color'            => '#d4f4dc',
+				'footer_background_color'       => '#344939',
+				'site_info_background_color'    => '#446053',
+				'link_color'                    => '#18a370',
+				'main_text_color'               => '#243a2a',
+				'secondary_text_color'          => '#243a2a',
 			),
 		),
 	);

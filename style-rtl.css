@@ -1613,7 +1613,8 @@ a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative;
   box-sizing: content-box;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1em; }
 
 .widget {
   background-color: #fff;
@@ -2241,16 +2242,6 @@ body.layout-one-column-narrow #content {
       font-size: 1.75rem;
       font-size: 1.75rem; } }
 
-.site-header .custom-logo {
-  width: auto;
-  max-height: 40px; }
-  @media only screen and (min-width:40.063em) {
-    .site-header .custom-logo {
-      max-height: 52px; } }
-  @media only screen and (min-width:61.063em) {
-    .site-header .custom-logo {
-      max-height: 62px; } }
-
 .site-description {
   font-size: 14px;
   color: #fff;
@@ -2260,6 +2251,31 @@ body.layout-one-column-narrow #content {
 .site-header {
   letter-spacing: -0.01em;
   background: #62d7db; }
+  .site-header .custom-logo {
+    width: auto;
+    max-height: 40px; }
+    @media only screen and (min-width:40.063em) {
+      .site-header .custom-logo {
+        max-height: 52px; } }
+    @media only screen and (min-width:61.063em) {
+      .site-header .custom-logo {
+        max-height: 62px; } }
+  .site-header .page-title-container {
+    clear: both; }
+    .site-header .page-title-container:before, .site-header .page-title-container:after {
+      content: " ";
+      display: table; }
+    .site-header .page-title-container:after {
+      clear: both; }
+    .site-header .page-title-container .page-title, .site-header .page-title-container .archive-title {
+      color: white;
+      font-weight: 200;
+      margin-top: 3rem;
+      margin-bottom: 0;
+      text-align: center;
+      font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase; }
 
 .site-header-wrapper {
   padding: 15px 0;
@@ -2326,23 +2342,6 @@ body.layout-one-column-narrow #content {
     font-size: 0.8125rem; }
     .featured-content .entry-header .read-more:hover {
       background-color: #39cfd1; }
-
-.page-title-container {
-  clear: both; }
-  .page-title-container:before, .page-title-container:after {
-    content: " ";
-    display: table; }
-  .page-title-container:after {
-    clear: both; }
-  .page-title-container .page-title, .page-title-container .archive-title {
-    color: white;
-    font-weight: 200;
-    margin-top: 3rem;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase; }
 
 .hero {
   clear: both;
