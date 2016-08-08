@@ -1476,7 +1476,8 @@ a {
           background-color: rgba(0, 0, 0, 0.1); }
       .main-navigation .sub-menu .sub-menu {
         left: 100%;
-        top: 0; }
+        top: 0;
+        padding-top: 0; }
       .main-navigation .sub-menu a, .main-navigation .sub-menu .sub-menu a {
         color: #62d7db;
         padding: 0.75em 1em;
