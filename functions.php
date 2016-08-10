@@ -327,7 +327,7 @@ function lyrical_colors() {
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#4c99ba',
 			'css'     => array(
-				'a, a:visited,
+				'#content a, #content a:visited,
 				.social-menu a,
 				.post-format,
 				.more-link,
@@ -349,7 +349,7 @@ function lyrical_colors() {
 				),
 			),
 			'rgba_css' => array(
-				'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active,
+				'#content a:hover, #content a:visited:hover, #content a:focus, #content a:visited:focus, #content a:active, #content a:visited:active,
 				.social-menu a:hover,
 				.featured-content .read-more:hover,
 				.site-footer a:hover,
