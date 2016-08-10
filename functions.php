@@ -82,33 +82,38 @@ function lyrical_update_custom_header_args( $args ) {
 add_filter( 'primer_custom_header_args', 'lyrical_update_custom_header_args' );
 
 /**
- * Add additional sidebars
+ * Register sidebar areas.
  *
- * @action primer_register_sidebars
- * @since 1.0.0
- * @param $sidebars
+ * @filter primer_sidebars
+ * @since  1.0.0
+ *
+ * @param  array $sidebars
+ *
  * @return array
  */
-function lyrical_add_sidebars( $sidebars ) {
+function lyrical_sidebars( $sidebars ) {
 
-	$new_sidebars = array(
-		array(
-			'name'          => __( 'Hero', 'ascension' ),
-			'id'            => 'hero',
-			'description'   => __( 'The hero appears in the hero widget area on the front page', 'lyrical' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		),
+	$sidebars[] = array(
+		'name'          => esc_html__( 'Hero', 'ascension' ),
+		'id'            => 'hero',
+		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'ascension' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	);
 
-	return array_merge( $sidebars, $new_sidebars );
+	return $sidebars;
 
 }
-add_filter( 'primer_register_sidebars', 'lyrical_add_sidebars' );
+add_filter( 'primer_sidebars', 'lyrical_sidebars' );
 
-function remove_hero_if_not_home() {
+/**
+ * Remove hero if we're not on the front page.
+ *
+ * @since 1.0.0
+ */
+function remove_hero_if_not_front_page() {
 
 	if ( ! is_front_page() ) {
 
@@ -117,7 +122,7 @@ function remove_hero_if_not_home() {
 	}
 
 }
-add_action( 'primer_before_header', 'remove_hero_if_not_home' );
+add_action( 'primer_before_header', 'remove_hero_if_not_front_page' );
 
 /**
  * Get header image with image size
