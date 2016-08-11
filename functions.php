@@ -22,7 +22,24 @@ function lyrical_move_elements() {
 	}
 
 }
-add_action( 'template_redirect', 'lyrical_move_elements' );
+add_action( 'after_setup_theme', 'lyrical_move_elements' );
+
+/**
+ * Display hero element on the front page.
+ *
+ * @action template_redirect
+ * @since  1.0.0
+ */
+function lyrical_add_hero(){
+
+	if( is_front_page() ){
+
+		do_action( 'primer_hero' );
+
+	}
+
+}
+add_action( 'primer_header', 'lyrical_add_hero', 9999 );
 
 /**
  * Add a footer menu.

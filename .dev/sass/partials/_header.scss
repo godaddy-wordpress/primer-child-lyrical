@@ -89,9 +89,10 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 
 .site-header-inner {
 	padding: 0;
+	@extend .columns;
+	@extend .large-12;
 
 	@media #{$medium-up} {
-		@include grid-column(12);
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
 	}

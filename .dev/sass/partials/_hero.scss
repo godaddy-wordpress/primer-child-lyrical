@@ -1,73 +1,70 @@
-.hero {
-  clear: both;
-  padding-top: 55px;
+.hero-wrapper {
+	@extend .row;
+	@include clearfix;
+	padding-top: 55px;
 
-  .hero-wrapper {
-    @extend .row;
-  }
 
-  .widget {
-    padding: 0;
-    background: none;
-  }
+	.widget {
+		padding: 0;
+		background: none;
+	}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  cite,
-  table,
-  ul,
-  li,
-  dd,
-  dt,
-  address,
-  code,
-  pre{
-    color: #fff;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	cite,
+	table,
+	ul,
+	li,
+	dd,
+	dt,
+	address,
+	code,
+	pre{
+		color: #fff;
+	}
 
-  blockquote.large {
-    border: none;
-    padding: 50px 0;
+	blockquote.large {
+		border: none;
+		padding: 50px 0;
 
-    p {
-      font-size: rem-calc(33);
-      font-weight: 400;
-      font-family: 'Playfair Display', $sans-font-family;
-      font-style: normal;
-      text-align: center;
-    }
+		p {
+			font-size: rem-calc(33);
+			font-weight: 400;
+			font-family: 'Playfair Display', $sans-font-family;
+			font-style: normal;
+			text-align: center;
+		}
 
-    cite {
-      font-style: normal;
-      text-transform: uppercase;
-      font-family: $sans-font-family;
-      font-size: rem-calc(14);
-      text-align: center;
-    }
-  }
+		cite {
+			font-style: normal;
+			text-transform: uppercase;
+			font-family: $sans-font-family;
+			font-size: rem-calc(14);
+			text-align: center;
+		}
+	}
 
-  @media #{$large-up} {
-    .widget_text {
-      @include clearfix;
+	@media #{$large-up} {
+		.widget_text {
+			@include clearfix;
 
-      blockquote.large {
-        float: right;
-        width: 50%;
-        p {
-          font-size: rem-calc(48);
-          text-align: auto;
-        }
-        cite {
-          font-size: rem-calc(20);
-        }
-      }
+			blockquote.large {
+				float: right;
+				width: 50%;
+				p {
+					font-size: rem-calc(48);
+					text-align: auto;
+				}
+				cite {
+					font-size: rem-calc(20);
+				}
+			}
 
-    }
-  }
-
+		}
+	}
 }
