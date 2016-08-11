@@ -1,85 +1,102 @@
 <?php
 
-
 /**
- * Move titles above menu templates.
+ * Move some elements around.
  *
- * @since 1.0.0
+ * @action template_redirect
+ * @since  1.0.0
  */
-function lyrical_remove_titles(){
+function lyrical_move_elements() {
 
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+	// Primary navigation
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
-	if( ! is_front_page() ):
-		add_action( 'primer_header', 'primer_add_page_builder_template_title' );
-		add_action( 'primer_header', 'primer_add_blog_title' );
-		add_action( 'primer_header', 'primer_add_archive_title' );
-	endif;
+	// Page titles
+	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	add_action( 'primer_header', 'primer_add_page_title' );
 
 }
-add_action( 'init', 'lyrical_remove_titles' );
+add_action( 'template_redirect', 'lyrical_move_elements' );
 
 /**
  * Add a footer menu.
  *
- * @action primer_nav_menus
- * @since 1.0.0
- * @param $nav_menus
+ * @filter primer_nav_menus
+ * @since  1.0.0
+ *
+ * @param  array $nav_menus
+ *
  * @return array
  */
 function lyrical_update_nav_menus( $nav_menus ) {
 
-	$new_nav_menus = array(
-		'footer' => esc_html__( 'Footer Menu', 'scribbles' ),
-	);
+	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'lyrical' );
 
-	return array_merge( $nav_menus, $new_nav_menus );
+	return $nav_menus;
 
 }
 add_filter( 'primer_nav_menus', 'lyrical_update_nav_menus' );
 
 /**
- * Add image size for hero image
+ * Set images sizes.
  *
- * @link https://codex.wordpress.org/Function_Reference/add_image_size
+ * @filter primer_image_sizes
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
  */
-function lyrical_add_image_size() {
+function lyrical_image_sizes( $sizes ) {
 
-	add_image_size( 'hero', 2400, 1320, array( 'center', 'center' ) );
+	$sizes['primer-hero']['width']  = 2400;
+	$sizes['primer-hero']['height'] = 1300;
+
+	return $sizes;
 
 }
-add_action( 'after_setup_theme', 'lyrical_add_image_size' );
+add_filter( 'primer_image_sizes', 'lyrical_image_sizes' );
 
 /**
- * Move navigation from after_header to header
+ * Set custom logo args.
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_action
- * @link https://codex.wordpress.org/Function_Reference/add_action
- */
-function lyrical_move_navigation() {
-
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 9 );
-
-}
-add_action( 'after_setup_theme', 'lyrical_move_navigation', 10 );
-
-/**
- * Update custom header arguments
+ * @filter primer_custom_logo_args
+ * @since  1.0.0
  *
- * @param $args
- * @return mixed
+ * @param  array $args
+ *
+ * @return array
  */
-function lyrical_update_custom_header_args( $args ) {
+function lyrical_custom_logo_args( $args ) {
 
-	$args['width'] = 2400;
-	$args['height'] = 1320;
+	$args['width']  = 325;
+	$args['height'] = 100;
 
 	return $args;
+
 }
-add_filter( 'primer_custom_header_args', 'lyrical_update_custom_header_args' );
+add_filter( 'primer_custom_logo_args', 'lyrical_custom_logo_args' );
+
+/**
+ * Set custom header args.
+ *
+ * @action primer_custom_header_args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
+ * @return array
+ */
+function lyrical_custom_header_args( $args ) {
+
+	$args['width']  = 2400;
+	$args['height'] = 1300;
+
+	return $args;
+
+}
+add_filter( 'primer_custom_header_args', 'lyrical_custom_header_args' );
 
 /**
  * Register sidebar areas.
@@ -109,114 +126,99 @@ function lyrical_sidebars( $sidebars ) {
 add_filter( 'primer_sidebars', 'lyrical_sidebars' );
 
 /**
- * Remove hero if we're not on the front page.
+ * Add styles to the header element.
  *
- * @since 1.0.0
+ * @param  string $css
+ *
+ * @return string
  */
-function remove_hero_if_not_front_page() {
+function lyrical_header_style_attribute( $css ) {
 
-	if ( ! is_front_page() ) {
+	if ( primer_has_hero_image() ) {
 
-		remove_action( 'primer_header', 'primer_add_hero', 10 );
+		$css = sprintf(
+			"background:url('%s') no-repeat top center; background-size: cover;",
+			esc_url( primer_get_hero_image() )
+		);
 
 	}
 
+	return $css;
+
 }
-add_action( 'primer_before_header', 'remove_hero_if_not_front_page' );
+add_action( 'primer_header_style_attr', 'lyrical_header_style_attribute' );
 
 /**
- * Get header image with image size
+ * Add hero content.
  *
- * @since 1.0.0
- * @return false|string
+ * @action primer_hero
+ * @since  1.0.0
  */
-function lyrical_get_header_image() {
+function lyrical_add_hero_content() {
 
-	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
-	$custom_header = get_custom_header();
+	get_template_part( 'templates/parts/hero-content' );
 
-	if ( ! empty( $custom_header->attachment_id ) ) {
-
-		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
-
-		if ( getimagesize( $image ) ) {
-			return $image;
-		}
-	}
-	return get_header_image();
 }
+add_action( 'primer_hero', 'lyrical_add_hero_content' );
 
 /**
- * Change font types.
+ * Display author avatar over the post thumbnail.
  *
- * @action primer_font_types
  * @since 1.0.0
+ */
+function lyrical_add_author_avatar() {
+
+	?>
+	<div class="avatar-container">
+
+		<?php echo get_avatar( get_the_author_meta( 'email' ), '128' ); ?>
+
+	</div>
+	<?php
+
+}
+add_action( 'primer_after_post_thumbnail', 'lyrical_add_author_avatar' );
+
+/**
+ * Set font types.
+ *
+ * @filter primer_font_types
+ * @since  1.0.0
+ *
+ * @param array $font_types
+ *
  * @return array
  */
-function lyrical_font_types() {
+function lyrical_font_types( $font_types ) {
 
-	return array(
-		array(
-			'name'    => 'primary_font',
-			'label'   => __( 'Primary Font', 'primer' ),
-			'default' => 'Open Sans',
-			'css'     => array(
-				'body,
-				h2, h3, h4, h5, h6,
-				blockquote,
-				button, a.button, input, select, textarea,
-				label,
-				legend,
-				.main-navigation,
-				.widget, .widget p, .widget ul, .widget ol,
-				.widget-title,
-				.entry-footer,
-				.entry-meta,
-				.event-meta, .sermon-meta, .location-meta, .person-meta,
-				.post-format,
-				.more-link,
-				.comment-list li .comment-author, .comment-list li .comment-metadata,
-				#respond,
-				.site-description,
-				.featured-content .entry-header .entry-title,
-				.featured-content .entry-header .read-more,
-				.hero blockquote.large cite,
-				.featured-content .entry-title,
-				.featured-content .read-more' => array(
-					'font-family' => '"%s", sans-serif',
-				),
-			),
-		),
-		array(
-			'name'    => 'secondary_font',
-			'label'   => __( 'Secondary Font', 'primer' ),
-			'default' => 'Playfair Display',
-			'css'     => array(
-				'h1,
-				.site-title,
-				.hero blockquote.large p
-				' => array(
-					'font-family' => '"%s", sans-serif',
-				),
-			),
+	$font_types['secondary_font']['default'] = 'Playfair Display';
+	$font_types['secondary_font']['css']     = array(
+		'h1,
+		.site-title,
+		.hero blockquote.large p' => array(
+			'font-family' => '"%s", sans-serif',
 		),
 	);
 
+	return $font_types;
+
 }
-add_action( 'primer_font_types', 'lyrical_font_types' );
+add_filter( 'primer_font_types', 'lyrical_font_types' );
 
 /**
- * Change colors
+ * Set colors.
  *
- * @action primer_colors
- * @since 1.0.0
+ * @filter primer_colors
+ * @since  1.0.0
+ *
+ * @param  array $colors
+ *
  * @return array
  */
-function lyrical_colors() {
+function lyrical_colors( $colors ) {
 
 	return array(
-		array(
-			'name'    => 'header_textcolor',
+		'header_textcolor' => array(
 			'default' => '#ffffff',
 			'css'     => array(
 				'.site-title a, .site-title a:visited,
@@ -234,12 +236,10 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'background_color',
+		'background_color' => array(
 			'default' => '#eaeaea',
 		),
-		array(
-			'name'    => 'content_background_color',
+		'content_background_color' => array(
 			'label'   => esc_html__( 'Content Background Color', 'primer' ),
 			'default' => '#ffffff',
 			'css'     => array(
@@ -271,7 +271,7 @@ function lyrical_colors() {
 				.featured-content .entry-header .entry-meta,
 				.featured-content .entry-header .entry-header-column,
 				.featured-content .entry-header, .featured-content .entry-header .entry-title, .featured-content .entry-header .entry-title a,
-				.gallery-caption,				' => array(
+				.gallery-caption' => array(
 					'color' => '%1$s',
 				),
 			),
@@ -282,8 +282,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'header_background_color',
+		'header_background_color' => array(
 			'label'   => esc_html__( 'Header Background Color', 'primer' ),
 			'default' => '#eaeaea',
 			'css'     => array(
@@ -292,8 +291,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'tagline_text_color',
+		'tagline_text_color' => array(
 			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
 			'default' => '#ffffff',
 			'css'     => array(
@@ -302,8 +300,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'footer_background_color',
+		'footer_background_color' => array(
 			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
 			'default' => '#141414',
 			'css'     => array(
@@ -312,8 +309,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'site_info_background_color',
+		'site_info_background_color' => array(
 			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
 			'default' => '#2d2d2d',
 			'css'     => array(
@@ -322,8 +318,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'link_color',
+		'link_color' => array(
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#4c99ba',
 			'css'     => array(
@@ -365,8 +360,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'main_text_color',
+		'main_text_color' => array(
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
 			'default' => '#111111',
 			'css'     => array(
@@ -378,8 +372,7 @@ function lyrical_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'secondary_text_color',
+		'secondary_text_color' => array(
 			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
 			'default' => '#111111',
 			'css'     => array(
@@ -408,66 +401,70 @@ function lyrical_colors() {
 				),
 			),
 		),
-
 	);
+
 }
-add_action( 'primer_colors', 'lyrical_colors' );
+add_filter( 'primer_colors', 'lyrical_colors' );
 
 /**
- * Change color schemes
+ * Set color schemes.
  *
- * @action primer_color_schemes
- * @since 1.0.0
+ * @filter primer_color_schemes
+ * @since  1.0.0
+ *
+ * @param  array $color_schemes
+ *
  * @return array
  */
-function lyrical_color_schemes() {
+function lyrical_color_schemes( $color_schemes ) {
 
 	return array(
 		'wallace' => array(
-			'label'  => esc_html__( 'Wallace', 'ascension' ),
+			'label'  => esc_html__( 'Wallace', 'lyrical' ),
 			'colors' => array(
-				'header_textcolor'              => '#efece4',
-				'background_color'              => '#efece4',
-				'content_background_color'      => '#FFFFFF',
-				'header_background_color'       => '#eaeaea',
-				'tagline_text_color'            => '#ffffff',
-				'footer_background_color'       => '#141414',
-				'site_info_background_color'    => '#2d2d2d',
-				'link_color'                    => '#00d3db',
-				'main_text_color'               => '#111111',
-				'secondary_text_color'          => '#111111',
+				'header_textcolor'           => '#efece4',
+				'background_color'           => '#efece4',
+				'content_background_color'   => '#ffffff',
+				'header_background_color'    => '#eaeaea',
+				'tagline_text_color'         => '#ffffff',
+				'footer_background_color'    => '#141414',
+				'site_info_background_color' => '#2d2d2d',
+				'link_color'                 => '#00d3db',
+				'main_text_color'            => '#111111',
+				'secondary_text_color'       => '#111111',
 			),
 		),
 		'miller' => array(
-			'label'  => esc_html__( 'Miller', 'ascension' ),
+			'label'  => esc_html__( 'Miller', 'lyrical' ),
 			'colors' => array(
-				'header_textcolor'              => '#ffffff',
-				'background_color'              => '#333333',
-				'content_background_color'      => '#333333',
-				'header_background_color'       => '#ffffff',
-				'tagline_text_color'            => '#ffffff',
-				'footer_background_color'       => '#333333',
-				'site_info_background_color'    => '#333333',
-				'link_color'                    => '#18a370',
-				'main_text_color'               => '#a0a0a0',
-				'secondary_text_color'          => '#a0a0a0',
+				'header_textcolor'           => '#ffffff',
+				'background_color'           => '#333333',
+				'content_background_color'   => '#333333',
+				'header_background_color'    => '#ffffff',
+				'tagline_text_color'         => '#ffffff',
+				'footer_background_color'    => '#333333',
+				'site_info_background_color' => '#333333',
+				'link_color'                 => '#18a370',
+				'main_text_color'            => '#a0a0a0',
+				'secondary_text_color'       => '#a0a0a0',
 			),
 		),
-		'Garand' => array(
-			'label'  => esc_html__( 'Garand', 'ascension' ),
+		'garand' => array(
+			'label'  => esc_html__( 'Garand', 'lyrical' ),
 			'colors' => array(
-				'header_textcolor'              => '#ffffff',
-				'background_color'              => '#c9e8d1',
-				'content_background_color'      => '#ffffff',
-				'header_background_color'       => '#344939',
-				'tagline_text_color'            => '#d4f4dc',
-				'footer_background_color'       => '#344939',
-				'site_info_background_color'    => '#446053',
-				'link_color'                    => '#18a370',
-				'main_text_color'               => '#243a2a',
-				'secondary_text_color'          => '#243a2a',
+				'header_textcolor'           => '#ffffff',
+				'background_color'           => '#c9e8d1',
+				'content_background_color'   => '#ffffff',
+				'header_background_color'    => '#344939',
+				'tagline_text_color'         => '#d4f4dc',
+				'footer_background_color'    => '#344939',
+				'site_info_background_color' => '#446053',
+				'link_color'                 => '#18a370',
+				'main_text_color'            => '#243a2a',
+				'secondary_text_color'       => '#243a2a',
 			),
 		),
 	);
+
 }
-add_action( 'primer_color_schemes', 'lyrical_color_schemes' );
+add_filter( 'primer_color_schemes', 'lyrical_color_schemes' );
