@@ -14,7 +14,12 @@ function lyrical_move_elements() {
 
 	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
-	add_action( 'primer_header', 'primer_add_page_title' );
+
+	if ( primer_has_hero_image() ) {
+
+		add_action( 'primer_header', 'primer_add_page_title' );
+
+	}
 
 }
 add_action( 'template_redirect', 'lyrical_move_elements' );
