@@ -126,7 +126,7 @@ body.archive .archive-header {
 	padding-bottom: 1rem;
 	font-size: .9em;
 	font-family: $sans-font-family;
-	@extend .clearfix;
+	@include clearfix;
 
 	i{
 		vertical-align: middle;

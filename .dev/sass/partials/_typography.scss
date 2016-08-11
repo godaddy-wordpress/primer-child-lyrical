@@ -186,7 +186,6 @@ $align-class-breakpoints:
 	margin-top: $subheader-top-margin;
 	margin-bottom: $subheader-bottom-margin;
 }
-@include exports("type") {
 	@if $include-html-type-classes {
 		// Responsive Text alignment
 		@include align-classes;
@@ -554,4 +553,3 @@ $align-class-breakpoints:
 		}
 
 	}
-}
