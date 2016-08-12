@@ -51,14 +51,14 @@ add_action( 'primer_header', 'lyrical_add_hero', 9999 );
  *
  * @return array
  */
-function lyrical_update_nav_menus( $nav_menus ) {
+function lyrical_nav_menus( $nav_menus ) {
 
 	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'lyrical' );
 
 	return $nav_menus;
 
 }
-add_filter( 'primer_nav_menus', 'lyrical_update_nav_menus' );
+add_filter( 'primer_nav_menus', 'lyrical_nav_menus' );
 
 /**
  * Set images sizes.
@@ -132,9 +132,8 @@ add_filter( 'primer_custom_header_args', 'lyrical_custom_header_args' );
  */
 function lyrical_sidebars( $sidebars ) {
 
-	$sidebars[] = array(
+	$sidebars['hero'] = array(
 		'name'          => esc_html__( 'Hero', 'ascension' ),
-		'id'            => 'hero',
 		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -193,7 +192,7 @@ function lyrical_add_author_avatar() {
 	?>
 	<div class="avatar-container">
 
-		<?php echo get_avatar( get_the_author_meta( 'email' ), '128' ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'user_email' ), '128' ); ?>
 
 	</div>
 	<?php

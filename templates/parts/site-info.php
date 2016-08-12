@@ -1,11 +1,3 @@
-<?php
-/**
- * Displays the footer site info.
- *
- * @package Primer
- */
-?>
-
 <div class="site-info-wrapper">
 
 	<div class="site-info">
