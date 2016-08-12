@@ -2983,9 +2983,6 @@ body.layout-one-column-narrow #content {
 .site-header .site-title-wrapper {
   float: left;
   margin-left: 15px; }
-  @media only screen and (min-width: 40.063em) {
-    .site-header .site-title-wrapper {
-      margin: 0; } }
 
 .site-title {
   font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

@@ -3,9 +3,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-header .site-title-wrapper{
 	float: left;
 	margin-left: 15px;
-	@media #{$medium-up} {
-		margin: 0;
-	}
 }
 
 .site-title {
