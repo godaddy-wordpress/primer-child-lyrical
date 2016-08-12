@@ -22,7 +22,7 @@ function lyrical_move_elements() {
 	}
 
 }
-add_action( 'after_setup_theme', 'lyrical_move_elements' );
+add_action( 'template_redirect', 'lyrical_move_elements' );
 
 /**
  * Display hero element on the front page.
