@@ -25,78 +25,23 @@ function lyrical_move_elements() {
 add_action( 'template_redirect', 'lyrical_move_elements' );
 
 /**
- * Set header element style attribute.
+ * Set the default hero image description.
  *
- * @filter primer_header_style_attr
+ * @filter primer_default_hero_images
  * @since  1.0.0
  *
- * @return string
- */
-function lyrical_header_style_attr() {
-
-	return sprintf(
-		'background: url(%s) no-repeat top center; background-size: cover;',
-		primer_get_hero_image()
-	);
-
-}
-add_filter( 'primer_header_style_attr', 'lyrical_header_style_attr' );
-
-/**
- * Add a footer menu.
- *
- * @filter primer_nav_menus
- * @since  1.0.0
- *
- * @param  array $nav_menus
+ * @param  array $defaults
  *
  * @return array
  */
-function lyrical_nav_menus( $nav_menus ) {
+function lyrical_default_hero_images( $defaults ) {
 
-	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'lyrical' );
+	$defaults['default']['description'] = esc_html__( 'Surfing', 'lyrical' );
 
-	return $nav_menus;
-
-}
-add_filter( 'primer_nav_menus', 'lyrical_nav_menus' );
-
-/**
- * Display footer navigation menu in the footer.
- *
- * @action primer_site_info
- * @since  1.0.0
- */
-function lyrical_add_footer_navigation() {
-
-	if ( has_nav_menu( 'footer' ) ) {
-
-		get_template_part( 'templates/parts/footer-navigation' );
-
-	}
+	return $defaults;
 
 }
-add_action( 'primer_site_info', 'lyrical_add_footer_navigation', 6 );
-
-/**
- * Set images sizes.
- *
- * @filter primer_image_sizes
- * @since  1.0.0
- *
- * @param  array $sizes
- *
- * @return array
- */
-function lyrical_image_sizes( $sizes ) {
-
-	$sizes['primer-hero']['width']  = 2400;
-	$sizes['primer-hero']['height'] = 1300;
-
-	return $sizes;
-
-}
-add_filter( 'primer_image_sizes', 'lyrical_image_sizes' );
+add_filter( 'primer_default_hero_images', 'lyrical_default_hero_images' );
 
 /**
  * Set custom logo args.
@@ -117,49 +62,6 @@ function lyrical_custom_logo_args( $args ) {
 
 }
 add_filter( 'primer_custom_logo_args', 'lyrical_custom_logo_args' );
-
-/**
- * Set custom header args.
- *
- * @action primer_custom_header_args
- * @since  1.0.0
- *
- * @param  array $args
- *
- * @return array
- */
-function lyrical_custom_header_args( $args ) {
-
-	$args['width']  = 2400;
-	$args['height'] = 1300;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_header_args', 'lyrical_custom_header_args' );
-
-/**
- * Add styles to the header element.
- *
- * @param  string $css
- *
- * @return string
- */
-function lyrical_header_style_attribute( $css ) {
-
-	if ( primer_has_hero_image() ) {
-
-		$css = sprintf(
-			"background:url('%s') no-repeat top center; background-size: cover;",
-			esc_url( primer_get_hero_image() )
-		);
-
-	}
-
-	return $css;
-
-}
-add_action( 'primer_header_style_attr', 'lyrical_header_style_attribute' );
 
 /**
  * Display author avatar over the post thumbnail.
