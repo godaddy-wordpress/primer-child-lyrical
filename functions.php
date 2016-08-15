@@ -12,8 +12,14 @@ function lyrical_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
-	// Page titles (moved to hero)
+	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	if ( ! is_front_page() ) {
+
+		add_action( 'primer_hero', 'primer_add_page_title' );
+
+	}
 
 }
 add_action( 'template_redirect', 'lyrical_move_elements' );
@@ -35,23 +41,6 @@ function lyrical_header_style_attr() {
 
 }
 add_filter( 'primer_header_style_attr', 'lyrical_header_style_attr' );
-
-/**
- * Add hero content.
- *
- * @action primer_hero
- * @since  1.0.0
- */
-function lyrical_add_hero_content() {
-
-	if ( ! is_front_page() ) {
-
-		get_template_part( 'templates/parts/page-title' );
-
-	}
-
-}
-add_action( 'primer_hero', 'lyrical_add_hero_content' );
 
 /**
  * Add a footer menu.
