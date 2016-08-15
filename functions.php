@@ -62,6 +62,23 @@ function lyrical_nav_menus( $nav_menus ) {
 add_filter( 'primer_nav_menus', 'lyrical_nav_menus' );
 
 /**
+ * Display footer navigation menu in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function lyrical_add_footer_navigation() {
+
+	if ( has_nav_menu( 'footer' ) ) {
+
+		get_template_part( 'templates/parts/footer-navigation' );
+
+	}
+
+}
+add_action( 'primer_site_info', 'lyrical_add_footer_navigation', 6 );
+
+/**
  * Set images sizes.
  *
  * @filter primer_image_sizes
