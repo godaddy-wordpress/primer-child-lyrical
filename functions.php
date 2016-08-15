@@ -12,17 +12,46 @@ function lyrical_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
-	// Page titles
+	// Page titles (moved to hero)
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
 
-	if ( primer_has_hero_image() ) {
+}
+add_action( 'template_redirect', 'lyrical_move_elements' );
 
-		add_action( 'primer_header', 'primer_add_page_title' );
+/**
+ * Set header element style attribute.
+ *
+ * @filter primer_header_style_attr
+ * @since  1.0.0
+ *
+ * @return string
+ */
+function lyrical_header_style_attr() {
+
+	return sprintf(
+		'background: url(%s) no-repeat top center; background-size: cover;',
+		primer_get_hero_image()
+	);
+
+}
+add_filter( 'primer_header_style_attr', 'lyrical_header_style_attr' );
+
+/**
+ * Add hero content.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function lyrical_add_hero_content() {
+
+	if ( ! is_front_page() ) {
+
+		get_template_part( 'templates/parts/page-title' );
 
 	}
 
 }
-add_action( 'template_redirect', 'lyrical_move_elements' );
+add_action( 'primer_hero', 'lyrical_add_hero_content' );
 
 /**
  * Add a footer menu.
@@ -104,32 +133,6 @@ function lyrical_custom_header_args( $args ) {
 add_filter( 'primer_custom_header_args', 'lyrical_custom_header_args' );
 
 /**
- * Register sidebar areas.
- *
- * @filter primer_sidebars
- * @since  1.0.0
- *
- * @param  array $sidebars
- *
- * @return array
- */
-function lyrical_sidebars( $sidebars ) {
-
-	$sidebars['hero'] = array(
-		'name'          => esc_html__( 'Hero', 'lyrical' ),
-		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'lyrical' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	);
-
-	return $sidebars;
-
-}
-add_filter( 'primer_sidebars', 'lyrical_sidebars' );
-
-/**
  * Add styles to the header element.
  *
  * @param  string $css
@@ -151,19 +154,6 @@ function lyrical_header_style_attribute( $css ) {
 
 }
 add_action( 'primer_header_style_attr', 'lyrical_header_style_attribute' );
-
-/**
- * Add hero content.
- *
- * @action primer_hero
- * @since  1.0.0
- */
-function lyrical_add_hero_content() {
-
-	get_template_part( 'templates/parts/hero-content' );
-
-}
-add_action( 'primer_hero', 'lyrical_add_hero_content' );
 
 /**
  * Display author avatar over the post thumbnail.

@@ -1,12 +1,19 @@
-.hero-wrapper {
+.hero {
 	@extend .row;
 	@include clearfix;
 	padding-top: 55px;
 
+	.hero-inner {
+		padding: 3% 2em;
+	}
 
 	.widget {
 		padding: 0;
 		background: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	h1,
