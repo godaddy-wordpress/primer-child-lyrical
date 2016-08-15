@@ -1,74 +1,66 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Lyrical
+# Copyright (C) 2016
 # This file is distributed under the same license as the lyrical package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# GoDaddy Operating Company, LLC.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: lyrical 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 15:10-0400\n"
+"POT-Creation-Date: 2016-08-15 17:50-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: functions.php:39
-msgid "Footer Menu"
+msgid "Surfing"
 msgstr ""
 
-#: functions.php:119
-msgid "Hero"
-msgstr ""
-
-#: functions.php:120
-msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-
-#: functions.php:247
+#: functions.php:145
 msgid "Content Background Color"
 msgstr ""
 
-#: functions.php:290
+#: functions.php:188
 msgid "Header Background Color"
 msgstr ""
 
-#: functions.php:299
+#: functions.php:197
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:308
+#: functions.php:206
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:215
 msgid "Site Info Background Color"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:224
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:368
+#: functions.php:266
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:380
+#: functions.php:278
 msgid "Secondary Text Color"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:325
 msgid "Wallace"
 msgstr ""
 
-#: functions.php:442
+#: functions.php:340
 msgid "Miller"
 msgstr ""
 
-#: functions.php:457
+#: functions.php:355
 msgid "Garand"
 msgstr ""
