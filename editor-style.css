@@ -1136,3 +1136,7 @@ body.layout-one-column-narrow .entry-meta {
     font-size: .8em;
     color: #888;
     margin-bottom: 2em; }
+
+body {
+  margin: 20px;
+  background-color: #fff; }
