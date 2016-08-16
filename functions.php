@@ -93,19 +93,42 @@ add_action( 'primer_after_post_thumbnail', 'lyrical_add_author_avatar' );
  */
 function lyrical_font_types( $font_types ) {
 
-	$font_types['secondary_font']['default'] = 'Playfair Display';
-	$font_types['secondary_font']['css']     = array(
-		'h1,
+	unset( $font_types['header_font'] );
+
+	$overrides = array(
+
+		'primary_font' => array(
+			'default' => 'Raleway',
+			'css'     => array(
+				'body,
+				p,
+				ol li,
+				ul li,
+				dl dd,
+				.button' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
+		'secondary_font' => array(
+			'default' => 'Playfair Display',
+			'css'     => array(
+				'h1,
 		.site-title,
-		.hero blockquote.large p' => array(
-			'font-family' => '"%s", sans-serif',
+		.hero blockquote p' => array(
+					'font-family' => '"%1$s", serif',
+				),
+			),
 		),
 	);
 
-	return $font_types;
+	return primer_array_replace_recursive( $font_types, $overrides );
 
 }
 add_filter( 'primer_font_types', 'lyrical_font_types' );
+
+
+
 
 /**
  * Set colors.
