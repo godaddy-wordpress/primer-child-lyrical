@@ -6,9 +6,13 @@
 	.hero-inner {
 		padding: 3% 2em;
 
-		@media #{$large-up}{
-			float: right;
-			width: 50%;
+		.home &{
+
+			@media #{$large-up}{
+				float: right;
+				width: 50%;
+			}
+
 		}
 	}
 

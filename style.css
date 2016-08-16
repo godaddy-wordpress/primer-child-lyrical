@@ -3115,7 +3115,7 @@ body.layout-one-column-narrow #content {
   .hero .hero-inner {
     padding: 3% 2em; }
     @media only screen and (min-width: 61.063em) {
-      .hero .hero-inner {
+      .home .hero .hero-inner {
         float: right;
         width: 50%; } }
   @media only screen and (min-width: 61.063em) {
