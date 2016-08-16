@@ -2292,12 +2292,11 @@ a {
     list-style: none;
     margin: 0;
     padding: 0; }
-  .widget li a {
-    display: block;
-    padding: .5em 0;
-    padding: .5rem 0;
-    border-bottom: 1px solid #f7f7f7;
-    word-wrap: break-word; }
+  .widget li {
+    padding: .25em 0;
+    padding: .25rem 0; }
+    .widget li a {
+      word-wrap: break-word; }
   .widget > ul:last-child > li:last-child > a,
   .widget > div > ul:last-child > li:last-child > a {
     border-bottom: 0;
@@ -2330,16 +2329,13 @@ a {
   line-height: 1.5; }
 
 /* Recent Comments Widget */
-.widget_recent_comments li {
-  padding: .5em 0;
-  padding: .5rem 0;
-  border-bottom: 1px solid #f7f7f7; }
-  .widget_recent_comments li:last-child {
-    border-bottom: 0;
-    padding-bottom: 0; }
-  .widget_recent_comments li a {
-    border: 0;
-    display: inline; }
+.widget_recent_comments li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0; }
+
+.widget_recent_comments li a {
+  border: 0;
+  display: inline; }
 
 /* Calendar Widget */
 .widget_calendar {
@@ -2416,11 +2412,6 @@ a {
 .widget_recent_entries li a {
   border-bottom: 0;
   padding: 0; }
-
-.widget_recent_entries li {
-  padding: .5em 0;
-  padding: .5rem 0;
-  border-bottom: 1px solid #f7f7f7; }
 
 .widget_recent_entries .post-date {
   font-size: 0.875rem;
@@ -3011,7 +3002,9 @@ body.layout-one-column-narrow #content {
 
 .site-header {
   letter-spacing: -.01em;
-  background: #62d7db; }
+  background: #62d7db;
+  -webkit-background-size: cover;
+  background-size: cover; }
   .site-header .custom-logo {
     width: auto;
     max-height: 40px; }
@@ -3116,11 +3109,28 @@ body.layout-one-column-narrow #content {
     clear: both; }
   .hero .hero-inner {
     padding: 3% 2em; }
+  .hero label, .hero input, .hero select, .hero textarea {
+    display: inline;
+    width: auto; }
   .hero .widget {
-    padding: 0;
-    background: none; }
-    .hero .widget:last-child {
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: 300;
+    background-color: transparent; }
+    .hero .widget::last-child {
       margin-bottom: 0; }
+    @media screen and (max-width: 900px) {
+      .hero .widget {
+        font-size: 1.5em;
+        padding-right: 0; } }
+    .hero .widget blockquote {
+      color: white; }
+    .hero .widget ul, .hero .widget ol {
+      padding-left: 0; }
+      .hero .widget ul li, .hero .widget ol li {
+        list-style: none; }
+    .hero .widget input, .hero .widget select, .hero .widget textarea {
+      color: #999; }
   .hero h1,
   .hero h2,
   .hero h3,

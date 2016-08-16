@@ -39,6 +39,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 .site-header {
 	letter-spacing: -.01em;
 	background: $primary-color;
+	background-size: cover;
 
 	.custom-logo {
 		width: auto;

@@ -7,12 +7,40 @@
 		padding: 3% 2em;
 	}
 
-	.widget {
-		padding: 0;
-		background: none;
+	label, input, select, textarea {
+		display: inline;
+		width: auto;
+	}
 
-		&:last-child {
+	.widget {
+		margin-bottom: 1em;
+		font-size: 2em;
+		font-weight: 300;
+		background-color: transparent;
+
+		&::last-child {
 			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 900px) {
+			font-size: 1.5em;
+			padding-right: 0;
+		}
+
+		blockquote{
+			color: white;
+		}
+
+		ul, ol {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+			}
+		}
+
+		input, select, textarea {
+			color: #999;
 		}
 	}
 
