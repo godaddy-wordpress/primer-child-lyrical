@@ -9,6 +9,8 @@ $menu-background-color: #202223;
 	padding: .5em 0.875em 1em;
 	cursor: pointer;
 	width: auto;
+	position: relative;
+	z-index: 9999;
 
 	div {
 		background: #fff;

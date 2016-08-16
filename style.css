@@ -2011,7 +2011,9 @@ a {
   float: right;
   padding: .5em 0.875em 1em;
   cursor: pointer;
-  width: auto; }
+  width: auto;
+  position: relative;
+  z-index: 9999; }
   .menu-toggle div {
     background: #fff;
     height: 4px;
@@ -3109,6 +3111,21 @@ body.layout-one-column-narrow #content {
     clear: both; }
   .hero .hero-inner {
     padding: 3% 2em; }
+    @media only screen and (min-width: 61.063em) {
+      .hero .hero-inner {
+        float: right;
+        width: 50%; } }
+  @media only screen and (min-width: 61.063em) {
+    .hero .widget_text:before, .hero .widget_text:after {
+      content: " ";
+      display: table; }
+    .hero .widget_text:after {
+      clear: both; }
+    .hero .widget_text blockquote.large p {
+      font-size: 3rem;
+      text-align: auto; }
+    .hero .widget_text blockquote.large cite {
+      font-size: 1.25rem; } }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
@@ -3116,13 +3133,15 @@ body.layout-one-column-narrow #content {
     margin-bottom: 1em;
     font-size: 2em;
     font-weight: 300;
-    background-color: transparent; }
+    background-color: transparent;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 1.5em; }
     .hero .widget::last-child {
       margin-bottom: 0; }
-    @media screen and (max-width: 900px) {
+    @media only screen and (min-width: 40.063em) {
       .hero .widget {
-        font-size: 1.5em;
-        padding-right: 0; } }
+        font-size: 1.5em; } }
     .hero .widget blockquote {
       color: white; }
     .hero .widget ul, .hero .widget ol {
@@ -3163,20 +3182,6 @@ body.layout-one-column-narrow #content {
       font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 0.875rem;
       text-align: center; }
-  @media only screen and (min-width: 61.063em) {
-    .hero .widget_text:before, .hero .widget_text:after {
-      content: " ";
-      display: table; }
-    .hero .widget_text:after {
-      clear: both; }
-    .hero .widget_text blockquote.large {
-      float: right;
-      width: 50%; }
-      .hero .widget_text blockquote.large p {
-        font-size: 3rem;
-        text-align: auto; }
-      .hero .widget_text blockquote.large cite {
-        font-size: 1.25rem; } }
 
 .site-footer {
   background-color: #111;

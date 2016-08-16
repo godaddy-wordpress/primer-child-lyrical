@@ -5,6 +5,28 @@
 
 	.hero-inner {
 		padding: 3% 2em;
+
+		@media #{$large-up}{
+			float: right;
+			width: 50%;
+		}
+	}
+
+	@media #{$large-up} {
+		.widget_text {
+			@include clearfix;
+
+			blockquote.large {
+				p {
+					font-size: rem-calc(48);
+					text-align: auto;
+				}
+				cite {
+					font-size: rem-calc(20);
+				}
+			}
+
+		}
 	}
 
 	label, input, select, textarea {
@@ -17,14 +39,16 @@
 		font-size: 2em;
 		font-weight: 300;
 		background-color: transparent;
+		padding-right: 0;
+		padding-left: 0;
+		font-size: 1.5em;
 
 		&::last-child {
 			margin-bottom: 0;
 		}
 
-		@media screen and (max-width: 900px) {
+		@media #{$medium-up} {
 			font-size: 1.5em;
-			padding-right: 0;
 		}
 
 		blockquote{
@@ -81,25 +105,6 @@
 			font-family: $sans-font-family;
 			font-size: rem-calc(14);
 			text-align: center;
-		}
-	}
-
-	@media #{$large-up} {
-		.widget_text {
-			@include clearfix;
-
-			blockquote.large {
-				float: right;
-				width: 50%;
-				p {
-					font-size: rem-calc(48);
-					text-align: auto;
-				}
-				cite {
-					font-size: rem-calc(20);
-				}
-			}
-
 		}
 	}
 }
