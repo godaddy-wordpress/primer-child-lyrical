@@ -2117,25 +2117,28 @@ a {
 /**
  * Site Info menu
  */
-.site-info-menu ul {
-  list-style-type: none;
-  margin: 0;
-  display: block; }
-  .site-info-menu ul li {
-    display: inline-block;
-    margin: 0 20px; }
-    .site-info-menu ul li a {
-      color: rgba(254, 255, 255, 0.231);
-      display: block;
-      text-shadow: 0px -4px 0px rgba(0, 0, 0, 0.15);
-      font-size: 1rem;
-      text-transform: uppercase;
-      padding-bottom: 5px;
-      font-weight: bold; }
-      .site-info-menu ul li a.current-menu-item, .site-info-menu ul li a:hover {
+.footer-menu {
+  margin-bottom: 30px; }
+  .footer-menu ul {
+    list-style-type: none;
+    margin: 0;
+    display: block; }
+    .footer-menu ul li {
+      display: inline-block;
+      margin: 0 20px; }
+      .footer-menu ul li a {
+        color: rgba(254, 255, 255, 0.4);
+        display: block;
+        text-shadow: 0px -4px 0px rgba(0, 0, 0, 0.15);
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        font-weight: bold; }
+      .footer-menu ul li.current-menu-item a,
+      .footer-menu ul li a:hover {
         padding-bottom: 3px;
-        color: rgba(254, 255, 255, 0.231);
-        border-bottom: 2px solid rgba(254, 255, 255, 0.231); }
+        color: rgba(254, 255, 255, 0.8);
+        border-bottom: 2px solid rgba(254, 255, 255, 0.8); }
 
 /**
  * Post navigation

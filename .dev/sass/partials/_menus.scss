@@ -156,29 +156,33 @@ $menu-background-color: #202223;
 /**
  * Site Info menu
  */
-.site-info-menu {
+.footer-menu {
+	margin-bottom: 30px;
+
 	ul {
 		list-style-type: none;
 		margin: 0;
 		display: block;
+
 		li {
 			display: inline-block;
 			margin: 0 20px;
+
 			a {
-				color: rgba(254, 255, 255, 0.231);
+				color: rgba(254, 255, 255, 0.4);
 				display: block;
 				text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
 				font-size: rem-calc(16);
 				text-transform: uppercase;
 				padding-bottom: 5px;
 				font-weight: bold;
+			}
 
-				&.current-menu-item,
-				&:hover {
-					padding-bottom: 3px;
-					color: rgba(254, 255, 255, 0.231);
-					border-bottom: 2px solid rgba(254, 255, 255, 0.231);
-				}
+			&.current-menu-item a,
+			a:hover {
+				padding-bottom: 3px;
+				color: rgba(254, 255, 255, 0.8);
+				border-bottom: 2px solid rgba(254, 255, 255, 0.8);
 			}
 		}
 	}
