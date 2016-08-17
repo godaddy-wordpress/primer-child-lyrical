@@ -8,12 +8,10 @@
  */
 function lyrical_move_elements() {
 
-	// Primary navigation
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
-
-	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
 	if ( ! is_front_page() ) {
 
@@ -36,7 +34,7 @@ add_action( 'template_redirect', 'lyrical_move_elements' );
  */
 function lyrical_default_hero_images( $defaults ) {
 
-	$defaults['default']['description'] = esc_html__( 'Surfing', 'lyrical' );
+	$defaults['default']['description'] = esc_html__( 'Surfer on a wave', 'lyrical' );
 
 	return $defaults;
 
@@ -66,7 +64,8 @@ add_filter( 'primer_custom_logo_args', 'lyrical_custom_logo_args' );
 /**
  * Display author avatar over the post thumbnail.
  *
- * @since 1.0.0
+ * @action primer_after_post_thumbnail
+ * @since  1.0.0
  */
 function lyrical_add_author_avatar() {
 
@@ -87,7 +86,7 @@ add_action( 'primer_after_post_thumbnail', 'lyrical_add_author_avatar' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param array $font_types
+ * @param  array $font_types
  *
  * @return array
  */
@@ -126,9 +125,6 @@ function lyrical_font_types( $font_types ) {
 
 }
 add_filter( 'primer_font_types', 'lyrical_font_types' );
-
-
-
 
 /**
  * Set colors.
