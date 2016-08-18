@@ -2026,6 +2026,8 @@ a {
   display: none;
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative; }
+  .main-navigation.open {
+    display: block; }
   .main-navigation .menu {
     position: absolute;
     z-index: 1000;

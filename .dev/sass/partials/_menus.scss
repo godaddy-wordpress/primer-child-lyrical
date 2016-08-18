@@ -27,6 +27,10 @@ $menu-background-color: #202223;
 	font-family: $menu-font-family;
 	position: relative;
 
+	&.open {
+		display: block;
+	}
+
 	.menu {
 		position: absolute;
 		z-index: 1000;
