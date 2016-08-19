@@ -113,8 +113,18 @@ add_filter( 'primer_fonts', 'lyrical_fonts' );
 function lyrical_font_types( $font_types ) {
 
 	$overrides = array(
-		'heading_font' => array(
+		'site_title_font' => array(
+			'label'   => esc_html__( 'Site Title Font', 'lyrical' ),
 			'default' => 'Playfair Display',
+			'css'     => array(
+				'.site-title' => array(
+					'font-family' => '"%1$s", serif',
+				),
+			),
+		),
+		'heading_font' => array(
+			'default'     => 'Raleway',
+			'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'lyrical' ),
 		),
 		'primary_font' => array(
 			'default' => 'Raleway',
