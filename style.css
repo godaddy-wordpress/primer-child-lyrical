@@ -2092,7 +2092,13 @@ a {
   @media only screen and (min-width: 40.063em) {
     .main-navigation li {
       position: relative;
-      float: left; } }
+      float: left; }
+    .main-navigation .current_page_item > a,
+    .main-navigation .current-menu-item > a,
+    .main-navigation .current_page_ancestor > a,
+    .main-navigation .current_page_parent > a,
+    .main-navigation .current-menu-ancestor > a {
+      border-bottom-color: white; } }
   .main-navigation a {
     display: block;
     text-decoration: none;
@@ -2205,6 +2211,26 @@ body.no-max-width .main-navigation {
   float: right;
   text-align: right;
   width: 50%; }
+
+.footer-menu {
+  margin-bottom: 2em; }
+  .footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .footer-menu ul li {
+      display: inline-block;
+      font-size: .875rem;
+      font-weight: 600;
+      margin: 0 10px;
+      text-align: center;
+      text-transform: uppercase; }
+      @media only screen and (min-width: 568px) {
+        .footer-menu ul li {
+          text-align: left; } }
+      .footer-menu ul li a {
+        color: white; }
 
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -3151,6 +3177,9 @@ body.layout-one-column-narrow #content {
     .featured-content .entry-header .read-more:hover {
       background-color: #39ccd1; }
 
+.site-header-wrapper .hero {
+  margin-right: 0; }
+
 .hero {
   padding-top: 55px; }
   .hero:before, .hero:after {
@@ -3290,16 +3319,17 @@ body.layout-one-column-narrow #content {
     margin-bottom: 55px; }
   .site-info-wrapper .site-info {
     overflow: hidden; }
-    .site-info-wrapper .site-info .social-menu ul {
-      margin-right: 0;
-      margin-bottom: 50px; }
-    .site-info-wrapper .site-info .social-menu li {
-      margin: 0 20px; }
-    .site-info-wrapper .site-info .social-menu a {
-      color: #fff;
-      background: none; }
-      .site-info-wrapper .site-info .social-menu a:hover {
-        color: #ddd; }
+    .site-info-wrapper .site-info .social-menu {
+      margin-bottom: 2em; }
+      .site-info-wrapper .site-info .social-menu ul {
+        margin-right: 0; }
+      .site-info-wrapper .site-info .social-menu li {
+        margin: 0 20px; }
+      .site-info-wrapper .site-info .social-menu a {
+        color: #fff;
+        background: none; }
+        .site-info-wrapper .site-info .social-menu a:hover {
+          color: #ddd; }
 
 .featured-content {
   -webkit-background-size: cover;

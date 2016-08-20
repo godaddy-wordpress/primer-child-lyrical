@@ -8,12 +8,10 @@
  */
 function lyrical_move_elements() {
 
-	// Primary navigation
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
-
-	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
 	if ( ! is_front_page() ) {
 
@@ -36,7 +34,7 @@ add_action( 'template_redirect', 'lyrical_move_elements' );
  */
 function lyrical_default_hero_images( $defaults ) {
 
-	$defaults['default']['description'] = esc_html__( 'Surfing', 'lyrical' );
+	$defaults['default']['description'] = esc_html__( 'Surfer on a wave', 'lyrical' );
 
 	return $defaults;
 
@@ -66,7 +64,8 @@ add_filter( 'primer_custom_logo_args', 'lyrical_custom_logo_args' );
 /**
  * Display author avatar over the post thumbnail.
  *
- * @since 1.0.0
+ * @action primer_after_post_thumbnail
+ * @since  1.0.0
  */
 function lyrical_add_author_avatar() {
 
@@ -82,43 +81,52 @@ function lyrical_add_author_avatar() {
 add_action( 'primer_after_post_thumbnail', 'lyrical_add_author_avatar' );
 
 /**
+ * Set fonts.
+ *
+ * @filter primer_fonts
+ * @since  1.0.0
+ *
+ * @param  array $fonts
+ *
+ * @return array
+ */
+function lyrical_fonts( $fonts ) {
+
+	$fonts[] = 'Playfair Display';
+	$fonts[] = 'Raleway';
+
+	return $fonts;
+
+}
+add_filter( 'primer_fonts', 'lyrical_fonts' );
+
+/**
  * Set font types.
  *
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param array $font_types
+ * @param  array $font_types
  *
  * @return array
  */
 function lyrical_font_types( $font_types ) {
 
-	unset( $font_types['header_font'] );
-
 	$overrides = array(
-
+		'site_title_font' => array(
+			'default' => 'Playfair Display',
+		),
+		'navigation_font' => array(
+			'default' => 'Raleway',
+		),
+		'heading_font' => array(
+			'default' => 'Raleway',
+		),
 		'primary_font' => array(
 			'default' => 'Raleway',
-			'css'     => array(
-				'body,
-				p,
-				ol li,
-				ul li,
-				dl dd,
-				.button' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
 		),
 		'secondary_font' => array(
-			'default' => 'Playfair Display',
-			'css'     => array(
-				'h1,
-		.site-title,
-		.hero blockquote p' => array(
-					'font-family' => '"%1$s", serif',
-				),
-			),
+			'default' => 'Raleway',
 		),
 	);
 
@@ -126,9 +134,6 @@ function lyrical_font_types( $font_types ) {
 
 }
 add_filter( 'primer_font_types', 'lyrical_font_types' );
-
-
-
 
 /**
  * Set colors.
@@ -142,7 +147,64 @@ add_filter( 'primer_font_types', 'lyrical_font_types' );
  */
 function lyrical_colors( $colors ) {
 
-	return array();
+	unset( $colors['menu_background_color'] );
+
+	$overrides = array(
+		/**
+		 * Text colors
+		 */
+		'footer_widget_text_color' => array(
+			'default' => '#ffffff',
+		),
+		/**
+		 * Link / Button colors
+		 */
+		'link_color' => array(
+			'default'  => '#4c99ba',
+		),
+		'button_color' => array(
+			'default'  => '#4c99ba',
+		),
+		/**
+		 * Background colors
+		 */
+		'hero_background_color' => array(
+			'default' => '#141414',
+		),
+		'footer_widget_background_color' => array(
+			'default' => '#141414',
+		),
+		'footer_background_color' => array(
+			'default' => '#2d2d2d',
+		),
+	);
+
+	return primer_array_replace_recursive( $colors, $overrides );
 
 }
 add_filter( 'primer_colors', 'lyrical_colors' );
+
+/**
+ * Set color schemes.
+ *
+ * @filter primer_color_schemes
+ * @since  1.0.0
+ *
+ * @param  array $color_schemes
+ *
+ * @return array
+ */
+function lyrical_color_schemes( $color_schemes ) {
+
+	$overrides = array(
+		'dark' => array(
+			'colors' => array(
+				'hero_background_color' => '#333333',
+			),
+		),
+	);
+
+	return primer_array_replace_recursive( $color_schemes, $overrides );
+
+}
+add_filter( 'primer_color_schemes', 'lyrical_color_schemes' );

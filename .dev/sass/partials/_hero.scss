@@ -1,3 +1,7 @@
+.site-header-wrapper .hero {
+	margin-right: 0;
+}
+
 .hero {
 	@extend .row;
 	@include clearfix;
