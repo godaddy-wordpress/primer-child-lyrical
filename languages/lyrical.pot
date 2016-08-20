@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lyrical 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-16 17:35-0500\n"
+"POT-Creation-Date: 2016-08-20 17:38-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,50 +20,6 @@ msgstr ""
 
 #: functions.php:39
 msgid "Surfing"
-msgstr ""
-
-#: functions.php:168
-msgid "Content Background Color"
-msgstr ""
-
-#: functions.php:211
-msgid "Header Background Color"
-msgstr ""
-
-#: functions.php:220
-msgid "Tagline Text Color"
-msgstr ""
-
-#: functions.php:229
-msgid "Footer Background Color"
-msgstr ""
-
-#: functions.php:238
-msgid "Site Info Background Color"
-msgstr ""
-
-#: functions.php:247
-msgid "Link Color"
-msgstr ""
-
-#: functions.php:289
-msgid "Main Text Color"
-msgstr ""
-
-#: functions.php:301
-msgid "Secondary Text Color"
-msgstr ""
-
-#: functions.php:348
-msgid "Wallace"
-msgstr ""
-
-#: functions.php:363
-msgid "Miller"
-msgstr ""
-
-#: functions.php:378
-msgid "Garand"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3

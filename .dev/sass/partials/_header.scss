@@ -40,6 +40,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 	letter-spacing: -.01em;
 	background: $primary-color;
 	background-size: cover;
+	position: relative;
 
 	.custom-logo {
 		width: auto;

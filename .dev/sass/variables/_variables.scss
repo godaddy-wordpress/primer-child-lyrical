@@ -27,7 +27,10 @@ $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
-$menu-background-color: #222;
+$menu-background-color: $secondary-color;
+$menu-background-hover-color: darken($menu-background-color,10%);
+$menu-text-color: #fff;
+$menu-text-hover-color: $menu-text-color;
 $alert-color: #c60f13;
 $success-color: #5da423;
 
