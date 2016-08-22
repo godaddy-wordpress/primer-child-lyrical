@@ -18,20 +18,18 @@
 		margin-top: 0;
 	}
 
-	&.open {
-		display: block;
-		@include clearfix;
-		position: absolute;
-		z-index: 9999;
-		margin-top: 0;
-		padding-top: 68px;
-		top: 0;
-		left: 0;
-		right: 0;
-		background-color: $secondary-color;
-
-		@media #{$medium-up}{
-			//background-color: none;
+	@media #{$medium-down} {
+		&.open {
+			display: block;
+			@include clearfix;
+			position: absolute;
+			z-index: 9999;
+			margin-top: 0;
+			padding-top: 68px;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: $secondary-color;
 		}
 	}
 

@@ -2009,21 +2009,22 @@ a {
       float: left;
       display: block;
       margin-top: 0; } }
-  .main-navigation.open {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    margin-top: 0;
-    padding-top: 68px;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: #1985a1; }
-    .main-navigation.open:before, .main-navigation.open:after {
-      content: " ";
-      display: table; }
-    .main-navigation.open:after {
-      clear: both; }
+  @media only screen and (max-width: 40.063em) {
+    .main-navigation.open {
+      display: block;
+      position: absolute;
+      z-index: 9999;
+      margin-top: 0;
+      padding-top: 68px;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #1985a1; }
+      .main-navigation.open:before, .main-navigation.open:after {
+        content: " ";
+        display: table; }
+      .main-navigation.open:after {
+        clear: both; } }
   .main-navigation .expand {
     font-size: 1.8rem;
     color: #fff;
