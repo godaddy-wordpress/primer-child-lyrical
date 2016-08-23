@@ -205,43 +205,33 @@ function lyrical_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'dark' => array(
 			'colors' => array(
-				'hero_background_color' => '#333333',
+				'link_color'                     => '#4c99ba',
+				'button_color'                   => '#4c99ba',
+				'button_text_color'              => '#ffffff',
+				'content_background_color'       => '#2d2d2d',
+				'hero_background_color'          => '#141414',
+				'footer_widget_background_color' => '#141414',
+				'footer_background_color'        => '#2d2d2d',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'muted' => array(
@@ -253,38 +243,22 @@ function lyrical_color_schemes( $color_schemes ) {
 		),
 		'plum' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_menu_text_color'           => '#686868',
-				'footer_widget_background_color'   => '#141414',
-				'footer_background_color'          => '#2d2d2d',
+				'footer_widget_background_color' => '#141414',
 			),
 		),
 	);
