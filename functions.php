@@ -218,6 +218,11 @@ function lyrical_color_schemes( $color_schemes ) {
 				'footer_widget_background_color' => '#141414',
 			),
 		),
+		'cool' => array(
+			'colors' => array(
+				'footer_widget_background_color' => '#141414',
+			),
+		),
 		'dark' => array(
 			'colors' => array(
 				'link_color'                     => '#4c99ba',
