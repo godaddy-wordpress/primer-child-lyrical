@@ -1,18 +1,22 @@
 $site-footer-background: #111 !default;
 $site-footer-text-color: contrast-color($site-footer-background, #222, #fff, 50%) !default;
-$site-footer-border-color: contrast-color($site-footer-background, darken($site-footer-background,15%), lighten($site-footer-background,15%), 50%) !default;
+$site-footer-border-color: contrast-color($site-footer-background, darken($site-footer-background, 15%), lighten($site-footer-background, 15%), 50%) !default;
 $site-footer-anchor-color: $primary-color !default;
 $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #fff, 50%) !default;
 
 $site-footer-info-background: #191c1d;
 $site-footer-info-text-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
-$site-footer-info-border-color: contrast-color($site-footer-info-background, darken($site-footer-info-background,15%), lighten($site-footer-info-background,15%), 50%) !default;
+$site-footer-info-border-color: contrast-color($site-footer-info-background, darken($site-footer-info-background, 15%), lighten($site-footer-info-background, 15%), 50%) !default;
 $site-footer-info-anchor-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 
-.site-footer{
+.site-footer {
 	background-color: $site-footer-background;
 	padding: 0;
+
+	.widget-title {
+		color: rgb(235, 235, 235);
+	}
 
 	.widget {
 		color: $site-footer-text-color;
@@ -83,35 +87,28 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	}
 }
 
-.site-info-wrapper{
+.site-info-wrapper {
 	padding: 70px 0 90px;
 	background: $site-footer-info-background;
 	color: $site-footer-info-text-color;
 	line-height: 1.5;
 	text-align: center;
 
-	a{
-		color: $site-footer-info-anchor-color;
-
-		&:hover{
-			color: $site-footer-info-anchor-color-hover;
-		}
-	}
-
-	.site-info-text{
+	.site-info-text {
 		.site-title-wrapper {
 			margin-bottom: 55px;
 		}
 	}
 
-	.site-info{
+	.site-info {
 		@extend .row;
+
 		overflow: hidden;
 
 		.social-menu {
 			margin-bottom: 2em;
 
-			ul{
+			ul {
 				margin-right: 0;
 			}
 
@@ -119,20 +116,20 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 				margin: 0 20px;
 			}
 
-			a{
+			a {
 				color: #fff;
 				background: none;
 
-				&:hover{
+				&:hover {
 					color: #ddd;
 				}
 			}
 		}
-
 	}
 
-	.site-info-inner{
+	.site-info-inner {
 		@extend .large-12;
+
 		@extend .columns;
 	}
 }
