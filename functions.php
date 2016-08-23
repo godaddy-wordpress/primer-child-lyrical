@@ -222,7 +222,6 @@ function lyrical_color_schemes( $color_schemes ) {
 			'colors' => array(
 				'link_color'                     => '#4c99ba',
 				'button_color'                   => '#4c99ba',
-				'button_text_color'              => '#ffffff',
 				'content_background_color'       => '#2d2d2d',
 				'hero_background_color'          => '#141414',
 				'footer_widget_background_color' => '#141414',
