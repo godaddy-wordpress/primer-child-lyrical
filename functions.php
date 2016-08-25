@@ -23,25 +23,6 @@ function lyrical_move_elements() {
 add_action( 'template_redirect', 'lyrical_move_elements' );
 
 /**
- * Set the default hero image description.
- *
- * @filter primer_default_hero_images
- * @since  1.0.0
- *
- * @param  array $defaults
- *
- * @return array
- */
-function lyrical_default_hero_images( $defaults ) {
-
-	$defaults['default']['description'] = esc_html__( 'Surfer on a wave', 'lyrical' );
-
-	return $defaults;
-
-}
-add_filter( 'primer_default_hero_images', 'lyrical_default_hero_images' );
-
-/**
  * Set custom logo args.
  *
  * @filter primer_custom_logo_args
