@@ -1,4 +1,20 @@
-.sticky {}
+.sticky {
+	display: block;
+	position: relative;
+
+	&:before {
+		font-family: 'Genericons';
+		content: '\f308';
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		opacity: 0.2;
+		height: 30px;
+		width: 30px;
+		font-size: 30px;
+		color: rgba(0,0,0,.5);
+	}
+}
 
 .no-results,
 .not-found{

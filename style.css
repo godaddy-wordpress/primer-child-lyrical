@@ -2493,6 +2493,21 @@ body.no-max-width .main-navigation {
   font-size: 0.875rem;
   text-transform: uppercase; }
 
+.sticky {
+  display: block;
+  position: relative; }
+  .sticky:before {
+    font-family: 'Genericons';
+    content: '\f308';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0.2;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5); }
+
 .no-results,
 .not-found {
   padding: 1.5em;
@@ -2730,6 +2745,15 @@ body.layout-one-column-narrow .entry-meta {
 
 .comment-content a {
   word-wrap: break-word; }
+
+.bypostauthor {
+  display: block;
+  padding: 40px 40px 0 60px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.2); }
+  .bypostauthor .comment-body {
+    padding-left: 60px; }
 
 .comments-area {
   padding: 1.5em;
