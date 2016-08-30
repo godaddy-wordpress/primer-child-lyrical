@@ -3072,7 +3072,9 @@ body.layout-one-column-narrow #content {
 
 .site-header .site-title-wrapper {
   float: left;
-  margin-left: 15px; }
+  margin-left: 15px;
+  position: absolute;
+  z-index: 999999; }
 
 .site-title {
   font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
