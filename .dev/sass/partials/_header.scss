@@ -3,6 +3,12 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 .site-header .site-title-wrapper {
 	float: left;
 	margin-left: 15px;
+
+	@media #{$small-only} {
+		position: absolute;
+		z-index: 999999;
+	}
+
 }
 
 .site-title {
