@@ -1,7 +1,7 @@
 .main-navigation-container {
 	//background-color: $color__background-menu;
 
-	@media #{$small-only}{
+	@media #{$large-down}{
 		clear: both;
 		z-index: 9999;
 	}
@@ -79,7 +79,7 @@
 	}
 
 	li:first-child a{
-		@media #{$small-only}{
+		@media #{$large-down}{
 			border-top: 1px solid rgba(255,255,255,.1);
 		}
 	}
@@ -97,7 +97,7 @@
 		margin: 0;
 		padding-left: 0;
 
-		@media #{$small-only}{
+		@media #{$large-down}{
 
 			.open > .sub-menu{
 				display: block;
@@ -107,7 +107,7 @@
 		ul {
 			z-index: 99999;
 
-			@media #{$small-only}{
+			@media #{$large-down}{
 				display: none;
 			}
 
@@ -166,7 +166,7 @@
 		border-bottom: 2px solid transparent;
 		color: white;
 
-		@media #{$small-only}{
+		@media #{$large-down}{
 			padding-top: 1.2em;
 			padding-bottom: 1.2em;
 			margin-left: 0;
