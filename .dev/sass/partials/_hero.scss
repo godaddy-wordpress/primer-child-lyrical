@@ -4,37 +4,15 @@
 
 .hero {
 	@extend .row;
+
 	@include clearfix;
+
 	padding-top: 55px;
 
 	.hero-inner {
+		display: inline-block;
+		width: 100%;
 		padding: 3% 2em;
-
-		.home &{
-
-			@media #{$large-up}{
-				float: right;
-				width: 50%;
-			}
-
-		}
-	}
-
-	@media #{$large-up} {
-		.widget_text {
-			@include clearfix;
-
-			blockquote.large {
-				p {
-					font-size: rem-calc(48);
-					text-align: auto;
-				}
-				cite {
-					font-size: rem-calc(20);
-				}
-			}
-
-		}
 	}
 
 	label, input, select, textarea {
@@ -43,24 +21,20 @@
 	}
 
 	.widget {
-		margin-bottom: 1em;
-		font-size: 2em;
+		margin: 1.5rem 0;
+		padding: 0;
+		font-size: 2.5em;
 		font-weight: 300;
 		background-color: transparent;
-		padding-right: 0;
-		padding-left: 0;
-		font-size: 1.5em;
 
-		&::last-child {
+		&:last-child {
 			margin-bottom: 0;
 		}
 
-		@media #{$medium-up} {
-			font-size: 1.5em;
-		}
-
-		blockquote{
-			color: white;
+		@media #{$large-up} {
+			float: right;
+			clear: right;
+			width: 50%;
 		}
 
 		ul, ol {
@@ -74,45 +48,25 @@
 		input, select, textarea {
 			color: #999;
 		}
-	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	cite,
-	table,
-	ul,
-	li,
-	dd,
-	dt,
-	address,
-	code,
-	pre{
-		color: #fff;
-	}
-
-	blockquote.large {
-		border: none;
-		padding: 50px 0;
-
-		p {
-			font-size: rem-calc(33);
-			font-weight: 400;
-			font-family: 'Playfair Display', $sans-font-family;
-			font-style: normal;
-			text-align: center;
-		}
-
-		cite {
-			font-style: normal;
-			text-transform: uppercase;
-			font-family: $sans-font-family;
-			font-size: rem-calc(14);
-			text-align: center;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		cite,
+		table,
+		ul,
+		li,
+		dd,
+		dt,
+		address,
+		code,
+		pre {
+			color: #fff;
 		}
 	}
 }

@@ -3222,78 +3222,49 @@ body.layout-one-column-narrow #content {
   .hero:after {
     clear: both; }
   .hero .hero-inner {
+    display: inline-block;
+    width: 100%;
     padding: 3% 2em; }
-    @media only screen and (min-width: 61.063em) {
-      .home .hero .hero-inner {
-        float: left;
-        width: 50%; } }
-  @media only screen and (min-width: 61.063em) {
-    .hero .widget_text:before, .hero .widget_text:after {
-      content: " ";
-      display: table; }
-    .hero .widget_text:after {
-      clear: both; }
-    .hero .widget_text blockquote.large p {
-      font-size: 3rem;
-      text-align: auto; }
-    .hero .widget_text blockquote.large cite {
-      font-size: 1.25rem; } }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
   .hero .widget {
-    margin-bottom: 1em;
-    font-size: 2em;
+    margin: 1.5rem 0;
+    padding: 0;
+    font-size: 2.5em;
     font-weight: 300;
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 1.5em; }
-    .hero .widget::last-child {
+    background-color: transparent; }
+    .hero .widget:last-child {
       margin-bottom: 0; }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: 61.063em) {
       .hero .widget {
-        font-size: 1.5em; } }
-    .hero .widget blockquote {
-      color: white; }
+        float: left;
+        clear: left;
+        width: 50%; } }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
         list-style: none; }
     .hero .widget input, .hero .widget select, .hero .widget textarea {
       color: #999; }
-  .hero h1,
-  .hero h2,
-  .hero h3,
-  .hero h4,
-  .hero h5,
-  .hero h6,
-  .hero p,
-  .hero cite,
-  .hero table,
-  .hero ul,
-  .hero li,
-  .hero dd,
-  .hero dt,
-  .hero address,
-  .hero code,
-  .hero pre {
-    color: #fff; }
-  .hero blockquote.large {
-    border: none;
-    padding: 50px 0; }
-    .hero blockquote.large p {
-      font-size: 2.0625rem;
-      font-weight: 400;
-      font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-      font-style: normal;
-      text-align: center; }
-    .hero blockquote.large cite {
-      font-style: normal;
-      text-transform: uppercase;
-      font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 0.875rem;
-      text-align: center; }
+    .hero .widget h1,
+    .hero .widget h2,
+    .hero .widget h3,
+    .hero .widget h4,
+    .hero .widget h5,
+    .hero .widget h6,
+    .hero .widget p,
+    .hero .widget blockquote,
+    .hero .widget cite,
+    .hero .widget table,
+    .hero .widget ul,
+    .hero .widget li,
+    .hero .widget dd,
+    .hero .widget dt,
+    .hero .widget address,
+    .hero .widget code,
+    .hero .widget pre {
+      color: #fff; }
 
 .site-footer {
   background-color: #111;
