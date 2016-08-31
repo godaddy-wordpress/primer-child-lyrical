@@ -12,13 +12,13 @@
 	position: relative;
 	margin-top: 20px;
 
-	@media #{$medium-up}{
+	@media #{$large-up}{
 		float: right;
 		display: block;
 		margin-top: 0;
 	}
 
-	@media #{$medium-down} {
+	@media #{$large-down} {
 		&.open {
 			display: block;
 			@include clearfix;
@@ -56,7 +56,7 @@
 			content: "+";
 		}
 
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			display: none;
 		}
 
@@ -72,7 +72,7 @@
 
 	.menu-main-menu-container {
 
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			float: left;
 			margin-left: 25px;
 		}
@@ -111,7 +111,7 @@
 				display: none;
 			}
 
-			@media #{$medium-up}{
+			@media #{$large-up}{
 				position: absolute;
 				left: -999em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -140,7 +140,7 @@
 		}
 	}
 
-	@media #{$medium-up}{
+	@media #{$large-up}{
 
 		li {
 			position: relative;
@@ -176,7 +176,7 @@
 			border-bottom: 1px solid rgba(255,255,255,.1);
 		}
 
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			&:hover,
 			&:visited:hover {
 				border-bottom-color: white;
@@ -190,7 +190,7 @@
 		background-color: $menu-background-color;
 		color: $menu-text-color;
 
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			border-bottom-width: 0;
 		}
 
@@ -214,7 +214,7 @@
 		transform: translateY(-50%);
 		display: none;
 
-		@media #{$medium-up}{
+		@media #{$large-up}{
 			display: inline;
 		}
 	}
@@ -239,7 +239,7 @@ body.no-max-width .main-navigation {
 	display: block;
 	z-index: 99999;
 
-	@media #{$medium-up}{
+	@media #{$large-up}{
 		display: none;
 	}
 

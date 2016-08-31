@@ -2003,12 +2003,12 @@ a {
   display: none;
   position: relative;
   margin-top: 20px; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen and (min-width: 61.063em) {
     .main-navigation {
       float: right;
       display: block;
       margin-top: 0; } }
-  @media only screen and (max-width: 40.063em) {
+  @media only screen and (max-width: 61.063em) {
     .main-navigation.open {
       display: block;
       position: absolute;
@@ -2042,14 +2042,14 @@ a {
       color: #fff; }
     .main-navigation .expand:before {
       content: "+"; }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: 61.063em) {
       .main-navigation .expand {
         display: none; } }
   .main-navigation .menu-item-has-children {
     position: relative; }
     .main-navigation .menu-item-has-children.open > .expand:before {
       content: "-"; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen and (min-width: 61.063em) {
     .main-navigation .menu-main-menu-container {
       float: left;
       margin-left: 25px; } }
@@ -2072,7 +2072,7 @@ a {
       @media only screen and (max-width: 40em) {
         .main-navigation ul ul {
           display: none; } }
-      @media only screen and (min-width: 40.063em) {
+      @media only screen and (min-width: 61.063em) {
         .main-navigation ul ul {
           position: absolute;
           left: -999em;
@@ -2089,7 +2089,7 @@ a {
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen and (min-width: 61.063em) {
     .main-navigation li {
       position: relative;
       float: left; }
@@ -2116,7 +2116,7 @@ a {
         padding-left: 1em;
         padding-right: 1em;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: 61.063em) {
       .main-navigation a:hover, .main-navigation a:visited:hover {
         border-bottom-color: white; } }
   .main-navigation li li a {
@@ -2124,7 +2124,7 @@ a {
     margin-right: 0;
     background-color: #1985a1;
     color: #fff; }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: 61.063em) {
       .main-navigation li li a {
         border-bottom-width: 0; } }
     .main-navigation li li a:hover, .main-navigation li li a:visited:hover {
@@ -2144,7 +2144,7 @@ a {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: none; }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen and (min-width: 61.063em) {
       .main-navigation .sub-menu .menu-item-has-children > a::after {
         display: inline; } }
   .main-navigation .sub-menu .menu-item-has-children > a:hover::after {
@@ -2163,7 +2163,7 @@ body.no-max-width .main-navigation {
   right: 0;
   display: block;
   z-index: 99999; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen and (min-width: 61.063em) {
     .menu-toggle {
       display: none; } }
   .menu-toggle div {
@@ -3072,9 +3072,11 @@ body.layout-one-column-narrow #content {
 
 .site-header .site-title-wrapper {
   float: left;
-  margin-left: 15px;
-  position: absolute;
-  z-index: 999999; }
+  margin-left: 15px; }
+  @media only screen and (max-width: 61.063em) {
+    .site-header .site-title-wrapper {
+      position: absolute;
+      z-index: 999999; } }
 
 .site-title {
   font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
