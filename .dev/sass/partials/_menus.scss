@@ -39,7 +39,7 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		padding: 22px 0 21px;
+		padding: 22px 0;
 		width: 50px;
 		line-height: 1;
 		text-align: center;
@@ -58,6 +58,7 @@
 
 		@media #{$large-up}{
 			display: none;
+			padding: 22px 0 21px;
 		}
 
 	}
@@ -86,6 +87,13 @@
 
 	li li{
 		text-indent: 1rem;
+
+		&:first-child a{
+			@media #{$large-down}{
+				border-top: none;
+			}
+		}
+
 	}
 
 	li li li{
