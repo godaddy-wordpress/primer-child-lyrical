@@ -4,7 +4,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 	float: left;
 	margin-left: 15px;
 
-	@media #{$small-only} {
+	@media #{$large-down} {
 		position: absolute;
 		z-index: 999999;
 	}
