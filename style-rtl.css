@@ -2025,27 +2025,30 @@ a {
       .main-navigation.open:after {
         clear: both; } }
   .main-navigation .expand {
+    background-color: #1985a1;
     font-size: 1.8rem;
     color: #fff;
     position: absolute;
     left: 0;
     top: 0;
-    padding: 22px 0;
+    padding: 22px 0 21px;
     width: 50px;
     line-height: 1;
     text-align: center;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-indent: 0; }
     .main-navigation .expand:hover {
-      background-color: #1985a1;
       color: #fff; }
     .main-navigation .expand:before {
       content: "+"; }
     @media only screen and (min-width: 61.063em) {
       .main-navigation .expand {
-        display: none;
-        padding: 22px 0 21px; } }
+        background-color: none;
+        border-bottom: none;
+        display: none; }
+        .main-navigation .expand:hover {
+          background-color: #1985a1; } }
   .main-navigation .menu-item-has-children {
     position: relative; }
     .main-navigation .menu-item-has-children.open > .expand:before {
