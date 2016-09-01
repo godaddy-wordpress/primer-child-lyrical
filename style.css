@@ -3115,6 +3115,8 @@ body.layout-one-column-narrow #content {
   background: #62d7db;
   -webkit-background-size: cover;
   background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   position: relative; }
   .site-header .custom-logo {
     width: auto;
