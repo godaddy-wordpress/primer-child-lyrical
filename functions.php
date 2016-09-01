@@ -314,27 +314,5 @@ function lyrical_color_schemes( $color_schemes ) {
 
 	return primer_array_replace_recursive( $color_schemes, $overrides );
 
-	$overrides = array(
-		'dark' => array(
-			'colors' => array(
-				'link_color'                     => '#4c99ba',
-				'button_color'                   => '#4c99ba',
-				'content_background_color'       => '#2d2d2d',
-				'hero_background_color'          => '#141414',
-				'footer_widget_background_color' => '#141414',
-				'footer_background_color'        => '#2d2d2d',
-			),
-		),
-		'muted' => array(
-			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				'footer_widget_background_color'   => '#767f99',
-			),
-		),
-	);
-
-	return primer_array_replace_recursive( $color_schemes, $overrides );
-
 }
 add_filter( 'primer_color_schemes', 'lyrical_color_schemes' );
