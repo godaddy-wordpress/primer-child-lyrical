@@ -12,15 +12,15 @@
 		height: 30px;
 		width: 30px;
 		font-size: 30px;
-		color: rgba(0,0,0,.5);
+		color: rgba(0, 0, 0, 0.5);
 	}
 }
 
 .no-results,
-.not-found{
+.not-found {
 	@include panel;
 
-	.page-header{
+	.page-header {
 		margin-bottom: 1em;
 	}
 }
@@ -37,7 +37,7 @@ body.archive .archive-header {
 .hentry {
 	@include panel;
 
-	.attachment-primer-featured{
+	.attachment-primer-featured {
 		width: 100%;
 		height: auto;
 	}
@@ -47,7 +47,7 @@ body.archive .archive-header {
 	}
 }
 
-.featured-image{
+.featured-image {
 	margin-bottom: 1em;
 	margin-bottom: 1.5rem;
 	position: relative;
@@ -69,8 +69,6 @@ body.archive .archive-header {
 			height: 106px;
 			border-radius: 100%;
 		}
-
-
 	}
 }
 
@@ -94,26 +92,28 @@ body.archive .archive-header {
 	margin: 0 0 1.5em;
 }
 
-.entry-title{
+.entry-title {
 	margin-bottom: .25em;
-	a{
+
+	a {
 		color: $heading-font-color;
 	}
 }
 
-.archive-title{
+.archive-title {
 	margin-bottom: 1em;
 	margin-bottom: 2rem;
 }
 
-.entry-footer{
+.entry-footer {
 	color: $small-font-color;
 	font-family: $header-font-family;
 	font-size: rem-calc(14);
 	padding-top: 1em;
+
 	@include clearfix;
 
-	a{
+	a {
 		color: $primary-color;
 	}
 
@@ -129,11 +129,10 @@ body.archive .archive-header {
 	.comments-link a {
 		vertical-align: top;
 	}
-
 }
 
 .entry-meta {
-	border-bottom: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	line-height: 1.4em;
 	line-height: 1.4rem;
 	margin-bottom: 1em;
@@ -142,14 +141,28 @@ body.archive .archive-header {
 	padding-bottom: 1rem;
 	font-size: .9em;
 	font-family: $sans-font-family;
+
 	@include clearfix;
 
-	i{
+	> span {
+		margin-right: 1em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+	}
+
+	i {
 		vertical-align: middle;
 		line-height: .8;
 	}
 
-	.has-post-thumbnail &{
+	.has-post-thumbnail & {
 		border-bottom-width: 0;
 	}
 }
@@ -159,7 +172,7 @@ body.archive .archive-header {
 		margin-right: 1em;
 		margin-right: 1rem;
 
-		@media #{$small-only}{
+		@media #{$small-only} {
 			margin-bottom: 10px;
 		}
 	}
@@ -177,7 +190,6 @@ body.archive .archive-header {
 		line-height: 2;
 	}
 
-
 	span {
 		-ms-word-wrap: break-word;
 		word-wrap: break-word;
@@ -188,7 +200,7 @@ body.archive .archive-header {
 	}
 }
 
-.post-format{
+.post-format {
 	color: $primary-color;
 	text-transform: uppercase;
 	font-family: $sans-font-family;
@@ -196,7 +208,7 @@ body.archive .archive-header {
 	font-weight: bold;
 }
 
-.more-link{
+.more-link {
 	font-family: $header-font-family;
 	font-weight: normal;
 	border-radius: $global-radius;
@@ -227,25 +239,25 @@ article.format-link {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		width: 100%!important;
-		height: 100%!important;
+		width: 100% !important;
+		height: 100% !important;
 	}
 
 	.mejs-container {
-		width: 100%!important;
-		height: 100%!important;
+		width: 100% !important;
+		height: 100% !important;
 	}
 }
 
-
 body.layout-one-column-wide,
 body.layout-one-column-narrow {
-
 	@media #{$large-up} {
+
 		article.post {
 			padding: 2.5em 20%;
 			padding: 2.5rem 20%;
 		}
+
 		.attachment-primer-featured {
 			width: 100%;
 			height: auto;

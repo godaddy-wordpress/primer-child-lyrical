@@ -2636,6 +2636,14 @@ body.archive .archive-header {
     display: table; }
   .entry-meta:after {
     clear: both; }
+  .entry-meta > span {
+    margin-left: 1em; }
+    .entry-meta > span:last-child {
+      margin-left: 0; }
+    @media only screen and (max-width: 40em) {
+      .entry-meta > span {
+        display: block;
+        margin-left: 0; } }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }
