@@ -3082,8 +3082,9 @@ body.page-template-page-builder-no-header #primary {
   padding: 0;
   float: none; }
 
-body.layout-one-column-narrow #content {
-  max-width: 50em; }
+@media only screen and (min-width: 40.063em) {
+  body.layout-one-column-narrow #content {
+    max-width: 50em; } }
 
 .site-header .site-title-wrapper {
   float: left;
