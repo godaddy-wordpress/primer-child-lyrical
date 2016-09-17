@@ -48,7 +48,7 @@ Lyrical is a Primer child theme with a focus on photography and beautiful fonts.
 
 **Contributing:**
 
-You can fork and contribute to Lyrical by visiting [our public repo on GitHub](https://github.com/godaddy/wp-Lyrical-theme).
+You can fork and contribute to Lyrical by visiting [our public repo on GitHub](https://github.com/godaddy/wp-lyrical-theme).
 
 == Installation ==
 
