@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Lyrical is a Primer child theme with a focus on photography and beautiful fonts.
+Lyrical is a GoDaddy Primer child theme with a focus on photography and beautiful fonts.
 
 == Description ==
 
-Lyrical is a Primer child theme with a focus on photography and beautiful fonts.
+Lyrical is a GoDaddy Primer child theme with a focus on photography and beautiful fonts.
 
 **Languages Supported:**
 
