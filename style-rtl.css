@@ -2530,13 +2530,6 @@ body.no-max-width .main-navigation {
   .not-found .page-header {
     margin-bottom: 1em; }
 
-body.search-results .page-header,
-body.archive .archive-header {
-  padding: 2.5em 3.5em;
-  padding: 2.5rem 3.5rem;
-  margin: 0 0 1.5em;
-  margin: 0 0 1.5rem; }
-
 .hentry {
   padding: 1.5em;
   padding: 1.5rem;
