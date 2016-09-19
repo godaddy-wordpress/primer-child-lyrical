@@ -45,7 +45,8 @@ body {
   font-style: normal;
   line-height: 150%;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
