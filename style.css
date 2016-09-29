@@ -64,7 +64,8 @@ body {
   font-style: normal;
   line-height: 150%;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -159,7 +160,8 @@ body {
   font-style: normal;
   line-height: 150%;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -1246,7 +1248,8 @@ body {
   font-style: normal;
   line-height: 150%;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -2202,8 +2205,7 @@ body.no-max-width .main-navigation {
  */
 .navigation .nav-links {
   margin-bottom: 1em;
-  margin-bottom: 1rem;
-  padding: 0; }
+  margin-bottom: 1rem; }
 
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
@@ -2280,27 +2282,37 @@ body.no-max-width .main-navigation {
   display: block;
   margin: 0 auto; }
 
-.clear:before, .clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: " ";
-  display: table; }
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer,
+.page-content {
   clear: both; }
+  .clear:before, .clear:after,
+  .entry-content:before,
+  .entry-content:after,
+  .comment-content:before,
+  .comment-content:after,
+  .site-header:before,
+  .site-header:after,
+  .site-content:before,
+  .site-content:after,
+  .site-footer:before,
+  .site-footer:after,
+  .page-content:before,
+  .page-content:after {
+    content: " ";
+    display: table; }
+  .clear:after,
+  .entry-content:after,
+  .comment-content:after,
+  .site-header:after,
+  .site-content:after,
+  .site-footer:after,
+  .page-content:after {
+    clear: both; }
 
 .widget {
   margin: 0 0 1.5em;
@@ -2530,14 +2542,6 @@ body.no-max-width .main-navigation {
   .not-found .page-header {
     margin-bottom: 1em; }
 
-body.search-results .page-header,
-body.archive .archive-header {
-  padding: 2.5em 3.5em;
-  padding: 2.5rem 3.5rem;
-  background: #fff;
-  margin: 0 0 1.5em;
-  margin: 0 0 1.5rem; }
-
 .hentry {
   padding: 1.5em;
   padding: 1.5rem;
@@ -2636,6 +2640,14 @@ body.archive .archive-header {
     display: table; }
   .entry-meta:after {
     clear: both; }
+  .entry-meta > span {
+    margin-right: 1em; }
+    .entry-meta > span:last-child {
+      margin-right: 0; }
+    @media only screen and (max-width: 40em) {
+      .entry-meta > span {
+        display: block;
+        margin-right: 0; } }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }
@@ -3042,6 +3054,26 @@ iframe,
 object {
   max-width: 100%; }
 
+.wp-pointer-content {
+  border-top: none; }
+  .wp-pointer-content h3 {
+    font-family: sans-serif; }
+  .wp-pointer-content p {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1.4; }
+  .wp-pointer-content a.close,
+  .wp-pointer-content a.close:visited {
+    color: #0073aa;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: 400; }
+    .wp-pointer-content a.close:hover, .wp-pointer-content a.close:active, .wp-pointer-content a.close:focus,
+    .wp-pointer-content a.close:visited:hover,
+    .wp-pointer-content a.close:visited:active,
+    .wp-pointer-content a.close:visited:focus {
+      color: #00a0d2; }
+
 .no-max-width .site-header-wrapper,
 .no-max-width .hero-wrapper,
 .no-max-width .site-footer-inner,
@@ -3074,8 +3106,9 @@ body.page-template-page-builder-no-header #primary {
   padding: 0;
   float: none; }
 
-body.layout-one-column-narrow #content {
-  max-width: 50em; }
+@media only screen and (min-width: 40.063em) {
+  body.layout-one-column-narrow #content {
+    max-width: 50em; } }
 
 .site-header .site-title-wrapper {
   float: left;

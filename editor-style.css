@@ -45,7 +45,8 @@ body {
   font-style: normal;
   line-height: 150%;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -831,14 +832,6 @@ legend {
   .not-found .page-header {
     margin-bottom: 1em; }
 
-body.search-results .page-header,
-body.archive .archive-header {
-  padding: 2.5em 3.5em;
-  padding: 2.5rem 3.5rem;
-  background: #fff;
-  margin: 0 0 1.5em;
-  margin: 0 0 1.5rem; }
-
 .hentry {
   padding: 1.5em;
   padding: 1.5rem;
@@ -937,6 +930,14 @@ body.archive .archive-header {
     display: table; }
   .entry-meta:after {
     clear: both; }
+  .entry-meta > span {
+    margin-right: 1em; }
+    .entry-meta > span:last-child {
+      margin-right: 0; }
+    @media only screen and (max-width: 40em) {
+      .entry-meta > span {
+        display: block;
+        margin-right: 0; } }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }

@@ -64,7 +64,7 @@
 			&:hover{
 				background-color: $secondary-color;
 			}
-			
+
 		}
 
 	}
@@ -297,7 +297,6 @@ body.no-max-width .main-navigation {
 		@extend .columns;
 		margin-bottom: 1em;
 		margin-bottom: 1rem;
-		padding: 0;
 	}
 }
 

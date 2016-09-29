@@ -3,6 +3,8 @@
 .comment-content,
 .site-header,
 .site-content,
-.site-footer {
+.site-footer,
+.page-content {
 	@include clearfix;
+	@include clearfix-after;
 }

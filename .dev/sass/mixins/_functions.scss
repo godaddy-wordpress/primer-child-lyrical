@@ -104,11 +104,11 @@ $modules: () !default;
 
 // Clearfix
 @mixin clearfix() {
-		content: "";
-		display: table;
+	content: "";
+	display: table;
 }
 
 // Center after (not all clearfix need this also)
 @mixin clearfix-after() {
-		clear: both;
+	clear: both;
 }
