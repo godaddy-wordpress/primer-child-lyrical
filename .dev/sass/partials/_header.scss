@@ -42,6 +42,18 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 	font-weight: 300;
 }
 
+body.home {
+
+	.site-header-wrapper {
+		height: 100vh;
+	}
+
+	.site-header {
+		height: 100vh;
+	}
+
+}
+
 .site-header {
 	letter-spacing: -.01em;
 	background: $primary-color;
@@ -49,7 +61,6 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 	background-position: center top;
 	background-repeat: no-repeat;
 	position: relative;
-	height: 100vh;
 
 	.custom-logo {
 		width: auto;
@@ -78,10 +89,6 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 			text-transform: uppercase;
 		}
 	}
-}
-
-body.home .site-header-wrapper {
-	height: 100vh;
 }
 
 .site-header-wrapper {

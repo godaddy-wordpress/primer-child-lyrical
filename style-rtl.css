@@ -3143,6 +3143,12 @@ body.page-template-page-builder-no-header #primary {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
+body.home .site-header-wrapper {
+  height: 100vh; }
+
+body.home .site-header {
+  height: 100vh; }
+
 .site-header {
   letter-spacing: -.01em;
   background: #62d7db;
@@ -3150,8 +3156,7 @@ body.page-template-page-builder-no-header #primary {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .site-header .custom-logo {
     width: auto;
     max-height: 40px; }
@@ -3175,9 +3180,6 @@ body.page-template-page-builder-no-header #primary {
       font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-weight: 400;
       text-transform: uppercase; }
-
-body.home .site-header-wrapper {
-  height: 100vh; }
 
 .site-header-wrapper {
   padding: 15px 0 0;
@@ -3256,6 +3258,11 @@ body.home .site-header-wrapper {
 body.home .hero {
   height: 100vh; }
 
+body.home .hero-inner {
+  display: table-cell;
+  height: 89.5vh;
+  vertical-align: middle; }
+
 .hero {
   padding-top: 55px; }
   .hero:before, .hero:after {
@@ -3264,11 +3271,9 @@ body.home .hero {
   .hero:after {
     clear: both; }
   .hero .hero-inner {
-    display: table-cell;
+    display: inline-block;
     width: 100%;
-    padding: 0 2em;
-    height: 89.5vh;
-    vertical-align: middle; }
+    padding: 3% 2em; }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }

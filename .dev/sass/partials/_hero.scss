@@ -2,8 +2,17 @@
 	margin-right: 0;
 }
 
-body.home .hero {
-	height: 100vh;
+body.home {
+
+	.hero {
+		height: 100vh;
+	}
+
+	.hero-inner {
+		display: table-cell;
+		height: 89.5vh;
+		vertical-align: middle;
+	}
 }
 
 .hero {
@@ -14,11 +23,9 @@ body.home .hero {
 	padding-top: 55px;
 
 	.hero-inner {
-		display: table-cell;
+		display: inline-block;
 		width: 100%;
-		padding: 0 2em;
-		height: 89.5vh;
-		vertical-align: middle;
+		padding: 3% 2em;
 	}
 
 	label, input, select, textarea {
