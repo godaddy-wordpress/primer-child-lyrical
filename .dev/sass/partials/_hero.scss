@@ -2,6 +2,19 @@
 	margin-right: 0;
 }
 
+body.home {
+
+	.hero {
+		height: 100vh;
+	}
+
+	.hero-inner {
+		display: table-cell;
+		height: calc(100vh - 70px);
+		vertical-align: middle;
+	}
+}
+
 .hero {
 	@extend .row;
 
@@ -28,7 +41,7 @@
 		background-color: transparent;
 
 		&:last-child {
-			margin-bottom: 0;
+			margin-top: 0;
 		}
 
 		@media #{$large-up} {

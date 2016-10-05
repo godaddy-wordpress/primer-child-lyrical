@@ -3143,6 +3143,10 @@ body.page-template-page-builder-no-header #primary {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
+body.home .site-header-wrapper,
+body.home .site-header {
+  height: 100vh; }
+
 .site-header {
   letter-spacing: -.01em;
   background: #62d7db;
@@ -3249,6 +3253,15 @@ body.page-template-page-builder-no-header #primary {
 .site-header-wrapper .hero {
   margin-left: 0; }
 
+body.home .hero {
+  height: 100vh; }
+
+body.home .hero-inner {
+  display: table-cell;
+  height: -webkit-calc(100vh - 70px);
+  height: calc(100vh - 70px);
+  vertical-align: middle; }
+
 .hero {
   padding-top: 55px; }
   .hero:before, .hero:after {
@@ -3270,7 +3283,7 @@ body.page-template-page-builder-no-header #primary {
     font-weight: 300;
     background-color: transparent; }
     .hero .widget:last-child {
-      margin-bottom: 0; }
+      margin-top: 0; }
     @media only screen and (min-width: 61.063em) {
       .hero .widget {
         float: left;
