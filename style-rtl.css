@@ -3249,6 +3249,9 @@ body.page-template-page-builder-no-header #primary {
 .site-header-wrapper .hero {
   margin-left: 0; }
 
+body.home .hero {
+  padding: 150px 0; }
+
 .hero {
   padding-top: 55px; }
   .hero:before, .hero:after {
