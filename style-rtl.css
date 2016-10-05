@@ -3150,7 +3150,8 @@ body.page-template-page-builder-no-header #primary {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
   .site-header .custom-logo {
     width: auto;
     max-height: 40px; }
@@ -3174,6 +3175,9 @@ body.page-template-page-builder-no-header #primary {
       font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-weight: 400;
       text-transform: uppercase; }
+
+body.home .site-header-wrapper {
+  height: 100vh; }
 
 .site-header-wrapper {
   padding: 15px 0 0;
@@ -3249,6 +3253,9 @@ body.page-template-page-builder-no-header #primary {
 .site-header-wrapper .hero {
   margin-left: 0; }
 
+body.home .hero {
+  height: 100vh; }
+
 .hero {
   padding-top: 55px; }
   .hero:before, .hero:after {
@@ -3257,9 +3264,11 @@ body.page-template-page-builder-no-header #primary {
   .hero:after {
     clear: both; }
   .hero .hero-inner {
-    display: inline-block;
+    display: table-cell;
     width: 100%;
-    padding: 3% 2em; }
+    padding: 0 2em;
+    height: 89.5vh;
+    vertical-align: middle; }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
@@ -3270,7 +3279,7 @@ body.page-template-page-builder-no-header #primary {
     font-weight: 300;
     background-color: transparent; }
     .hero .widget:last-child {
-      margin-bottom: 0; }
+      margin-top: 0; }
     @media only screen and (min-width: 61.063em) {
       .hero .widget {
         float: left;

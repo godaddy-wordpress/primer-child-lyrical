@@ -2,6 +2,10 @@
 	margin-right: 0;
 }
 
+body.home .hero {
+	height: 100vh;
+}
+
 .hero {
 	@extend .row;
 
@@ -10,9 +14,11 @@
 	padding-top: 55px;
 
 	.hero-inner {
-		display: inline-block;
+		display: table-cell;
 		width: 100%;
-		padding: 3% 2em;
+		padding: 0 2em;
+		height: 89.5vh;
+		vertical-align: middle;
 	}
 
 	label, input, select, textarea {
@@ -28,7 +34,7 @@
 		background-color: transparent;
 
 		&:last-child {
-			margin-bottom: 0;
+			margin-top: 0;
 		}
 
 		@media #{$large-up} {
