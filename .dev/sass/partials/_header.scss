@@ -44,10 +44,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 body.home {
 
-	.site-header-wrapper {
-		height: 100vh;
-	}
-
+	.site-header-wrapper,
 	.site-header {
 		height: 100vh;
 	}

@@ -3143,9 +3143,7 @@ body.page-template-page-builder-no-header #primary {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
-body.home .site-header-wrapper {
-  height: 100vh; }
-
+body.home .site-header-wrapper,
 body.home .site-header {
   height: 100vh; }
 
@@ -3260,7 +3258,8 @@ body.home .hero {
 
 body.home .hero-inner {
   display: table-cell;
-  height: 89.5vh;
+  height: -webkit-calc(100vh - 70px);
+  height: calc(100vh - 70px);
   vertical-align: middle; }
 
 .hero {

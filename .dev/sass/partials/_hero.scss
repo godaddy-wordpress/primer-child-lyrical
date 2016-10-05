@@ -10,7 +10,7 @@ body.home {
 
 	.hero-inner {
 		display: table-cell;
-		height: 89.5vh;
+		height: calc(100vh - 70px);
 		vertical-align: middle;
 	}
 }
