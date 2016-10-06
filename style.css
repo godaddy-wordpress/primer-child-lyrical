@@ -3117,6 +3117,16 @@ body.page-template-page-builder-no-header #primary {
     .site-header .site-title-wrapper {
       position: absolute;
       z-index: 999999; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 61em) {
+    .site-header .site-title-wrapper {
+      max-width: 80%;
+      z-index: 8;
+      position: relative; } }
+  @media only screen and (max-width: 40em) {
+    .site-header .site-title-wrapper {
+      max-width: 80%;
+      z-index: 8;
+      position: relative; } }
 
 .site-title {
   font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

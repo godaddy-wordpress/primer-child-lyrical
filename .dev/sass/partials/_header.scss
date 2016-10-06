@@ -9,6 +9,18 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 		z-index: 999999;
 	}
 
+	@media #{$medium-only} {
+		max-width: 80%;
+		z-index: 8;
+		position: relative;
+	}
+
+	@media #{$small-only} {
+		max-width: 80%;
+		z-index: 8;
+		position: relative;
+	}
+
 }
 
 .site-title {
