@@ -3112,7 +3112,7 @@ body.page-template-page-builder-no-header #primary {
 
 .site-header .site-title-wrapper {
   float: left;
-  margin-left: 15px; }
+  margin: 0 0 30px 15px; }
   @media only screen and (max-width: 61.063em) {
     .site-header .site-title-wrapper {
       position: absolute;
@@ -3261,6 +3261,9 @@ body.page-template-page-builder-no-header #primary {
 
 body.home .hero {
   padding: 150px 0; }
+  @media only screen and (max-width: 40em) {
+    body.home .hero {
+      padding: 0; } }
 
 .hero {
   padding-top: 55px; }

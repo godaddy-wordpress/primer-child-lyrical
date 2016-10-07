@@ -19,8 +19,10 @@ function lyrical_move_elements() {
 
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	remove_action( 'primer_header', 'primer_add_site_title' );
 
-	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
+	add_action( 'primer_header', 'primer_add_site_title', 8 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 9 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 

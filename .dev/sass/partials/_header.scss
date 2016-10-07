@@ -2,7 +2,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 .site-header .site-title-wrapper {
 	float: left;
-	margin-left: 15px;
+	margin: 0 0 30px 15px;
 
 	@media #{$large-down} {
 		position: absolute;
