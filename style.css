@@ -3112,11 +3112,21 @@ body.page-template-page-builder-no-header #primary {
 
 .site-header .site-title-wrapper {
   float: left;
-  margin-left: 15px; }
+  margin: 0 0 30px 15px; }
   @media only screen and (max-width: 61.063em) {
     .site-header .site-title-wrapper {
       position: absolute;
       z-index: 999999; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 61em) {
+    .site-header .site-title-wrapper {
+      max-width: 90%;
+      z-index: 8;
+      position: relative; } }
+  @media only screen and (max-width: 40em) {
+    .site-header .site-title-wrapper {
+      max-width: 75%;
+      z-index: 8;
+      position: relative; } }
 
 .site-title {
   font-family: "Playfair Display", "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -3248,6 +3258,12 @@ body.page-template-page-builder-no-header #primary {
 
 .site-header-wrapper .hero {
   margin-right: 0; }
+
+body.home .hero {
+  padding: 150px 0; }
+  @media only screen and (max-width: 40em) {
+    body.home .hero {
+      padding: 0; } }
 
 .hero {
   padding-top: 55px; }

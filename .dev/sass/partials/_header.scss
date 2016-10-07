@@ -2,11 +2,23 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 .site-header .site-title-wrapper {
 	float: left;
-	margin-left: 15px;
+	margin: 0 0 30px 15px;
 
 	@media #{$large-down} {
 		position: absolute;
 		z-index: 999999;
+	}
+
+	@media #{$medium-only} {
+		max-width: 90%;
+		z-index: 8;
+		position: relative;
+	}
+
+	@media #{$small-only} {
+		max-width: 75%;
+		z-index: 8;
+		position: relative;
 	}
 
 }

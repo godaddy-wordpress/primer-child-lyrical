@@ -2,6 +2,14 @@
 	margin-right: 0;
 }
 
+body.home .hero {
+	padding: 150px 0;
+
+	@media #{$small-only} {
+		padding: 0;
+	}
+}
+
 .hero {
 	@extend .row;
 
