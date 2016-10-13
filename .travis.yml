@@ -1,0 +1,30 @@
+sudo: false
+
+language:
+  - php
+  - node_js
+
+before_script:
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+
+script:
+  - echo "Deploy only"
+
+before_deploy:
+  - export RELEASE_FOLDER=lyrical
+  - php /tmp/wp-cli.phar package install runcommand/dist-archive
+  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
+  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+
+
+deploy:
+  provider: releases
+  api_key:
+    secure: HXg/IrminkVwGo3t+UotDwth6Zg1/YQAr1hWbX2TFVSucrUIm7gT76q6SrQ9rN4mdtc+m6YSNCgc+MV6I3KE1uxDLp7Gwv7CU0DK9AsdXualmc1/LMd3U2Mui5Pz0tpomFWBUh/UjrVHfCejBiPz+WqkiGIakYxm+5jU/mZGXqsjjYIfi0JBP+7QWUe36RcS9HMf4nCX53lHNJaDmGTVA4PLNWixOMetgy/txT0JjypkvSWPwUlTPZounILr+fhHWp9LxPB+E2+2FMUhTyTJ/rCNrTdOe49QofKrJ3mX91CmHkTWK1eRi9I8onPDPf/Tf5OA9qK1VbYDHD1B5QZcjfheE/x+KwNSE/+ul4irk9z/avTlj8Mg4kfjv3nsi4YhWKgML1mj8WN3I7wNzM46rNn+JNIdQjdcVQVMTcremAGhzDWH1SpPtxPU2IQMovi7h8OsJJHvEbJO3TDHT5KB2VBCSx1ww/qHn/pjZUGHfTf4e2nXNP/wr0W3WrOegNVktEPRDhA5rMH2GlVpyMkTl5lnHXSnSktdvGmqlnbUu76PR6sHZbuMpteVUy56xvQLPsCsNgS7jFnu4KhVdaZUrGlxudH5jpBBIpGAUNlfgjTWtdW/QA5JnxREzsxTgXLPkQbN3KoinOfUMQ8zWSoBoefx+pyUsejPJ7O+nu6AI8A=
+  file: lyrical.zip
+  on:
+    tags: true
+    repo: godaddy/wp-lyrical-theme
+  skip_cleanup: true
+  overwrite: true
