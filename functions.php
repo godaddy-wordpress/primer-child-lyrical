@@ -20,9 +20,11 @@ function lyrical_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
 	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
 	remove_action( 'primer_header', 'primer_add_site_title',               5 );
+	remove_action( 'primer_after_header', 'primer_generate_cart_submenu',  11 );
 
 	add_action( 'primer_header', 'primer_add_site_title',         5 );
 	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
+	add_action( 'primer_header', 'primer_generate_cart_submenu',  5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
