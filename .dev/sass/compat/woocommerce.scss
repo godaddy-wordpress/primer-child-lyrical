@@ -158,12 +158,21 @@ li#woocommerce-cart-menu-item li.mini_cart_item a {
 	text-indent: 15px;
 	margin-left: 10px;
 	color: inherit;
+	background: inherit;
 }
 
-@media #{$medium-up} {
+@media #{$large-up} {
 
 	li#woocommerce-cart-menu-item .sub-menu {
 		margin-left: -6em;
+	}
+
+}
+
+@media #{$large-down} {
+
+	li #woocommerce-cart-menu-item .widget_shopping_cart {
+		width: 100%;
 	}
 
 }

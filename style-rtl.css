@@ -4078,8 +4078,13 @@ li#woocommerce-cart-menu-item li.mini_cart_item a {
   border-bottom: none;
   text-indent: 15px;
   margin-right: 10px;
-  color: inherit; }
+  color: inherit;
+  background: inherit; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 61.063em) {
   li#woocommerce-cart-menu-item .sub-menu {
     margin-right: -6em; } }
+
+@media only screen and (max-width: 61.063em) {
+  li #woocommerce-cart-menu-item .widget_shopping_cart {
+    width: 100%; } }
