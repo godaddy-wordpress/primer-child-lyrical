@@ -143,6 +143,13 @@ body.single-product {
 	}
 }
 
+body.woocommerce-cart {
+
+	.primer-wc-cart-sub-menu {
+		display: none;
+	}
+}
+
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
