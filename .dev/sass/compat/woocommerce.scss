@@ -17,7 +17,7 @@
 		}
 
 		ul.product_list_widget {
-			position: relative !important;
+			position: relative;
 			left: 0;
 			max-height: 250px;
 			overflow-y: auto;
@@ -94,7 +94,7 @@
 						line-height: .8;
 
 						&:hover {
-							background: red !important;
+							background: red;
 						}
 					}
 				}
