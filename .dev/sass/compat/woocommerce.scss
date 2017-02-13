@@ -148,7 +148,9 @@ body.single-product {
 .woocommerce-page #content table.cart img,
 .woocommerce-page table.cart img {
 	width: 100%;
-	margin-bottom: 0;
+	max-width: 90px;
+	display: block;
+	margin: 0 auto;
 }
 
 .woocommerce #content table.cart td.actions .input-text,
