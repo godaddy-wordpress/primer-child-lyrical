@@ -9,6 +9,7 @@
 		float: left;
 		padding: 0;
 		margin-bottom: 0;
+		background: $secondary-color;
 
 		.quantity {
 			display: block;
@@ -35,9 +36,10 @@
 		}
 
 		.total {
-			margin: 0 0 10px 0;
-			padding-top: 10px;
+			margin: 0;
+			padding: 10px 0;
 			text-align: center;
+			color: #333;
 
 			strong {
 				text-indent: 0;
@@ -47,6 +49,7 @@
 
 		p.buttons {
 			padding: .5em;
+			padding-top: 0;
 			margin: 0;
 
 			a {
@@ -100,7 +103,7 @@
 				}
 
 				a:nth-child(2) {
-					padding: .5em 0em;
+					padding: .5em 0 0 0;
 					margin: 0;
 					width: 100%;
 					text-indent: 1.75rem;
@@ -150,21 +153,23 @@ body.woocommerce-cart {
 	}
 }
 
-.woocommerce #content table.cart img,
-.woocommerce table.cart img,
-.woocommerce-page #content table.cart img,
-.woocommerce-page table.cart img {
-	width: 100%;
-	max-width: 90px;
-	display: block;
-	margin: 0 auto;
-}
+.woocommerce,
+.woocommerce-page {
 
-.woocommerce #content table.cart td.actions .input-text,
-.woocommerce table.cart td.actions .input-text,
-.woocommerce-page #content table.cart td.actions .input-text,
-.woocommerce-page table.cart td.actions .input-text {
-	padding: 7px;
+	table.cart {
+
+		img {
+			width: 100%;
+			max-width: 100px;
+			margin-bottom: 0;
+		}
+
+		td.actions .input-text {
+			padding: 10px !important;
+		}
+
+	}
+
 }
 
 .woocommerce ul.products li.product a.add_to_cart_button {
@@ -173,10 +178,15 @@ body.woocommerce-cart {
 	text-align: center;
 }
 
-@media #{$medium-down} {
+@media #{$large-down} {
 
-	.primer-wc-cart-menu .primer-wc-cart-sub-menu {
-		width: 100%;
+	.primer-wc-cart-menu {
+
+		.primer-wc-cart-sub-menu,
+		.widget_shopping_cart {
+			width: 100%;
+		}
+
 	}
 
 }
