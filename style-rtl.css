@@ -4034,7 +4034,7 @@ body.home .hero {
         .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a.remove {
           float: right;
           padding: 0;
-          margin: 18px 15px 0 0;
+          margin: 20px 15px 0 0;
           z-index: 1001;
           line-height: .8; }
           .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a.remove:hover {
