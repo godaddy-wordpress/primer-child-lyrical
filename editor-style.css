@@ -704,7 +704,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: #7d8183;
   background-color: #f3f3f3;
   border: none;
@@ -732,10 +733,22 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
+  textarea:focus,
+  .select2-container .select2-choice:focus {
     color: #4b4e4f;
     outline: none;
     background-color: #e6e6e6; }
+
+.select2-container .select2-choice {
+  padding: 0.42rem 0.75rem; }
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-container .select2-choice,
+.select2-container-active .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #ccc; }
 
 input[type="text"],
 input[type="email"],
@@ -753,7 +766,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  padding: 1em;
   padding: 1rem; }
 
 input[type="file"] {

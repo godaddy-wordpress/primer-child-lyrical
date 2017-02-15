@@ -39,7 +39,7 @@ input[type="submit"] {
 	&:active{
 		background: lighten($color-background-button,3%);
 	}
-	
+
 	&:disabled {
 		background-color: #c5c3c6;
 	}
@@ -86,7 +86,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
 	color: $color-text-input;
 	background-color: $color-text-input-background;
 	border: none;
@@ -101,6 +102,19 @@ textarea {
 		outline: none;
 		background-color: darken($color-text-input-background,5%);
 	}
+}
+
+.select2-container .select2-choice {
+	padding: 0.42rem 0.75rem;
+}
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-container .select2-choice,
+.select2-container-active .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border: none;
 }
 
 input[type="text"],
@@ -119,7 +133,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	padding: 1em;
 	padding: 1rem;
 }
 
