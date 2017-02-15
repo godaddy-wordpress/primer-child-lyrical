@@ -17,16 +17,16 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function lyrical_move_elements() {
 
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	remove_action( 'primer_after_header', 'primer_add_page_title' );
-	remove_action( 'primer_header', 'primer_add_site_title' );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
+	remove_action( 'primer_header', 'primer_add_site_title',               5 );
 
-	add_action( 'primer_header', 'primer_add_site_title', 8 );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 9 );
+	add_action( 'primer_header', 'primer_add_site_title',         5 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_hero', 'primer_add_page_title' );
+		add_action( 'primer_hero', 'primer_add_page_title', 12 );
 
 	}
 
@@ -189,6 +189,11 @@ function lyrical_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default'  => '#4c99ba',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'button_text_color' => array(
 			'default'  => '#ffffff',
