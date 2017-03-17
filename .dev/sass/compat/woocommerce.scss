@@ -123,6 +123,75 @@
 	}
 }
 
+.woocommerce-page {
+
+	div.product {
+
+		.woocommerce-product-gallery {
+
+			figure.woocommerce-product-gallery__wrapper {
+				margin: 0;
+			}
+
+		}
+
+		.summary {
+			margin-top: 0;
+		}
+
+		.commentlist {
+			padding-left: 0;
+		}
+
+	}
+
+	&.woocommerce div.product form.cart {
+		margin: 1em 0;
+	}
+
+	ul.products li.product.primer-2-column-product {
+		width: 48.05%;
+	}
+
+	.primer-woocommerce .cart .qty {
+		padding: 0.5em;
+	}
+
+	#reviews #comments ol.commentlist li {
+
+		img.avatar {
+			width: 60px;
+		}
+
+		.comment-text {
+			margin: 0 0 0 80px;
+		}
+
+	}
+
+	form.woocommerce-cart-form {
+
+		table.cart td.actions #coupon_code {
+			width: 55%;
+			margin-right: 0;
+		}
+
+	}
+
+	table.cart {
+		img {
+			width: 100%;
+			max-width: 100px;
+			margin-bottom: 0;
+		}
+
+		td.actions .input-text {
+			padding: 10px !important;
+		}
+	}
+
+}
+
 body.post-type-archive,
 body.single-product {
 	/* On Sale Badge */
@@ -148,21 +217,6 @@ body.single-product {
 body.woocommerce-cart {
 	.primer-wc-cart-sub-menu {
 		display: none;
-	}
-}
-
-.woocommerce,
-.woocommerce-page {
-	table.cart {
-		img {
-			width: 100%;
-			max-width: 100px;
-			margin-bottom: 0;
-		}
-
-		td.actions .input-text {
-			padding: 10px !important;
-		}
 	}
 }
 
