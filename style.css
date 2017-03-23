@@ -3270,6 +3270,45 @@ body.page-template-page-builder-no-header #primary {
     .featured-content .entry-header .read-more:hover {
       background-color: #39ccd1; }
 
+.site-header.video-header {
+  height: 100vh;
+  padding: 0; }
+  @media only screen and (max-width: 61.063em) {
+    .site-header.video-header {
+      margin: 0 auto; } }
+  .site-header.video-header .hero {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .site-header.video-header .hero .hero-inner {
+      z-index: 1; }
+  .site-header.video-header #wp-custom-header-video-button {
+    position: absolute;
+    bottom: 0.5em;
+    left: 1em;
+    opacity: 0.5;
+    z-index: 11; }
+  .site-header.video-header iframe#wp-custom-header-video {
+    height: 100%; }
+
+.site-header #wp-custom-header {
+  position: absolute;
+  height: 100%; }
+  .site-header #wp-custom-header img {
+    display: none; }
+
+body.admin-bar .video-header {
+  height: -webkit-calc( 100vh - 32px);
+  height: calc( 100vh - 32px); }
+
 .site-header-wrapper .hero {
   margin-right: 0; }
 
