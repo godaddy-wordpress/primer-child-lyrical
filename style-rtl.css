@@ -3175,6 +3175,8 @@ body.page-template-page-builder-no-header #primary {
   background-position: center top;
   background-repeat: no-repeat;
   position: relative; }
+  .site-header #wp-custom-header img {
+    display: none; }
   .site-header .custom-logo {
     width: auto;
     max-height: 40px; }
