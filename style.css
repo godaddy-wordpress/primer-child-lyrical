@@ -3271,25 +3271,27 @@ body.page-template-page-builder-no-header #primary {
       background-color: #39ccd1; }
 
 .site-header.video-header {
+  overflow: hidden;
   background: #000;
   color: #000; }
   .site-header.video-header .site-header-wrapper {
     position: relative;
     z-index: 3; }
+  .site-header.video-header #wp-custom-header {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
   .site-header.video-header #wp-custom-header-video-button {
     position: absolute;
-    bottom: 0.5em;
+    bottom: 10vh;
     left: 1em;
-    opacity: 0.5;
-    z-index: 11; }
+    opacity: 0.5; }
   .site-header.video-header iframe#wp-custom-header-video {
     height: 100%; }
-
-.site-header #wp-custom-header {
-  position: absolute;
-  height: 100%; }
-  .site-header #wp-custom-header img {
-    display: none; }
 
 .site-header-wrapper .hero {
   margin-right: 0; }
