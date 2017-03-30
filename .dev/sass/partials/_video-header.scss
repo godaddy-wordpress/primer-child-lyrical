@@ -1,0 +1,31 @@
+.site-header.video-header {
+	overflow: hidden;
+	background: #000;
+	color: #000;
+
+	.site-header-wrapper {
+		position: relative;
+		z-index: 3;
+	}
+
+	#wp-custom-header {
+		position: absolute;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	#wp-custom-header-video-button {
+		position: absolute;
+		bottom: 11.5vh;
+		left: 1em;
+		opacity: 0.5;
+	}
+
+	iframe#wp-custom-header-video {
+		height: 100%;
+	}
+}
