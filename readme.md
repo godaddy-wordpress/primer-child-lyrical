@@ -96,6 +96,7 @@ TODO
 * New: Added styles for video headers. Requires Primer v1.7.0+. @props [evanherman](https://github.com/EvanHerman)
 * New: Added new customizer controls to adjust the dropdown menu background/hover color. @props [evanherman](https://github.com/EvanHerman)
 * New: Added pagination styles. @props [evanherman](https://github.com/EvanHerman)
+* New: Added Ninja Forms compatibility styles. Styled ninja form responses. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Adjusted various WooCommerce styles, including i10n site tweaks. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.0.0 ###
