@@ -1,6 +1,5 @@
 .main-navigation-container {
-	display: inline-block;
-	//background-color: $color__background-menu;
+	display: block;
 
 	@media #{$large-down}{
 		clear: both;
