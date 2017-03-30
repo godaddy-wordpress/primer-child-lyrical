@@ -4124,7 +4124,8 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .woocommerce ul.products li.product a.add_to_cart_button {
   width: 100%;
   font-size: 16px;
-  text-align: center; }
+  text-align: center;
+  white-space: normal; }
 
 @media only screen and (max-width: 61.063em) {
   .primer-wc-cart-menu .primer-wc-cart-sub-menu,
