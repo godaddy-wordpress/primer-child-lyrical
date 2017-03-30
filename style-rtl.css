@@ -2010,7 +2010,7 @@ a {
     color: #6edade; }
 
 .main-navigation-container {
-  display: inline-block; }
+  display: block; }
   @media only screen and (max-width: 61.063em) {
     .main-navigation-container {
       clear: both;
