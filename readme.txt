@@ -1,8 +1,8 @@
 === Lyrical ===
-Contributors:      godaddy, fjarrett, jonathanbardo
+Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
+Tested up to:      4.7
 Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -89,6 +89,13 @@ TODO
 
 == Changelog ==
 
-= 1.0.0 - June, 2016 =
+= 1.1.0 =
+
+* New: Added styles for video headers. Requires Primer v1.7.0+. @props [evanherman](https://github.com/EvanHerman)
+* New: Added new customizer controls to adjust the dropdown menu background/hover color. @props [evanherman](https://github.com/EvanHerman)
+* New: Added pagination styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Adjusted various WooCommerce styles, including i10n site tweaks. @props [evanherman](https://github.com/EvanHerman)
+
+= 1.0.0 =
 
 * Initial release.
