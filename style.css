@@ -3289,7 +3289,7 @@ body.page-template-page-builder-no-header #primary {
     margin: auto; }
   .site-header.video-header #wp-custom-header-video-button {
     position: absolute;
-    bottom: 10vh;
+    bottom: 11.5vh;
     left: 1em;
     opacity: 0.5; }
   .site-header.video-header iframe#wp-custom-header-video {
