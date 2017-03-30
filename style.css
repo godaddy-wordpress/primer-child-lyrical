@@ -4089,6 +4089,20 @@ body.home .hero {
   .primer-wc-cart-menu .cart-preview-count {
     margin-left: 8px; }
 
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  display: block; }
+  @media only screen and (min-width: 61.063em) {
+    body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+    .woocommerce a.added_to_cart {
+      font-size: 0.75rem; } }
+
+.woocommerce a.added_to_cart {
+  text-align: left; }
+
 .woocommerce-page div.product .woocommerce-product-gallery figure.woocommerce-product-gallery__wrapper {
   margin: 0; }
 
