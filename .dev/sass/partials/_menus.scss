@@ -1,5 +1,5 @@
 .main-navigation-container {
-	//background-color: $color__background-menu;
+	display: block;
 
 	@media #{$large-down}{
 		clear: both;
@@ -297,6 +297,58 @@ body.no-max-width .main-navigation {
 		@extend .columns;
 		margin-bottom: 1em;
 		margin-bottom: 1rem;
+	}
+}
+
+.navigation.pagination {
+	clear: both;
+	margin: 0 0 1.5em;
+
+	.nav-links {
+		text-align: center;
+
+		.page-numbers {
+			display: inline-block;
+			border: none;
+			border-radius: 3px;
+			line-height: 1;
+			margin: 0 0.25em;
+			padding: 0.5em 0.75em;
+			white-space: nowrap;
+
+			&.dots {
+				background: none;
+			}
+
+			&.current {
+				color: $menu-background-color;
+				background-color: $color-link;
+			}
+		}
+	}
+
+	.paging-nav-text {
+		display: none;
+	}
+
+	@media #{$small-only} {
+
+		.paging-nav-text {
+			display: inline-block;
+			font-size: 0.9rem;
+			font-weight: normal;
+			color: $menu-text-color;
+		}
+
+		.nav-links {
+			float: right;
+
+			.page-numbers {
+				&:not(.prev, .next) {
+					display: none;
+				}
+			}
+		}
 	}
 }
 

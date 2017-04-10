@@ -7,7 +7,7 @@
  *
  * @var string
  */
-define( 'PRIMER_CHILD_VERSION', '1.0.0' );
+define( 'PRIMER_CHILD_VERSION', '1.1.0' );
 
 /**
  * Move some elements around.
@@ -17,16 +17,16 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function lyrical_move_elements() {
 
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	remove_action( 'primer_after_header', 'primer_add_page_title' );
-	remove_action( 'primer_header', 'primer_add_site_title' );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
+	remove_action( 'primer_header', 'primer_add_site_title',               5 );
 
-	add_action( 'primer_header', 'primer_add_site_title', 8 );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 9 );
+	add_action( 'primer_header', 'primer_add_site_title',         5 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_hero', 'primer_add_page_title' );
+		add_action( 'primer_hero', 'primer_add_page_title', 12 );
 
 	}
 
@@ -160,6 +160,21 @@ function lyrical_colors( $colors ) {
 		'menu_text_color' => array(
 			'default' => '#ffffff',
 		),
+		'menu_dropdown_background_color' => array(
+			'label'   => esc_html__( 'Dropdown Background', 'primer' ),
+			'default' => '#1985a1',
+			'section' => 'colors-menu',
+			'css'     => array(
+				'.main-navigation li li a' => array(
+					'background-color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.main-navigation li li a:hover, .main-navigation li li a:visited:hover' => array(
+					'background-color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
 		'heading_text_color' => array(
 			'default' => '#353535',
 		),
@@ -189,6 +204,11 @@ function lyrical_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default'  => '#4c99ba',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'button_text_color' => array(
 			'default'  => '#ffffff',
@@ -233,26 +253,30 @@ function lyrical_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['blush']['base'],
-				'button_color' => $color_schemes['blush']['base'],
+				'link_color'                     => $color_schemes['blush']['base'],
+				'button_color'                   => $color_schemes['blush']['base'],
+				'menu_dropdown_background_color' => $color_schemes['blush']['base'],
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['bronze']['base'],
-				'button_color' => $color_schemes['bronze']['base'],
+				'link_color'                     => $color_schemes['bronze']['base'],
+				'button_color'                   => $color_schemes['bronze']['base'],
+				'menu_dropdown_background_color' => $color_schemes['bronze']['base'],
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['canary']['base'],
-				'button_color' => $color_schemes['canary']['base'],
+				'link_color'                     => $color_schemes['canary']['base'],
+				'button_color'                   => $color_schemes['canary']['base'],
+				'menu_dropdown_background_color' => $color_schemes['canary']['base'],
 			),
 		),
 		'cool' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['cool']['base'],
-				'button_color' => $color_schemes['cool']['base'],
+				'link_color'                     => $color_schemes['cool']['base'],
+				'button_color'                   => $color_schemes['cool']['base'],
+				'menu_dropdown_background_color' => $color_schemes['cool']['base'],
 			),
 		),
 		'dark' => array(
@@ -270,12 +294,14 @@ function lyrical_color_schemes( $color_schemes ) {
 				'hero_background_color'          => '#141414',
 				'footer_widget_background_color' => '#141414',
 				'footer_background_color'        => '#2d2d2d',
+				'menu_dropdown_background_color' => $color_schemes['dark']['base'],
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['iguana']['base'],
-				'button_color' => $color_schemes['iguana']['base'],
+				'link_color'                     => $color_schemes['iguana']['base'],
+				'button_color'                   => $color_schemes['iguana']['base'],
+				'menu_dropdown_background_color' => $color_schemes['iguana']['base'],
 			),
 		),
 		'muted' => array(
@@ -293,32 +319,38 @@ function lyrical_color_schemes( $color_schemes ) {
 				'background_color'               => '#d5d6e0',
 				'hero_background_color'          => '#5a6175',
 				'menu_background_color'          => '#5a6175',
+				'menu_dropdown_background_color' => $color_schemes['muted']['base'],
 				'footer_widget_background_color' => '#b6b9c5',
 				'footer_background_color'        => '#d5d6e0',
+
 			),
 		),
 		'plum' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['plum']['base'],
-				'button_color' => $color_schemes['plum']['base'],
+				'link_color'                     => $color_schemes['plum']['base'],
+				'button_color'                   => $color_schemes['plum']['base'],
+				'menu_dropdown_background_color' => $color_schemes['plum']['base'],
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['rose']['base'],
-				'button_color' => $color_schemes['rose']['base'],
+				'link_color'                     => $color_schemes['rose']['base'],
+				'button_color'                   => $color_schemes['rose']['base'],
+				'menu_dropdown_background_color' => $color_schemes['rose']['base'],
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['tangerine']['base'],
-				'button_color' => $color_schemes['tangerine']['base'],
+				'link_color'                     => $color_schemes['tangerine']['base'],
+				'button_color'                   => $color_schemes['tangerine']['base'],
+				'menu_dropdown_background_color' => $color_schemes['tangerine']['base'],
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'link_color'   => $color_schemes['turquoise']['base'],
-				'button_color' => $color_schemes['turquoise']['base'],
+				'link_color'                     => $color_schemes['turquoise']['base'],
+				'button_color'                   => $color_schemes['turquoise']['base'],
+				'menu_dropdown_background_color' => $color_schemes['turquoise']['base'],
 			),
 		),
 	);
