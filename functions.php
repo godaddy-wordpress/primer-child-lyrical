@@ -165,12 +165,15 @@ function lyrical_colors( $colors ) {
 			'default' => '#1985a1',
 			'section' => 'colors-menu',
 			'css'     => array(
-				'.main-navigation li li a' => array(
+				'.main-navigation li li a,
+				.menu-toggle:not( [style*="display: none"] ) + .main-navigation,
+				.menu-toggle:not( [style*="display: none"] ) + .main-navigation .expand' => array(
 					'background-color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
-				'.main-navigation li li a:hover, .main-navigation li li a:visited:hover' => array(
+				'.main-navigation li li a:hover,
+				.main-navigation li li a:visited:hover' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
