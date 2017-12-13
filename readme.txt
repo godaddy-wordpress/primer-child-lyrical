@@ -89,6 +89,10 @@ TODO
 
 == Changelog ==
 
+= 1.1.1 =
+
+* Tweak: Fix mobile menu background/hover colors. @props [evanherman](https://github.com/EvanHerman)
+
 = 1.1.0 =
 
 * New: Added styles for video headers. Requires Primer v1.7.0+. @props [evanherman](https://github.com/EvanHerman)
