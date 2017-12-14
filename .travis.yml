@@ -27,6 +27,9 @@ env:
   global:
     - WP_THEME=lyrical
 
+before_install:
+  - phpenv config-rm xdebug.ini
+
 before_script:
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
