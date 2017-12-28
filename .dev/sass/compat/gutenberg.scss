@@ -1,0 +1,96 @@
+/*--------------------------------------------------------------
+>>> Gutenberg:
+--------------------------------------------------------------*/
+.wp-block-cover-image {
+	margin-bottom: 1.5rem;
+}
+
+.wp-block-cover-image.alignfull,
+.wp-block-image.alignfull,
+.wp-block-cover-text.alignfull,
+.wp-block-gallery.alignfull,
+.wp-block-text-columns.alignfull {
+	margin-left: -33.3333%;
+	width: 166.6666%;
+
+	figcaption {
+		padding: 0 3.375em;
+	}
+
+	@media #{$medium-only} {
+		margin-left: -3.5rem;
+		width: calc( 100% + 7rem );
+
+		figcaption {
+			padding: 0 2.375em;
+		}
+	}
+
+	@media #{$small-only} {
+		margin-left: -1.5rem;
+		width: calc( 100% + 3rem );
+
+		figcaption {
+			padding: 0 1em;
+		}
+	}
+}
+
+.wp-block-cover-image.alignfull,
+.wp-block-image.alignfull {
+	img {
+		width: 100%;
+	}
+}
+
+.wp-block-cover-image.alignwide,
+.wp-block-image.alignwide,
+.wp-block-cover-text.alignwide,
+.wp-block-image.alignwide,
+.wp-block-gallery.alignwide,
+.wp-block-text-columns.alignwide {
+	margin-left: -20%;
+	width: 140%;
+
+	@media #{$medium-only} {
+		margin-left: -2.375rem;
+		width: calc( 100% + 4.75rem );
+	}
+
+	@media #{$small-only} {
+		margin-left: -0.75rem;
+		width: calc( 100% + 1.5rem );
+	}
+}
+
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-video,
+.wp-block-quote,
+.wp-block-text-columns,
+.entry-content ul,
+.entry-content ol,
+.wp-block-cover-text {
+	&.alignleft {
+		max-width: 40%;
+		margin: 0 1.5em 1.5em 0;
+	}
+
+	&.alignright {
+		max-width: 40%;
+		margin: 0 0 1.5em 1.5em;
+	}
+}
+
+body.customize-support {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.site-title,
+	.page-title {
+		clear: none;
+	}
+}
