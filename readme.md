@@ -81,6 +81,10 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
+Stock photography, Pixabay
+License: Creative Commons Zero
+Source: https://pixabay.com/en/beach-ocean-outdoors-sea-seascape-1836366/
+
 ## Frequently Asked Questions ##
 
 TODO
