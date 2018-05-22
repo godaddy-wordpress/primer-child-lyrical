@@ -87,6 +87,11 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	}
 }
 
+.privacy-policy-link {
+	display: inline-block;
+	margin-bottom: 2em;
+}
+
 .site-info-wrapper {
 	padding: 70px 0 90px;
 	background: $site-footer-info-background;
