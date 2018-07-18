@@ -22,7 +22,7 @@
     "[![WordPress <%= pkg.engines.wordpress %>](https://img.shields.io/badge/wordpress-<% print(encodeURI(pkg.engines.wordpress)) %>-blue.svg)](https://wordpress.org/download/release-archive/)"
   ],
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.3",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -34,7 +34,7 @@
     "grunt-sass": "^2.0.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-wp-readme-to-markdown": "^2.0.1",
-    "load-grunt-tasks": "^3.5.2",
+    "load-grunt-tasks": "^4.0.0",
     "matchdep": "^2.0.0"
   },
   "scripts": {
