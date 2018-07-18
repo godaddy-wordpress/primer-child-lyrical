@@ -1,104 +1,59 @@
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.wp-block-cover-image {
-	margin-bottom: 1.5rem;
-}
+body.customize-support {
+	.alignfull {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-	margin-left: -33.3333%;
-	width: 166.6666%;
-
-	figcaption {
-		padding: 0 3.375em;
-	}
-
-	@media #{$medium-only} {
-		margin-left: -3.5rem;
-		width: calc( 100% + 7rem );
-
-		figcaption {
-			padding: 0 2.375em;
+		img {
+			width: 100%;
 		}
 	}
 
-	@media #{$small-only} {
-		margin-left: -1.5rem;
-		width: calc( 100% + 3rem );
-
-		figcaption {
-			padding: 0 1em;
-		}
-	}
-}
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull {
-	img {
+	.alignwide {
+		margin-left: 0;
+		margin-right: 0;
 		width: 100%;
 	}
-}
 
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide,
-.wp-block-cover-text.alignwide,
-.wp-block-image.alignwide,
-.wp-block-gallery.alignwide,
-.wp-block-text-columns.alignwide {
-	margin-left: -20%;
-	width: 140%;
+	.wp-block-image,
+	.wp-block-gallery,
+	.wp-block-video,
+	.wp-block-quote,
+	.wp-block-text-columns,
+	.entry-content ul,
+	.entry-content ol,
+	.wp-block-cover-text {
+		&.alignleft {
+			margin: 0 1em 0.5em 0;
+		}
 
-	@media #{$medium-only} {
-		margin-left: -2.375rem;
-		width: calc( 100% + 4.75rem );
-	}
+		&.alignright {
+			margin: 0 0 0.5em 1em;
+		}
 
-	@media #{$small-only} {
-		margin-left: -0.75rem;
-		width: calc( 100% + 1.5rem );
-	}
-}
+		&.alignleft,
+		&.alignright {
+			max-width: 40%;
+			width: 100%;
 
-.wp-block-image,
-.wp-block-gallery,
-.wp-block-video,
-.wp-block-quote,
-.wp-block-text-columns,
-.entry-content ul,
-.entry-content ol,
-.wp-block-cover-text {
-	&.alignleft {
-		margin: 0 1em 0.5em 0;
-	}
-
-	&.alignright {
-		margin: 0 0 0.5em 1em;
-	}
-
-	&.alignleft,
-	&.alignright {
-		max-width: 40%;
-		@media #{$small-only} {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
+			img {
+				width: inherit;
+			}
 		}
 	}
-}
 
-body.customize-support {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.site-title,
-	.page-title {
-		clear: none;
+	.wp-block-gallery {
+		margin-left: 0;
+		margin-right: 0;
+
+		&.is-cropped .blocks-gallery-item img {
+			height: auto;
+		}
 	}
 }
