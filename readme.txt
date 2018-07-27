@@ -93,9 +93,13 @@ TODO
 
 == Changelog ==
 
+= 1.1.3 =
+
+* New: Introduce styles for Gutenberg. @props [evanherman](https://github.com/EvanHerman)
+
 = 1.1.2 =
 
-* New: Added styles for WordPress 4.9.6 privacy policy footer link & cookie comment checkbox.
+* New: Added styles for WordPress 4.9.6 privacy policy footer link & cookie comment checkbox. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.1.1 =
 
