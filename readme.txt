@@ -80,6 +80,10 @@ Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC. Primer is
 
 Lyrical bundles the following third-party resources:
 
+Genericons icon font, Copyright 2013 Automattic, Inc.
+License: GPL-2.0 (or later)
+Source: https://genericons.com/
+
 Stock photography, Pixabay
 License: Creative Commons Zero
 Source: https://pixabay.com/en/beach-ocean-outdoors-sea-seascape-1836366/
