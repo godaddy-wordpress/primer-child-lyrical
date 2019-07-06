@@ -52,7 +52,7 @@ You can fork and contribute to Lyrical by visiting [our public repo on GitHub](h
 
 == Installation ==
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Lyrical** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Lyrical on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -73,6 +73,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Lyrical is a child theme of Primer:
+
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL
+
 Lyrical bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic, Inc.
@@ -82,14 +86,6 @@ Source: https://genericons.com/
 Stock photography, Pixabay
 License: Creative Commons Zero
 Source: https://pixabay.com/en/beach-ocean-outdoors-sea-seascape-1836366/
-
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
 
 == Changelog ==
 
