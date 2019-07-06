@@ -47,6 +47,7 @@ module.exports = function( grunt ) {
 					'*.php',
 					'*.txt',
 					'screenshot.png',
+					'languages/**',
 					'assets/**',
 					'inc/**',
 					'templates/**'

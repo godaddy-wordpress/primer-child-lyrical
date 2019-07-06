@@ -2,8 +2,8 @@
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [fixed-layout](https://wordpress.org/themes/tags/fixed-layout/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [fluid-layout](https://wordpress.org/themes/tags/fluid-layout/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [light](https://wordpress.org/themes/tags/light/), [one-column](https://wordpress.org/themes/tags/one-column/), [responsive-layout](https://wordpress.org/themes/tags/responsive-layout/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
-**Tested up to:**      4.9  
-**Requires PHP:**      5.6.0  
+**Tested up to:**      5.2  
+**Requires PHP:**      5.6.0
 **Stable tag:**        1.1.3  
 **License:**           GPL-2.0  
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
@@ -75,6 +75,10 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+Lyrical is a child theme of Primer:
+
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL
 
 Lyrical bundles the following third-party resources:
 

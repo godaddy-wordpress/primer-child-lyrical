@@ -2,7 +2,7 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.9
+Tested up to:      5.2
 Requires PHP:      5.6.0
 Stable tag:        1.1.3
 License:           GPL-2.0
@@ -73,6 +73,10 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+Lyrical is a child theme of Primer:
+
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL
 
 Lyrical bundles the following third-party resources:
 
