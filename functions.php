@@ -1,9 +1,9 @@
 <?php
-
 /**
  * Child theme version.
  *
- * @since 1.0.0
+ * @since   1.0.0
+ * @package Primer
  *
  * @var string
  */
@@ -18,10 +18,10 @@ define( 'PRIMER_CHILD_VERSION', '1.1.3' );
 function lyrical_move_elements() {
 
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
-	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
-	remove_action( 'primer_header', 'primer_add_site_title',               5 );
+	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+	remove_action( 'primer_header', 'primer_add_site_title', 5 );
 
-	add_action( 'primer_header', 'primer_add_site_title',         5 );
+	add_action( 'primer_header', 'primer_add_site_title', 5 );
 	add_action( 'primer_header', 'primer_add_primary_navigation', 5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
@@ -39,7 +39,7 @@ add_action( 'template_redirect', 'lyrical_move_elements' );
  * @filter primer_custom_logo_args
  * @since  1.0.0
  *
- * @param  array $args
+ * @param  array $args Arguments array.
  *
  * @return array
  */
@@ -78,7 +78,7 @@ add_action( 'primer_after_post_thumbnail', 'lyrical_add_author_avatar' );
  * @filter primer_fonts
  * @since  1.0.0
  *
- * @param  array $fonts
+ * @param  array $fonts Fonts array.
  *
  * @return array
  */
@@ -98,7 +98,7 @@ add_filter( 'primer_fonts', 'lyrical_fonts' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param  array $font_types
+ * @param  array $font_types Font types array.
  *
  * @return array
  */
@@ -111,13 +111,13 @@ function lyrical_font_types( $font_types ) {
 		'navigation_font' => array(
 			'default' => 'Raleway',
 		),
-		'heading_font' => array(
+		'heading_font'    => array(
 			'default' => 'Raleway',
 		),
-		'primary_font' => array(
+		'primary_font'    => array(
 			'default' => 'Raleway',
 		),
-		'secondary_font' => array(
+		'secondary_font'  => array(
 			'default' => 'Raleway',
 		),
 	);
@@ -133,7 +133,7 @@ add_filter( 'primer_font_types', 'lyrical_font_types' );
  * @filter primer_colors
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Color array.
  *
  * @return array
  */
@@ -144,27 +144,28 @@ function lyrical_colors( $colors ) {
 		$colors['footer_widget_content_background_color']
 	);
 
+	// @codingStandardsIgnoreStart
 	$overrides = array(
 		/**
 		 * Text colors
 		 */
-		'header_textcolor' => array(
+		'header_textcolor'                 => array(
 			'default' => '#ffffff',
 		),
-		'tagline_text_color' => array(
+		'tagline_text_color'               => array(
 			'default' => '#ffffff',
 		),
-		'hero_text_color' => array(
+		'hero_text_color'                  => array(
 			'default' => '#ffffff',
 		),
-		'menu_text_color' => array(
+		'menu_text_color'                  => array(
 			'default' => '#ffffff',
 		),
-		'menu_dropdown_background_color' => array(
-			'label'   => esc_html__( 'Dropdown Background', 'primer' ),
-			'default' => '#1985a1',
-			'section' => 'colors-menu',
-			'css'     => array(
+		'menu_dropdown_background_color'   => array(
+			'label'    => esc_html__( 'Dropdown Background', 'primer' ),
+			'default'  => '#1985a1',
+			'section'  => 'colors-menu',
+			'css'      => array(
 				'.main-navigation li li a,
 				.menu-toggle:not( [style*="display: none"] ) + .main-navigation,
 				.menu-toggle:not( [style*="display: none"] ) + .main-navigation .expand' => array(
@@ -178,63 +179,64 @@ function lyrical_colors( $colors ) {
 				),
 			),
 		),
-		'heading_text_color' => array(
+		'heading_text_color'               => array(
 			'default' => '#353535',
 		),
-		'primary_text_color' => array(
+		'primary_text_color'               => array(
 			'default' => '#252525',
 		),
-		'secondary_text_color' => array(
+		'secondary_text_color'             => array(
 			'default' => '#686868',
 		),
 		'footer_widget_heading_text_color' => array(
 			'default' => '#ffffff',
 		),
-		'footer_widget_text_color' => array(
+		'footer_widget_text_color'         => array(
 			'default' => '#ffffff',
 		),
-		'footer_menu_text_color' => array(
+		'footer_menu_text_color'           => array(
 			'default' => '#686868',
 		),
-		'footer_text_color' => array(
+		'footer_text_color'                => array(
 			'default' => '#686868',
 		),
 		/**
 		 * Link / Button colors
 		 */
-		'link_color' => array(
-			'default'  => '#4c99ba',
+		'link_color'                       => array(
+			'default' => '#4c99ba',
 		),
-		'button_color' => array(
-			'default'  => '#4c99ba',
+		'button_color'                     => array(
+			'default' => '#4c99ba',
 			'css'     => array(
 				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
-		'button_text_color' => array(
-			'default'  => '#ffffff',
+		'button_text_color'                => array(
+			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
 		 */
-		'background_color' => array(
+		'background_color'                 => array(
 			'default' => '#f5f5f5',
 		),
-		'content_background_color' => array(
+		'content_background_color'         => array(
 			'default' => '#ffffff',
 		),
-		'hero_background_color' => array(
+		'hero_background_color'            => array(
 			'default' => '#141414',
 		),
-		'footer_widget_background_color' => array(
+		'footer_widget_background_color'   => array(
 			'default' => '#141414',
 		),
-		'footer_background_color' => array(
+		'footer_background_color'          => array(
 			'default' => '#2d2d2d',
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $colors, $overrides );
 
@@ -247,78 +249,78 @@ add_filter( 'primer_colors', 'lyrical_colors' );
  * @filter primer_color_schemes
  * @since  1.0.0
  *
- * @param  array $color_schemes
+ * @param  array $color_schemes Color scheme array.
  *
  * @return array
  */
 function lyrical_color_schemes( $color_schemes ) {
 
 	$overrides = array(
-		'blush' => array(
+		'blush'     => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['blush']['base'],
 				'button_color'                   => $color_schemes['blush']['base'],
 				'menu_dropdown_background_color' => $color_schemes['blush']['base'],
 			),
 		),
-		'bronze' => array(
+		'bronze'    => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['bronze']['base'],
 				'button_color'                   => $color_schemes['bronze']['base'],
 				'menu_dropdown_background_color' => $color_schemes['bronze']['base'],
 			),
 		),
-		'canary' => array(
+		'canary'    => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['canary']['base'],
 				'button_color'                   => $color_schemes['canary']['base'],
 				'menu_dropdown_background_color' => $color_schemes['canary']['base'],
 			),
 		),
-		'cool' => array(
+		'cool'      => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['cool']['base'],
 				'button_color'                   => $color_schemes['cool']['base'],
 				'menu_dropdown_background_color' => $color_schemes['cool']['base'],
 			),
 		),
-		'dark' => array(
+		'dark'      => array(
 			'colors' => array(
-				// Text
+				// Text.
 				'tagline_text_color'               => '#999999',
 				'heading_text_color'               => '#ffffff',
 				'primary_text_color'               => '#e5e5e5',
 				'secondary_text_color'             => '#c1c1c1',
 				'footer_widget_heading_text_color' => '#ffffff',
 				'footer_widget_text_color'         => '#ffffff',
-				// Backgrounds
-				'background_color'               => '#222222',
-				'content_background_color'       => '#2d2d2d',
-				'hero_background_color'          => '#141414',
-				'footer_widget_background_color' => '#141414',
-				'footer_background_color'        => '#2d2d2d',
-				'menu_dropdown_background_color' => $color_schemes['dark']['base'],
+				// Backgrounds.
+				'background_color'                 => '#222222',
+				'content_background_color'         => '#2d2d2d',
+				'hero_background_color'            => '#141414',
+				'footer_widget_background_color'   => '#141414',
+				'footer_background_color'          => '#2d2d2d',
+				'menu_dropdown_background_color'   => $color_schemes['dark']['base'],
 			),
 		),
-		'iguana' => array(
+		'iguana'    => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['iguana']['base'],
 				'button_color'                   => $color_schemes['iguana']['base'],
 				'menu_dropdown_background_color' => $color_schemes['iguana']['base'],
 			),
 		),
-		'muted' => array(
+		'muted'     => array(
 			'colors' => array(
-				// Text
-				'heading_text_color'     => '#4f5875',
-				'primary_text_color'     => '#4f5875',
-				'secondary_text_color'   => '#888c99',
-				'footer_menu_text_color' => $color_schemes['muted']['base'],
-				'footer_text_color'      => '#4f5875',
-				// Links & Buttons
-				'link_color'   => $color_schemes['muted']['base'],
-				'button_color' => $color_schemes['muted']['base'],
-				// Backgrounds
+				// Text.
+				'heading_text_color'             => '#4f5875',
+				'primary_text_color'             => '#4f5875',
+				'secondary_text_color'           => '#888c99',
+				'footer_menu_text_color'         => $color_schemes['muted']['base'],
+				'footer_text_color'              => '#4f5875',
+				// Links & Buttons.
+				'link_color'                     => $color_schemes['muted']['base'],
+				'button_color'                   => $color_schemes['muted']['base'],
+				// Backgrounds.
 				'background_color'               => '#d5d6e0',
 				'hero_background_color'          => '#5a6175',
 				'menu_background_color'          => '#5a6175',
@@ -328,14 +330,14 @@ function lyrical_color_schemes( $color_schemes ) {
 
 			),
 		),
-		'plum' => array(
+		'plum'      => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['plum']['base'],
 				'button_color'                   => $color_schemes['plum']['base'],
 				'menu_dropdown_background_color' => $color_schemes['plum']['base'],
 			),
 		),
-		'rose' => array(
+		'rose'      => array(
 			'colors' => array(
 				'link_color'                     => $color_schemes['rose']['base'],
 				'button_color'                   => $color_schemes['rose']['base'],
