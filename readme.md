@@ -10,7 +10,7 @@
 
 Lyrical is a GoDaddy Primer child theme with a focus on photography and beautiful fonts.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-lyrical-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-lyrical-theme) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-lyrical-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![Build Status](https://travis-ci.org/godaddy-wordpress/primer-child-lyrical.svg?branch=master)](https://travis-ci.org/godaddy-wordpress/primer-child-lyrical) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy-wordpress/primer-child-lyrical/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
