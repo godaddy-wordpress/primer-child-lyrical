@@ -27,8 +27,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -344,7 +342,6 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1.25rem; }
@@ -358,7 +355,6 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -503,7 +499,6 @@ blockquote p {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -585,7 +580,6 @@ input[type="submit"] {
   -webkit-font-smoothing: auto;
   font-size: 0.8125rem;
   line-height: 1;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 1em 2em;
   padding: 1rem 2rem;
@@ -681,9 +675,7 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -717,12 +709,8 @@ textarea,
   color: #7d8183;
   background-color: #f3f3f3;
   border: none;
-  -webkit-transform: 200ms background linear;
-  -ms-transform: 200ms background linear;
   transform: 200ms background linear;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0px 3px 0px 0px rgba(1, 1, 1, 0.06);
   box-shadow: inset 0px 3px 0px 0px rgba(1, 1, 1, 0.06);
   resize: none;
   font-size: 1rem; }
@@ -882,12 +870,10 @@ legend {
     left: 0;
     right: 0;
     top: -57px;
-    -webkit-border-radius: 100%;
     border-radius: 100%; }
     .featured-image .avatar-container .avatar {
       width: 106px;
       height: 106px;
-      -webkit-border-radius: 100%;
       border-radius: 100%; }
 
 .byline,
@@ -1004,7 +990,6 @@ legend {
 .more-link {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #62d7db;
   padding: .5em 1em;
@@ -1071,7 +1056,6 @@ body.layout-one-column-narrow .entry-meta {
 .bypostauthor {
   display: block;
   padding: 40px 40px 0 60px;
-  -webkit-border-radius: 8px;
   border-radius: 8px;
   border: 3px solid rgba(0, 0, 0, 0.2); }
   .bypostauthor .comment-body {
@@ -1088,10 +1072,6 @@ body.layout-one-column-narrow .entry-meta {
       padding: 2.5em 3.5em;
       padding: 2.5rem 3.5rem; } }
   .comments-area .comment-form-cookies-consent {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     line-height: 16px; }
     .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
@@ -1149,7 +1129,6 @@ body.layout-one-column-narrow .entry-meta {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -1163,7 +1142,6 @@ body.layout-one-column-narrow .entry-meta {
   left: -1em;
   left: -1rem;
   position: relative;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 .comment-form label .required {
