@@ -5,6 +5,8 @@
  * Author URI: https://www.godaddy.com/
  * Description: Lyrical is a Primer child theme with a focus on photography and beautiful fonts.
  * Version: 1.1.3
+ * Tested up to: 5.9
+ * Requires PHP: 5.6.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: lyrical
@@ -45,8 +47,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -141,8 +141,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -1339,8 +1337,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -1656,7 +1652,6 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1.25rem; }
@@ -1670,7 +1665,6 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -1815,7 +1809,6 @@ blockquote p {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -1897,7 +1890,6 @@ input[type="submit"] {
   -webkit-font-smoothing: auto;
   font-size: 0.8125rem;
   line-height: 1;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 1em 2em;
   padding: 1rem 2rem;
@@ -1993,9 +1985,7 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -2029,12 +2019,8 @@ textarea,
   color: #7d8183;
   background-color: #f3f3f3;
   border: none;
-  -webkit-transform: 200ms background linear;
-  -ms-transform: 200ms background linear;
   transform: 200ms background linear;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0px 3px 0px 0px rgba(1, 1, 1, 0.06);
   box-shadow: inset 0px 3px 0px 0px rgba(1, 1, 1, 0.06);
   resize: none;
   font-size: 1rem; }
@@ -2217,7 +2203,6 @@ a {
         .main-navigation ul ul {
           position: absolute;
           right: -999em;
-          -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
           .main-navigation ul ul ul {
             right: -999em;
@@ -2281,8 +2266,6 @@ a {
     border-bottom: 7px solid transparent;
     border-top: 7px solid transparent;
     border-right: 7px solid #fff;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: none; }
     @media only screen and (min-width: 61.063em) {
@@ -2310,25 +2293,16 @@ body.no-max-width .main-navigation {
   .menu-toggle div {
     background-color: #fff;
     margin: 0.43rem 0 0.43rem .86rem;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .15s ease-in-out;
     transition: .15s ease-in-out;
-    -webkit-transform-origin: right center;
-    -ms-transform-origin: right center;
     transform-origin: right center;
     height: 0.32rem; }
   .menu-toggle.open div:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
   .menu-toggle.open div:nth-child(2) {
     width: 0%;
     opacity: 0; }
   .menu-toggle.open div:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
 /**
@@ -2346,7 +2320,6 @@ body.no-max-width .main-navigation {
     .navigation.pagination .nav-links .page-numbers {
       display: inline-block;
       border: none;
-      -webkit-border-radius: 3px;
       border-radius: 3px;
       line-height: 1;
       margin: 0 0.25em;
@@ -2412,9 +2385,7 @@ body.no-max-width .main-navigation {
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
     background-color: blue;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
@@ -2517,10 +2488,7 @@ body.no-max-width .main-navigation {
   .widget_search .search-field {
     width: 100%;
     background: #fff;
-    -webkit-border-radius: 2px;
     border-radius: 2px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .widget_search .search-field:focus {
       background: #fff; }
@@ -2535,8 +2503,6 @@ body.no-max-width .main-navigation {
 .widget-title {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   font-weight: bold;
   font-size: 1em; }
@@ -2566,7 +2532,6 @@ body.no-max-width .main-navigation {
 
 .widget_author .avatar {
   width: 80px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   float: right;
   margin-left: 1em;
@@ -2606,7 +2571,6 @@ body.no-max-width .main-navigation {
     color: #202223;
     border-collapse: collapse;
     font-size: .9em;
-    -webkit-border-radius: 0 0 2px 2px;
     border-radius: 0 0 2px 2px;
     overflow: hidden;
     margin-bottom: 0; }
@@ -2621,7 +2585,6 @@ body.no-max-width .main-navigation {
       padding: .75em .25em;
       font-weight: bold;
       background-color: #f7f7f7;
-      -webkit-border-radius: 2px 2px 0 0;
       border-radius: 2px 2px 0 0; }
     .widget_calendar #calendar_wrap #wp-calendar thead th {
       padding: .25em 0;
@@ -2639,13 +2602,11 @@ body.no-max-width .main-navigation {
       .widget_calendar #calendar_wrap #wp-calendar tbody tr td a {
         color: #222;
         background: #f7f7f7;
-        -webkit-border-radius: 2px;
         border-radius: 2px;
         margin: 0 3px;
         display: block;
         font-weight: bold;
         border-bottom: none;
-        -webkit-transition: 200ms color linear;
         transition: 200ms color linear; }
     .widget_calendar #calendar_wrap #wp-calendar tfoot {
       background: #dedede; }
@@ -2654,7 +2615,6 @@ body.no-max-width .main-navigation {
         font-weight: bold; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
           color: #202223;
-          -webkit-transition: 200ms color linear;
           transition: 200ms color linear; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover {
             color: #62d7db; }
@@ -2735,12 +2695,10 @@ body.no-max-width .main-navigation {
     right: 0;
     left: 0;
     top: -57px;
-    -webkit-border-radius: 100%;
     border-radius: 100%; }
     .featured-image .avatar-container .avatar {
       width: 106px;
       height: 106px;
-      -webkit-border-radius: 100%;
       border-radius: 100%; }
 
 .byline,
@@ -2863,7 +2821,6 @@ body.no-max-width .main-navigation {
 .more-link {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #62d7db;
   padding: .5em 1em;
@@ -2930,7 +2887,6 @@ body.layout-one-column-narrow .entry-meta {
 .bypostauthor {
   display: block;
   padding: 40px 60px 0 40px;
-  -webkit-border-radius: 8px;
   border-radius: 8px;
   border: 3px solid rgba(0, 0, 0, 0.2); }
   .bypostauthor .comment-body {
@@ -2947,10 +2903,6 @@ body.layout-one-column-narrow .entry-meta {
       padding: 2.5em 3.5em;
       padding: 2.5rem 3.5rem; } }
   .comments-area .comment-form-cookies-consent {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     line-height: 16px; }
     .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
@@ -3008,7 +2960,6 @@ body.layout-one-column-narrow .entry-meta {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -3022,7 +2973,6 @@ body.layout-one-column-narrow .entry-meta {
   right: -1em;
   right: -1rem;
   position: relative;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 .comment-form label .required {
@@ -3071,8 +3021,6 @@ img[class*="wp-image-"] {
   margin-bottom: 1em;
   margin-bottom: 1rem;
   max-width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
@@ -3136,42 +3084,34 @@ img[class*="wp-image-"] {
 
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
-  max-width: -webkit-calc(50% - 4px);
   max-width: calc(50% - 4px); }
 
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
-  max-width: -webkit-calc(33.3% - 4px);
   max-width: calc(33.3% - 4px); }
 
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
-  max-width: -webkit-calc(25% - 4px);
   max-width: calc(25% - 4px); }
 
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
-  max-width: -webkit-calc(20% - 4px);
   max-width: calc(20% - 4px); }
 
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
-  max-width: -webkit-calc(16.7% - 4px);
   max-width: calc(16.7% - 4px); }
 
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
-  max-width: -webkit-calc(14.28% - 4px);
   max-width: calc(14.28% - 4px); }
 
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
-  max-width: -webkit-calc(12.5% - 4px);
   max-width: calc(12.5% - 4px); }
 
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
-  max-width: -webkit-calc(11.1% - 4px);
   max-width: calc(11.1% - 4px); }
 
 .gallery-columns-1 .gallery-item:nth-of-type(1n),
@@ -3187,8 +3127,6 @@ img[class*="wp-image-"] {
 
 .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   margin: 0;
@@ -3333,7 +3271,6 @@ body.page-template-page-builder-no-header #primary {
 .site-header {
   letter-spacing: -.01em;
   background: #62d7db;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -3380,7 +3317,6 @@ body.page-template-page-builder-no-header #primary {
       padding-left: 1.25rem; } }
 
 .featured-content .entry-header {
-  -webkit-background-size: cover;
   background-size: cover; }
   .featured-content .entry-header,
   .featured-content .entry-header .entry-title,
@@ -3587,7 +3523,6 @@ body.home .hero {
           color: #ddd; }
 
 .featured-content {
-  -webkit-background-size: cover;
   background-size: cover; }
   .featured-content,
   .featured-content .entry-title a {
@@ -4081,11 +4016,9 @@ body.home .hero {
   border: 0;
   width: 32px;
   height: 32px;
-  -webkit-transition: 200ms opacity;
   transition: 200ms opacity;
   color: #f7f7f7;
   background: #62d7db;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
   .social-menu a:before {
     -webkit-font-smoothing: subpixel-antialiased;
@@ -4190,7 +4123,6 @@ body.home .hero {
       max-height: 250px;
       overflow-y: auto;
       border: none;
-      -webkit-box-shadow: none;
       box-shadow: none;
       display: inline-block;
       background: inherit; }
@@ -4219,7 +4151,6 @@ body.home .hero {
           margin-bottom: 5px; }
     .primer-wc-cart-menu .widget_shopping_cart .cart_list {
       background: transparent;
-      -webkit-box-shadow: none;
       box-shadow: none; }
       .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item {
         padding: 0;
@@ -4230,7 +4161,6 @@ body.home .hero {
         padding: .5em 1em;
         text-indent: 0;
         opacity: 1;
-        -webkit-transition: opacity .25s ease-out;
         transition: opacity .25s ease-out; }
         .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item img {
           width: 100%;
@@ -4291,7 +4221,6 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
 .woocommerce-page span.onsale,
 .woocommerce-page ul.products li.product .onsale {
   padding: 2px 8px;
-  -webkit-border-radius: 0;
   border-radius: 0;
   margin: 0;
   min-height: auto;
